@@ -55,9 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DiscoverWindow.xaml.cs">
+      <DependentUpon>DiscoverWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MapScreen.xaml.cs">
       <DependentUpon>MapScreen.xaml</DependentUpon>
     </Compile>
+    <Page Include="DiscoverWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
