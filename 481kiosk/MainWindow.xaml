@@ -12,23 +12,24 @@
                 <Grid x:Name="backgroundForTab" Background="#FFE5E5E5">
                     <Label x:Name="labelSelectLanguage" Content="Welcome To" HorizontalAlignment="Left" Margin="196,64,0,0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="48"/>
                     <Label x:Name="labelCalgary" Content="Calgary" HorizontalAlignment="Left" Margin="370,108,0,0" VerticalAlignment="Top" FontFamily="Mistral" FontSize="106.667" Height="auto" Width="auto"/>
-                    <Button x:Name="btnEnglish" Content="English" HorizontalAlignment="Left" Margin="71,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnEnglish_Click"/>
-                    <Button x:Name="btnFrench" Content="Français" HorizontalAlignment="Left" Margin="264,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnSpanish" Content="Español" HorizontalAlignment="Left" Margin="455,316,0,0" VerticalAlignment="Top" Width="155" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnChinese" Content="中国" HorizontalAlignment="Left" Margin="652,316,0,0" VerticalAlignment="Top" Width="159" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnHindi" Content="हिंदी" HorizontalAlignment="Left" Margin="71,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnArabic" Content="العربية" HorizontalAlignment="Left" Margin="264,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnRussian" Content="Русский" HorizontalAlignment="Left" Margin="455,458,0,0" VerticalAlignment="Top" Width="155" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnJapanese" Content="日本語" HorizontalAlignment="Left" Margin="652,458,0,0" VerticalAlignment="Top" Width="159" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnEnglish" Content="English" HorizontalAlignment="Left" Margin="72,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnEnglish_Click"/>
+                    <Button x:Name="btnFrench" Content="Français" HorizontalAlignment="Left" Margin="265,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnSpanish" Content="Español" HorizontalAlignment="Left" Margin="458,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnChinese" Content="中国" HorizontalAlignment="Left" Margin="651,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnHindi" Content="हिंदी" HorizontalAlignment="Left" Margin="72,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnArabic" Content="العربية" HorizontalAlignment="Left" Margin="265,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnRussian" Content="Русский" HorizontalAlignment="Left" Margin="458,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnJapanese" Content="日本語" HorizontalAlignment="Left" Margin="651,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabDiscover" Header="Discover" Margin="-2,-2,-2,-1" Visibility="Hidden">
+            <TabItem x:Name="tabDiscover" Header="Discover" Visibility="Hidden">
                 <Grid Background="#FFE5E5E5">
                     <GroupBox x:Name="groupBox" Header="Discover Calgary" Height="600" Width="800" BorderThickness="1" BorderBrush="#FF181A1B">
                         <Button x:Name="btnTestPage" Content="Test Page" HorizontalAlignment="Left" Margin="112,97,0,0" VerticalAlignment="Top" Width="75" Click="btnTestPage_Click"/>
                     </GroupBox>
                 </Grid>
             </TabItem>
+            
         </TabControl>
 
     </Grid>
