@@ -1,0 +1,25 @@
+﻿<Window x:Class="_481kiosk.InfoScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_481kiosk"
+        mc:Ignorable="d"
+        Title="InfoScreen" Height="700" Width="900">
+    <Grid Background="#FFE5E5E5">
+        <Image x:Name="imgPicture" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Source="calgary-tower.jpg" Height="350"/>
+        <TextBlock x:Name="txtBlockTitle" HorizontalAlignment="Left" Margin="339,28,0,0" TextWrapping="Wrap" Text="Calgary Tower" VerticalAlignment="Top" FontSize="53.333" FontFamily="Rockwell Extra Bold"/>
+        <GroupBox x:Name="grpBoxAddress" Header="Address" HorizontalAlignment="Left" Margin="304,113,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="95" Width="253" FontSize="16" FontWeight="Bold">
+            <TextBlock x:Name="txtBlockAddress" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"><Run Text="101 9 Ave SW "/><LineBreak/><Run Text="Calgary, AB T2P 1J9"/></TextBlock>
+        </GroupBox>
+        <GroupBox x:Name="grpBoxHours" Header="Hours of Operation" HorizontalAlignment="Left" Margin="586,113,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="265" Width="253" FontSize="16" FontWeight="Bold">
+            <TextBlock x:Name="txtBlockHours" HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="202" Width="219" FontSize="13.333"><Run Text="Monday - 9:00AM to 9:00PM"/><LineBreak/><Run Text="Tuesday - 9:00AM to 9:00PM"/><LineBreak/><Run Text="Wednesday - 9:00AM to 9:00PM"/><LineBreak/><Run Text="Thursday - 9:00AM to 9:00PM"/><LineBreak/><Run Text="Friday - 9:00AM to 9:00PM"/><LineBreak/><Run Text="Saturday - 9:00AM to 9:00PM"/><LineBreak/><Run Text="Sunday - 9:00AM to 9:00PM"/><LineBreak/><Run/><LineBreak/><Run Text="*"/><Run Text="Hours "/><Run Text="extend to 10:00PM from July to August"/></TextBlock>
+        </GroupBox>
+        <GroupBox x:Name="grpBoxDescription" Header="Description" HorizontalAlignment="Left" Margin="32,398,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="244" Width="807" FontSize="16" FontWeight="Bold">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This block describes what the attraction has to offer" VerticalAlignment="Top" Height="196" Width="773" FontSize="13.333" FontWeight="Normal"/>
+        </GroupBox>
+        <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold"/>
+        <Button x:Name="btnRestaurantsNearby" Content="Restaurants Nearby This Location" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
