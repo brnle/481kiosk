@@ -47,18 +47,23 @@
                                             <ColumnDefinition Width="260" />
                                         </Grid.ColumnDefinitions>
                                         <Button Grid.Row="0" Grid.Column="0" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="calgary-tower.jpg" Margin="-42,-2,39,38" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="56,1,-33,0" TextWrapping="Wrap" Text="Calgary Tower" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="68,26,-28,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="63,43,-28,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="68,76,-28,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="77,95,-28,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="61,118,-21,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="-32,133,-28,0" Text="The Calgary Tower is home to the highest 360° observation deck in the world" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="0" Grid.Column="1" Width="175" Height="175" Margin="42,12,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="calgary-tower.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+
+                                                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+
+                                            </Button>
+                                            <Button Grid.Row="0" Grid.Column="1" Width="175" Height="175" Margin="42,12,42,13">
                                             <Grid>
                                                 <Image Source="calgary-tower.jpg" Margin="-42,-2,39,38" />
                                                 <TextBlock HorizontalAlignment="Left" Margin="56,1,-33,0" TextWrapping="Wrap" Text="Calgary Tower" VerticalAlignment="Top" Height="34" Width="78"/>
