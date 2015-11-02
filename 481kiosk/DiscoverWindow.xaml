@@ -283,8 +283,7 @@
                             <TextBlock HorizontalAlignment="Left" Margin="56,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="15" Width="78" Foreground="Black"/>
                             <RadioButton Margin="119,6,-119,24" Content="Distance" Grid.Row="0"/>
                             <RadioButton Margin="199,6,-227,24" Content="Price" Grid.Row="0"/>
-                            <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1">
-
+                            <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="2">
                                 <ScrollViewer Margin="0,6,0,-6">
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -297,123 +296,178 @@
                                             <ColumnDefinition Width="260" />
                                             <ColumnDefinition Width="260" />
                                         </Grid.ColumnDefinitions>
-                                        <Button Grid.Row="0" Grid.Column="0" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="0" Grid.Column="1" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="0" Grid.Column="2" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="1" Grid.Column="0" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="1" Grid.Column="1" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="1" Grid.Column="2" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="2" Grid.Column="0" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="2" Grid.Column="1" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
-                                        <Button Grid.Row="2" Grid.Column="2" Width="175" Height="175" Margin="42,12,42,13">
-                                            <Grid>
-                                                <Image Source="hardy4.jpg" Margin="0,-13,71,63" />
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,1,-9,0" TextWrapping="Wrap" Text="River Cafe" VerticalAlignment="Top" Height="34" Width="78"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="107,22,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="102,38,0,0" Text="101 9 Ave SW, Calgary, AB" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="9.333"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="110,68,0,0" TextWrapping="Wrap" Text="Distance" VerticalAlignment="Top" Height="20" Width="61"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="116,85,0,0" Text="0.5K" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="52" FontSize="9.333"/>
-                                                <TextBlock Margin="7,106,33,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock Margin="7,89,33,0" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Height="20"/>
-                                                <TextBlock HorizontalAlignment="Left" Margin="7,123,0,-2" Text="Upscale locally sourced meat and seafood entrees in an chic restored park concession building" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="161" FontSize="9.333"/>
-                                            </Grid>
-                                        </Button>
+                                        <Grid Grid.Row="0" Grid.Column="0">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="hardy4.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="River Cafe" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="5.9KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="0" Grid.Column="1">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="picNotable.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="Notable" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="6.4KM      $$$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="0" Grid.Column="2">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="picRaw.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="Raw Bar" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="9.2KM      $$$$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="1" Grid.Column="0">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="hardy4.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="River Cafe" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="5.9KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="1" Grid.Column="1">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="picNotable.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="Notable" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="6.4KM      $$$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="1" Grid.Column="2">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="picRaw.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="Raw Bar" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="9.2KM      $$$$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="2" Grid.Column="0">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="hardy4.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="River Cafe" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="5.9KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="2" Grid.Column="1">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="picNotable.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="Notable" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="6.4KM      $$$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+                                        <Grid Grid.Row="2" Grid.Column="2">
+                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="picRaw.jpg" Stretch="UniformToFill">
+                                                        <ImageBrush.RelativeTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                                                <TranslateTransform/>
+                                                            </TransformGroup>
+                                                        </ImageBrush.RelativeTransform>
+                                                    </ImageBrush>
+                                                </Button.Background>
+                                                <TextBlock TextWrapping="Wrap" Text="Raw Bar" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            </Button>
+                                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                            <TextBlock Text="9.2KM      $$$$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                        </Grid>
+
                                     </Grid>
                                 </ScrollViewer>
                             </GroupBox>

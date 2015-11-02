@@ -138,6 +138,10 @@
     <Resource Include="glenbow-museum.jpg" />
     <Resource Include="telus-spark.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picNotable.jpg" />
+    <Resource Include="picRaw.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
