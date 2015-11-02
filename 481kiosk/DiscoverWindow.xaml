@@ -63,7 +63,7 @@
                                                 <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="5.9KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="5.9KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="0" Grid.Column="1">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -82,7 +82,7 @@
                                                 <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Glenbow Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="6.4KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="6.4KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="0" Grid.Column="2">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -101,7 +101,7 @@
                                                 <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="Telus Spark" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="9.2KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="9.2KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="1" Grid.Column="0">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -120,7 +120,7 @@
                                                 <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="5.9KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="5.9KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="1" Grid.Column="1">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -139,7 +139,7 @@
                                                 <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Glenbow Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="6.4KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="6.4KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="1" Grid.Column="2">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -158,7 +158,7 @@
                                                 <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="Telus Spark" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="9.2KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="9.2KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="2" Grid.Column="0">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -177,7 +177,7 @@
                                                 <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="5.9KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="5.9KM       $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="2" Grid.Column="1">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -196,7 +196,7 @@
                                                 <TextBlock x:Name="textBlock8" TextWrapping="Wrap" Text="Glenbow Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="6.4KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="6.4KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
                                         <Grid Grid.Row="2" Grid.Column="2">
                                             <Button Width="175" Height="175" Margin="42,5,42,13">
@@ -215,7 +215,7 @@
                                                 <TextBlock x:Name="textBlock9" TextWrapping="Wrap" Text="Telus Spark" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                             </Button>
                                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                            <TextBlock Text="9.2KM" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                                            <TextBlock Text="9.2KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                         </Grid>
 
                                     </Grid>
