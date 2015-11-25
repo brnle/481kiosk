@@ -20,7 +20,7 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Height="41" Width="152" FontSize="26.667"/>
-                    <Expander Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="True" Width="800">
+                    <Expander Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="False" Width="800">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="163*"/>
@@ -225,51 +225,12 @@
                     </Expander>
                     <Expander Grid.Row ="2" Header="Events" Foreground="Blue" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="False" Width="800">
                         <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0">
-
+                            
                             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="2,0,-2,0">
-                                <StackPanel>
+
+                                <StackPanel x:Name="buttonStackpanel">
                                     <Calendar Height="170" HorizontalAlignment="Left" Margin="304,0,-482,0"   
-                                        Name="calendar1" VerticalAlignment="Top" Width="180"/>
-                                    <Button>
-                                        <Grid >
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Image Source="stampede_logo.png" Margin="-324,0,0,-9" Grid.Column="0" HorizontalAlignment="Left" Width="150" Height="100"/>
-                                            <StackPanel Grid.Column="1" Margin="0,0,0,0">
-                                                <TextBlock Text="Calgary Stampede" FontWeight="Bold" />
-                                                <TextBlock Text="July 4 - 14" TextWrapping="Wrap" />
-                                            </StackPanel>
-                                        </Grid>
-                                    </Button>
-                                    <Button>
-                                        <Grid >
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Image Source="Calgary-Flames.jpg" Margin="-324,0,0,-9" Grid.Column="0" HorizontalAlignment="Left" Width="150" Height="100"/>
-                                            <StackPanel Grid.Column="1" Margin="0,0,0,0">
-                                                <TextBlock Text="Calgary Flames" FontWeight="Bold" />
-                                                <TextBlock Text="Saddledome Oct 30" TextWrapping="Wrap" />
-                                                <TextBlock Text="VS. Edmonton Oilers" TextWrapping="Wrap" />
-                                            </StackPanel>
-                                        </Grid>
-                                    </Button>
-                                    <Button>
-                                        <Grid >
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Image Source="illuminasia.jpg" Margin="-324,0,0,-9" Grid.Column="0" HorizontalAlignment="Left" Width="150" Height="100"/>
-                                            <StackPanel Grid.Column="1" Margin="0,0,0,0">
-                                                <TextBlock Text="Illuminasia" FontWeight="Bold" />
-                                                <TextBlock Text="Nov 3" TextWrapping="Wrap" />
-                                            </StackPanel>
-                                        </Grid>
-                                    </Button>
+                                        x:Name="calendar1" VerticalAlignment="Top" Width="180" SelectedDatesChanged="Selection_Change"/>
                                 </StackPanel>
                             </ScrollViewer>
                         </GroupBox>

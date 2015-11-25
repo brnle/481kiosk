@@ -58,6 +58,7 @@
     <Compile Include="DiscoverWindow.xaml.cs">
       <DependentUpon>DiscoverWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Events.cs" />
     <Compile Include="InfoScreen.xaml.cs">
       <DependentUpon>InfoScreen.xaml</DependentUpon>
     </Compile>
