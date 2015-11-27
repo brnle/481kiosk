@@ -47,7 +47,7 @@
                                             <ColumnDefinition Width="260" />
                                         </Grid.ColumnDefinitions>
                                         <Grid Grid.Row="0" Grid.Column="0">
-                                            <Button Width="175" Height="175" Margin="42,5,42,13">
+                                            <Button x:Name="btnCalgaryTower" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalgaryTower_Click">
                                                 <Button.Background>
                                                     <ImageBrush ImageSource="calgary-tower.jpg" Stretch="UniformToFill">
                                                         <ImageBrush.RelativeTransform>

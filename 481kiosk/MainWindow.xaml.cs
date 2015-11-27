@@ -27,25 +27,26 @@ namespace _481kiosk
 
         private void btnEnglish_Click(object sender, RoutedEventArgs e)
         {
-            if (tabControl.Items.Count > 2)
+            if (tabControl.Items.Count > 1)
             {
-                for (int index = tabControl.Items.Count - 1; index > 1; index--)
+                for (int index = tabControl.Items.Count - 1; index > 0; index--)
                 {
                     tabControl.Items.RemoveAt(index);
                 }
             }
 
-            tabDiscover.Visibility = Visibility.Visible;
-            tabControl.SelectedItem = tabDiscover;
+            UCDiscoverScreen _ucDiscover = new UCDiscoverScreen(this);
+            TabItem _tabDiscover = new TabItem();
+            _tabDiscover.Header = "Discover";
+            _tabDiscover.Content = _ucDiscover;
+
+            tabControl.Items.Add(_tabDiscover);
+            tabControl.SelectedItem = _tabDiscover;
         }
 
         private void btnTestPage_Click(object sender, RoutedEventArgs e)
         {
-            TabItem _tabTestPage = new TabItem();
-            _tabTestPage.Header = "Test";
-
-            tabControl.Items.Add(_tabTestPage);
-            tabControl.SelectedItem = _tabTestPage;
+            
         }
     }
 }

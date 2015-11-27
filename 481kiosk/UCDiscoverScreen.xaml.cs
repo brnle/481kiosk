@@ -10,19 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace _481kiosk
 {
     /// <summary>
-    /// Interaction logic for DiscoverWindow.xaml
+    /// Interaction logic for UCDiscoverScreen.xaml
     /// </summary>
-    public partial class DiscoverWindow : Window
+    public partial class UCDiscoverScreen : UserControl
     {
         private Dictionary<string, List<Events>> eventListing;
-
-        public DiscoverWindow()
+        private MainWindow _main;
+        public UCDiscoverScreen(MainWindow _source)
         {
+            _main = _source;
             List<Events> novEvents = new List<Events>();
             novEvents.Add(new Events("Calgary Flames", "Calgary flames face off against the league leading team Chicago Blackhawks", "Calgary-Flames.jpg"));
             novEvents.Add(new Events("Illuminasia", "Exotic lantern festival from different parts of asia", "illuminasia.jpg"));
@@ -30,7 +32,6 @@ namespace _481kiosk
             InitializeComponent();
             eventListing = new Dictionary<string, List<Events>>();
             eventListing.Add("11/25/2015", novEvents);
-
         }
 
         private void Selection_Change(object sender, SelectionChangedEventArgs e)
@@ -40,13 +41,13 @@ namespace _481kiosk
             // dates selected in the Calendar control.
             foreach (DateTime day in calendar1.SelectedDates)
             {
-                if(eventListing.ContainsKey(day.Date.ToShortDateString()))
+                if (eventListing.ContainsKey(day.Date.ToShortDateString()))
                 {
                     List<Events> tempEventListing = eventListing[day.Date.ToShortDateString()];
                     int count = tempEventListing.Count();
                     //For loop to create a list of buttons depending on how many events there are
                     List<Button> buttons = new List<Button>();
-                    for(int i = 0; i < count; i++)
+                    for (int i = 0; i < count; i++)
                     {
 
                         Grid grid = new Grid();
@@ -70,7 +71,7 @@ namespace _481kiosk
                         eventName.Text = tempEventListing[i].getName();
 
                         TextBlock eventDesc = new TextBlock();
-                        eventDesc.Text = day.Date.ToShortDateString() + "\n" +tempEventListing[i].getDescription();
+                        eventDesc.Text = day.Date.ToShortDateString() + "\n" + tempEventListing[i].getDescription();
                         eventDesc.TextWrapping = TextWrapping.Wrap;
 
                         stackpanel.Children.Add(eventName);
@@ -99,6 +100,8 @@ namespace _481kiosk
 
         private void btnCalgaryTower_Click(object sender, RoutedEventArgs e)
         {
+            Button _btn = (Button)sender;
+
             UCInfoScreen _ucInfo = new UCInfoScreen();
             TabItem _tabTestPage = new TabItem();
             _tabTestPage.Header = "Calgary Tower";
@@ -108,8 +111,8 @@ namespace _481kiosk
 
             _tabTestPage.Content = _ucInfo;
 
-            tabControl.Items.Add(_tabTestPage);
-            tabControl.SelectedItem = _tabTestPage;
+            _main.tabControl.Items.Add(_tabTestPage);
+            _main.tabControl.SelectedItem = _tabTestPage;
         }
     }
 }

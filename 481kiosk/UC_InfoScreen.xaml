@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="_481kiosk.UCInfoScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_481kiosk"
+             mc:Ignorable="d" 
+             d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
+    <Grid>
+        <Image x:Name="imgPicture" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Source="calgary-tower.jpg" Height="350"/>
+        <Viewbox Height="80" VerticalAlignment="Top" Margin="304,28,33,0">
+            <TextBlock x:Name="txtBlockTitle" TextAlignment="Center" FontSize="45.333" FontFamily="Rockwell Extra Bold" Width="535" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.494,-3.708" Height="69"/>
+        </Viewbox>
+        <GroupBox x:Name="grpBoxAddress" Header="Address" HorizontalAlignment="Left" Margin="304,113,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="95" Width="253" FontSize="16" FontWeight="Bold">
+            <TextBlock x:Name="txtBlockAddress" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"></TextBlock>
+        </GroupBox>
+        <GroupBox x:Name="grpBoxHours" Header="Hours of Operation" HorizontalAlignment="Left" Margin="586,113,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="265" Width="253" FontSize="16" FontWeight="Bold">
+            <TextBlock x:Name="txtBlockHours" HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="202" Width="219" FontSize="13.333"></TextBlock>
+        </GroupBox>
+        <GroupBox x:Name="grpBoxDescription" Header="Description" HorizontalAlignment="Left" Margin="32,398,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="226" Width="807" FontSize="16" FontWeight="Bold">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This block describes what the attraction has to offer" VerticalAlignment="Top" Height="178" Width="773" FontSize="13.333" FontWeight="Normal"/>
+        </GroupBox>
+        <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold"/>
+        <Button x:Name="btnRestaurantsNearby" Content="Restaurants Nearby This Location" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold"/>
+
+    </Grid>
+</UserControl>
