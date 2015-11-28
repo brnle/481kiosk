@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="InfoScreen" Height="700" Width="900">
     <Grid Background="#FFE5E5E5">
-        <Image x:Name="imgPicture" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Source="calgary-tower.jpg" Height="350"/>
+        <Image x:Name="imgPicture" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Source="Images/calgary-tower.jpg" Height="350"/>
         <TextBlock x:Name="txtBlockTitle" HorizontalAlignment="Left" Margin="339,28,0,0" TextWrapping="Wrap" Text="Calgary Tower" VerticalAlignment="Top" FontSize="53.333" FontFamily="Rockwell Extra Bold"/>
         <GroupBox x:Name="grpBoxAddress" Header="Address" HorizontalAlignment="Left" Margin="304,113,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="95" Width="253" FontSize="16" FontWeight="Bold">
             <TextBlock x:Name="txtBlockAddress" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"><Run Text="101 9 Ave SW "/><LineBreak/><Run Text="Calgary, AB T2P 1J9"/></TextBlock>

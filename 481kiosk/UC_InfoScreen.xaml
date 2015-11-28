@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
     <Grid>
-        <Image x:Name="imgPicture" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Source="calgary-tower.jpg" Height="350"/>
+        <Image x:Name="imgPicture" Margin="32,28,0,0" Height="350" Width="233" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Viewbox Height="80" VerticalAlignment="Top" Margin="304,28,33,0">
             <TextBlock x:Name="txtBlockTitle" TextAlignment="Center" FontSize="45.333" FontFamily="Rockwell Extra Bold" Width="535" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.494,-3.708" Height="69"/>
         </Viewbox>
@@ -20,7 +20,7 @@
         <GroupBox x:Name="grpBoxDescription" Header="Description" HorizontalAlignment="Left" Margin="32,398,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="226" Width="807" FontSize="16" FontWeight="Bold">
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This block describes what the attraction has to offer" VerticalAlignment="Top" Height="178" Width="773" FontSize="13.333" FontWeight="Normal"/>
         </GroupBox>
-        <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold"/>
+        <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold" Click="btnDirections_Click"/>
         <Button x:Name="btnRestaurantsNearby" Content="Restaurants Nearby This Location" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold"/>
 
     </Grid>

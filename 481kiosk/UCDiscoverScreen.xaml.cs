@@ -100,19 +100,41 @@ namespace _481kiosk
 
         private void btnCalgaryTower_Click(object sender, RoutedEventArgs e)
         {
-            Button _btn = (Button)sender;
+            //Call main window's reset tab function to remove excess starting from this tab
+            _main.resetTab(_main.tabControl.SelectedIndex);
 
-            UCInfoScreen _ucInfo = new UCInfoScreen();
-            TabItem _tabTestPage = new TabItem();
-            _tabTestPage.Header = "Calgary Tower";
+            //Instantiate user control and tab to be displayed
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
 
+
+            //Input all information regarding attraction
+            _tabPage.Header = "Calgary Tower";
             _ucInfo.txtBlockTitle.Text = "Calgary Tower";
             _ucInfo.txtBlockAddress.Text = "101 9 Ave SW\nCalgary, AB T2P 1J9";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calgary-tower.jpg", UriKind.Relative));
 
-            _tabTestPage.Content = _ucInfo;
+            //Project user control onto the new tab's content, and set it as the new selected tab
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
 
-            _main.tabControl.Items.Add(_tabTestPage);
-            _main.tabControl.SelectedItem = _tabTestPage;
+        private void btnGlenbowMuseum_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Glenbow Museum";
+            _ucInfo.txtBlockTitle.Text = "Glenbow Museum";
+            _ucInfo.txtBlockAddress.Text = "130 9 Ave SE\nCalgary, AB T2G 0P3";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/glenbow-museum.jpg", UriKind.Relative));
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
         }
     }
 }

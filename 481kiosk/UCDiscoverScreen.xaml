@@ -48,7 +48,7 @@
                                     <Grid Grid.Row="0" Grid.Column="0">
                                         <Button x:Name="btnCalgaryTower" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalgaryTower_Click">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="calgary-tower.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/calgary-tower.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -65,9 +65,9 @@
                                         <TextBlock Text="5.9KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Row="0" Grid.Column="1">
-                                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                                        <Button x:Name="btnGlenbowMuseum" Width="175" Height="175" Margin="42,5,42,13" Click="btnGlenbowMuseum_Click">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="glenbow-museum.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/glenbow-museum.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -86,7 +86,7 @@
                                     <Grid Grid.Row="0" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="telus-spark.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/telus-spark.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -105,7 +105,7 @@
                                     <Grid Grid.Row="1" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="calgary-tower.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/calgary-tower.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -124,7 +124,7 @@
                                     <Grid Grid.Row="1" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="glenbow-museum.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/glenbow-museum.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -143,7 +143,7 @@
                                     <Grid Grid.Row="1" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="telus-spark.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/telus-spark.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -162,7 +162,7 @@
                                     <Grid Grid.Row="2" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="calgary-tower.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/calgary-tower.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -181,7 +181,7 @@
                                     <Grid Grid.Row="2" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="glenbow-museum.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/glenbow-museum.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -200,7 +200,7 @@
                                     <Grid Grid.Row="2" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="telus-spark.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/telus-spark.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -259,7 +259,7 @@
                                     <Grid Grid.Row="0" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="hardy4.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/hardy4.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -278,7 +278,7 @@
                                     <Grid Grid.Row="0" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="picNotable.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/picNotable.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -297,7 +297,7 @@
                                     <Grid Grid.Row="0" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="picRaw.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/picRaw.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -316,7 +316,7 @@
                                     <Grid Grid.Row="1" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="hardy4.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/hardy4.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -335,7 +335,7 @@
                                     <Grid Grid.Row="1" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="picNotable.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/picNotable.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -354,7 +354,7 @@
                                     <Grid Grid.Row="1" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="picRaw.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/picRaw.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -373,7 +373,7 @@
                                     <Grid Grid.Row="2" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="hardy4.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/hardy4.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -392,7 +392,7 @@
                                     <Grid Grid.Row="2" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="picNotable.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/picNotable.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -411,7 +411,7 @@
                                     <Grid Grid.Row="2" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="picRaw.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/picRaw.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>

@@ -97,9 +97,11 @@ namespace _481kiosk
             }
         }
 
+        //Only a temporary function
         private void btnCalgaryTower_Click(object sender, RoutedEventArgs e)
         {
-            UCInfoScreen _ucInfo = new UCInfoScreen();
+            MainWindow _main = new MainWindow();
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabTestPage = new TabItem();
             _tabTestPage.Header = "Calgary Tower";
 

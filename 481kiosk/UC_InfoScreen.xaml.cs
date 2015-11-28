@@ -20,9 +20,18 @@ namespace _481kiosk
     /// </summary>
     public partial class UCInfoScreen : UserControl
     {
-        public UCInfoScreen()
+        MainWindow _main;
+        public UCInfoScreen(MainWindow _window)
         {
+            _main = _window;
             InitializeComponent();
+        }
+
+        private void btnDirections_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 _map = new Window1();
+            _map.Title = "CALGARY TOWER";
+            _map.Show();
         }
     }
 }

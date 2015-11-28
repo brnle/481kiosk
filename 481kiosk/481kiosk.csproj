@@ -132,30 +132,30 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="chinook-calgary-tower-map.png" />
+    <Resource Include="Images\chinook-calgary-tower-map.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="calgary-tower.jpg" />
+    <Resource Include="Images\calgary-tower.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hardy4.jpg" />
+    <Resource Include="Images\hardy4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="stampede_logo.png" />
+    <Resource Include="Images\stampede_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Calgary-Flames.jpg" />
+    <Resource Include="Images\Calgary-Flames.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="illuminasia.jpg" />
+    <Resource Include="Images\illuminasia.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="glenbow-museum.jpg" />
-    <Resource Include="telus-spark.jpg" />
+    <Resource Include="Images\glenbow-museum.jpg" />
+    <Resource Include="Images\telus-spark.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="picNotable.jpg" />
-    <Resource Include="picRaw.jpg" />
+    <Resource Include="Images\picNotable.jpg" />
+    <Resource Include="Images\picRaw.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

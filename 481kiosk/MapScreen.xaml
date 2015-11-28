@@ -19,7 +19,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="54,27,0,0" TextWrapping="Wrap" Text="INSTRUCTIONS" VerticalAlignment="Top" FontSize="26.667"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="406" Margin="305,114,0,0" VerticalAlignment="Top" Width="535" Source="chinook-calgary-tower-map.png" Stretch="Fill"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="406" Margin="305,114,0,0" VerticalAlignment="Top" Width="535" Source="Images/chinook-calgary-tower-map.png" Stretch="Fill"/>
         <Button x:Name="btnTransit" Content="Transit" HorizontalAlignment="Left" Margin="305,46,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="14.667"/>
         <Button x:Name="btnWalking" Content="Walking" HorizontalAlignment="Left" Margin="506,46,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="14.667"/>
         <Button x:Name="btnCar" Content="Driving" HorizontalAlignment="Left" Margin="705,46,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="14.667"/>
