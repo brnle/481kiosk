@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="_481kiosk.UCMapScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_481kiosk"
+             mc:Ignorable="d" 
+             d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
+    <Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="453" Margin="36,63,0,0" VerticalAlignment="Top" Width="183">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Task}" />
+                        <TextBlock Text="{Binding Path=Description}"/>
+                        <TextBlock Text="{Binding Path=Time}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="36,23,0,0" TextWrapping="Wrap" Text="INSTRUCTIONS" VerticalAlignment="Top" FontSize="26.667" Width="184"/>
+        <Button x:Name="btnTransit" Content="Transit" HorizontalAlignment="Left" Margin="279,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667"/>
+        <Button x:Name="btnWalking" Content="Walking" HorizontalAlignment="Left" Margin="487,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667"/>
+        <Button x:Name="btnCar" Content="Driving" HorizontalAlignment="Left" Margin="693,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667"/>
+        <Label x:Name="lblDriving" Content="11 Minutes" HorizontalAlignment="Left" Margin="728,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="71"/>
+        <Label x:Name="lblWalking" Content="1 hour 11 minutes" HorizontalAlignment="Left" Margin="503,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="110"/>
+        <Label x:Name="lblTransit" Content="24 Minutes" HorizontalAlignment="Left" Margin="314,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="71"/>
+        <Button x:Name="btnPrint" Content="PRINT INSTRUCTIONS" HorizontalAlignment="Left" Margin="36,535,0,0" VerticalAlignment="Top" Width="797" Height="70" FontSize="26.667"/>
+        <WebBrowser x:Name="wbMap" HorizontalAlignment="Left" Height="406" Margin="279,110,0,0" VerticalAlignment="Top" Width="554"/>
+
+    </Grid>
+</UserControl>

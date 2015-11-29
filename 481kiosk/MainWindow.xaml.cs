@@ -27,6 +27,7 @@ namespace _481kiosk
 
         private void btnEnglish_Click(object sender, RoutedEventArgs e)
         {
+
             resetTab(tabControl.SelectedIndex);
 
             UCDiscoverScreen _ucDiscover = new UCDiscoverScreen(this);
@@ -41,9 +42,12 @@ namespace _481kiosk
         //Public function to be called whenever tabs need to be refreshed
         public void resetTab(int start)
         {
-            for (int index = tabControl.Items.Count - 1; index > start; index--)
+            if (tabControl.SelectedIndex < tabControl.Items.Count - 1)
             {
-                tabControl.Items.RemoveAt(index);
+                for (int index = tabControl.Items.Count - 1; index > start; index--)
+                {
+                    tabControl.Items.RemoveAt(index);
+                }
             }
         }
     }

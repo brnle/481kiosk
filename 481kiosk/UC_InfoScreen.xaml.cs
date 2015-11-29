@@ -20,7 +20,7 @@ namespace _481kiosk
     /// </summary>
     public partial class UCInfoScreen : UserControl
     {
-        MainWindow _main;
+        private MainWindow _main;
         public UCInfoScreen(MainWindow _window)
         {
             _main = _window;
@@ -29,9 +29,16 @@ namespace _481kiosk
 
         private void btnDirections_Click(object sender, RoutedEventArgs e)
         {
-            Window1 _map = new Window1();
-            _map.Title = "CALGARY TOWER";
-            _map.Show();
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCMapScreen _ucMap = new UCMapScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Navigation";
+
+            _tabPage.Content = _ucMap;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
         }
     }
 }
