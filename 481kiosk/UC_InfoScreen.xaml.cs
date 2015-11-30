@@ -29,6 +29,11 @@ namespace _481kiosk
 
         private void btnDirections_Click(object sender, RoutedEventArgs e)
         {
+            if (!IEVersionFix.IsBrowserEmulationSet())
+            {
+                IEVersionFix.SetBrowserEmulationVersion();
+            }
+
             _main.resetTab(_main.tabControl.SelectedIndex);
 
             UCMapScreen _ucMap = new UCMapScreen(_main);
