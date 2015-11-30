@@ -25,12 +25,23 @@ namespace _481kiosk
         public UCDiscoverScreen(MainWindow _source)
         {
             _main = _source;
-            List<Events> novEvents = new List<Events>();
-            novEvents.Add(new Events("Calgary Flames", "Calgary flames face off against the league leading team Chicago Blackhawks", "Calgary-Flames.jpg"));
-            novEvents.Add(new Events("Illuminasia", "Exotic lantern festival from different parts of asia", "illuminasia.jpg"));
-            novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "stampede_logo.png"));
             InitializeComponent();
+            List<Events> decEvents1 = new List<Events>();
+            decEvents1.Add(new Events("Inside", "Inside is a play about modern life. Daniel MacIvor adapted the play with University of Calgary students", "Images/inside.jpg", "210 University Ct. N.W\nReeve Theatre",
+                "Tuesday 7:30 p.m\nWednesday 7:30 p.m\nThursday 7:30 p.m\nFriday 7:30 p.m\nSaturday 7:30 p.m\nSunday 2 p.m"));
+            decEvents1.Add(new Events("Jewish Book Festival", "Browse hundreds of books at the annual Jewish Book Festival", "Images/jewish_book_event.jpg", "1607 90 Ave. S.W\nJewish Centre Calgary",
+                "Sunday 10 a.m. to 8:30 p.m\nMonday 10 a.m.to 8:30 p.m\nTuesday 10 a.m.to 8:30 p.m\nWednesday 10 a.m.to 8:30 p.m\nThursday 10 a.m.to 8:30 p.m\nFriday 10 a.m.to 4 p.m\nSaturday 6 p.m.to 8:30 p.m."));
             eventListing = new Dictionary<string, List<Events>>();
+            eventListing.Add("12/1/2015", decEvents1);
+            eventListing.Add("12/2/2015", decEvents1);
+            eventListing.Add("12/3/2015", decEvents1);
+            eventListing.Add("12/4/2015", decEvents1);
+            eventListing.Add("12/5/2015", decEvents1);
+
+            List <Events> novEvents = new List<Events>();
+            novEvents.Add(new Events("Calgary Flames", "Calgary flames face off against the league leading team Chicago Blackhawks", "Images/Calgary-Flames.jpg", "555 Saddledome Rise SE\n T2G 2W1", "Saturday 7 p.m - 10 p.m"));
+            novEvents.Add(new Events("Illuminasia", "Exotic lantern festival from different parts of asia", "Images/illuminasia.jpg", "1300 Zoo Rd NE\nT2E 7V6", "All week 7 pm"));
+            novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "Images/stampede_logo.png", "1410 Olympic Way SE\nT2G 2W1", "7 a.m. to 12 p.m"));
             eventListing.Add("11/25/2015", novEvents);
         }
 
@@ -43,6 +54,7 @@ namespace _481kiosk
             {
                 if (eventListing.ContainsKey(day.Date.ToShortDateString()))
                 {
+                    buttonStackpanel.Children.RemoveRange(1, buttonStackpanel.Children.Count - 1);
                     List<Events> tempEventListing = eventListing[day.Date.ToShortDateString()];
                     int count = tempEventListing.Count();
                     //For loop to create a list of buttons depending on how many events there are
@@ -82,9 +94,10 @@ namespace _481kiosk
                         Grid.SetColumn(stackpanel, 1);
 
                         Button b = new Button();
+                        b.Tag = tempEventListing[i];
+                        b.Click += event_Click;
                         //b.Name = tempEventListing[i].getName();
                         b.Content = grid;
-
                         buttonStackpanel.Children.Add(b);
                     }
                 }
@@ -96,6 +109,28 @@ namespace _481kiosk
 
 
             }
+        }
+
+        void event_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            Events temp = (Events)button.Tag;
+            //Input all information regarding attraction
+            _tabPage.Header = temp.getName();
+            _ucInfo.txtBlockTitle.Text = temp.getName();
+            _ucInfo.txtBlockAddress.Text = temp.getAddress();
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri(temp.getImg(), UriKind.Relative));
+
+            //Project user control onto the new tab's content, and set it as the new selected tab
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
         }
 
         private void btnCalgaryTower_Click(object sender, RoutedEventArgs e)

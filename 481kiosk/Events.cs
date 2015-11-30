@@ -12,13 +12,17 @@ namespace _481kiosk
         private string eventName;
         private string eventDescription;
         private string image;
+        private string address;
+        private string hoursOfOperation;
 
 
-        public Events(string name, string desc, string img)
+        public Events(string name, string desc, string img, string addr, string hours)
         {
             eventName = name;
             eventDescription = desc;
             image = img;
+            address = addr;
+            hoursOfOperation = hours;
         }
 
         public string getName()
@@ -34,6 +38,16 @@ namespace _481kiosk
         public string getImg()
         {
             return image;
+        }
+        
+        public string getAddress()
+        {
+            return address;
+        }
+
+        public string getHours()
+        {
+            return hoursOfOperation;
         }
     }
 
