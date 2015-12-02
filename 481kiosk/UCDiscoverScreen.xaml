@@ -105,7 +105,7 @@
                                     <Grid Grid.Row="1" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="Images/calgary-tower.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/aero-space-museum.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -116,7 +116,7 @@
                                                     </ImageBrush.RelativeTransform>
                                                 </ImageBrush>
                                             </Button.Background>
-                                            <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="Aero Space Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                         </Button>
                                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                         <TextBlock Text="5.9KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
@@ -124,7 +124,7 @@
                                     <Grid Grid.Row="1" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="Images/glenbow-museum.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/calgary-zoo.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -135,7 +135,7 @@
                                                     </ImageBrush.RelativeTransform>
                                                 </ImageBrush>
                                             </Button.Background>
-                                            <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Glenbow Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Calgary Zoo" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                         </Button>
                                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                         <TextBlock Text="6.4KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
@@ -143,7 +143,7 @@
                                     <Grid Grid.Row="1" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="Images/telus-spark.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/canada-sports-hof.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -154,7 +154,7 @@
                                                     </ImageBrush.RelativeTransform>
                                                 </ImageBrush>
                                             </Button.Background>
-                                            <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="Telus Spark" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="Canada's Sports Hall of Fame" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                         </Button>
                                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                         <TextBlock Text="9.2KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
@@ -162,7 +162,7 @@
                                     <Grid Grid.Row="2" Grid.Column="0">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="Images/calgary-tower.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/c-o-p.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -173,7 +173,7 @@
                                                     </ImageBrush.RelativeTransform>
                                                 </ImageBrush>
                                             </Button.Background>
-                                            <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Text="Canadian Olympic Park" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                         </Button>
                                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                         <TextBlock Text="5.9KM       $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
@@ -181,7 +181,7 @@
                                     <Grid Grid.Row="2" Grid.Column="1">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="Images/glenbow-museum.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/calaway-park.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -192,7 +192,7 @@
                                                     </ImageBrush.RelativeTransform>
                                                 </ImageBrush>
                                             </Button.Background>
-                                            <TextBlock x:Name="textBlock8" TextWrapping="Wrap" Text="Glenbow Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            <TextBlock x:Name="textBlock8" TextWrapping="Wrap" Text="Calaway Park" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                         </Button>
                                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                         <TextBlock Text="6.4KM      $" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
@@ -200,7 +200,7 @@
                                     <Grid Grid.Row="2" Grid.Column="2">
                                         <Button Width="175" Height="175" Margin="42,5,42,13">
                                             <Button.Background>
-                                                <ImageBrush ImageSource="Images/telus-spark.jpg" Stretch="UniformToFill">
+                                                <ImageBrush ImageSource="Images/bow-habitat-station.jpg" Stretch="UniformToFill">
                                                     <ImageBrush.RelativeTransform>
                                                         <TransformGroup>
                                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -211,7 +211,7 @@
                                                     </ImageBrush.RelativeTransform>
                                                 </ImageBrush>
                                             </Button.Background>
-                                            <TextBlock x:Name="textBlock9" TextWrapping="Wrap" Text="Telus Spark" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                            <TextBlock x:Name="textBlock9" TextWrapping="Wrap" Text="Bow Habitat Station" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                         </Button>
                                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                         <TextBlock Text="9.2KM      $$" Margin="80,10,74,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
