@@ -22,8 +22,70 @@ namespace _481kiosk
     public partial class UCMapScreen : UserControl
     {
         private MainWindow _main;
-        private String api = "AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY";
-        private String _embeddedInstructions = @"
+        private String[] _travelMode = new String[3] {"TRANSIT", "WALKING", "DRIVING"};
+        private UCInfoScreen _info;
+
+        public UCMapScreen(MainWindow _window)
+        {
+            _main = _window;
+            InitializeComponent();
+           
+            TabItem _prevTab = (TabItem)_main.tabControl.Items.GetItemAt(_main.tabControl.Items.Count - 1);
+            _info = (UCInfoScreen) _prevTab.Content;
+            String destination = _info.txtBlockTitle.Text + " Calgary Alberta" ;
+            String _embeddedMap, _embeddedInstructions;
+
+            //Call generic function to develop the appropriate API call strings
+            setupContent(destination, 0, out _embeddedMap, out _embeddedInstructions);
+
+            //Call generic function to show the map and instructions
+            showContent(_embeddedMap, _embeddedInstructions);
+        }
+
+        //Generic template for creating the appropriate values for each string used in API call
+        private void setupContent(String destination, int mode, out String _embeddedMap, out String _embeddedInstructions)
+        {
+            _embeddedMap = @"
+            <!doctype html><html>
+                <head>
+                    <meta http-equiv='X - UA - Compatible' content='IE=edge'/>
+                </head>
+                <body>
+                    <div id = 'map' style = 'width: 535px; height: 385px;'/>
+                <script type = 'text/javascript'>
+                    function initMap() {
+                        var directionsService = new google.maps.DirectionsService();
+                        var directionsDisplay = new google.maps.DirectionsRenderer();
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 13,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        });
+
+                        directionsDisplay.setMap(map);
+
+                        var request = {
+                            origin: 'Chinook Centre',
+                            destination: '" + destination + @"',
+                            travelMode: google.maps.DirectionsTravelMode." + _travelMode[mode] + @",
+                            unitSystem: google.maps.UnitSystem.METRIC,
+                            optimizeWaypoints: true
+                        };
+
+                        directionsService.route(request, function(response, status)
+                        {
+                            if (status == google.maps.DirectionsStatus.OK)
+                            {
+                                directionsDisplay.setDirections(response);
+                            }
+                        });
+                    }
+                </script> 
+                <script type = 'text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY&signed_in=true&callback=initMap'></script>
+                <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+                </body>
+            </html>";
+
+            _embeddedInstructions = @"
             <!DOCTYPE html>
             <html> 
             <head> 
@@ -39,8 +101,8 @@ namespace _481kiosk
 
                         var request = {
                             origin: 'Chinook Centre',
-                            destination: 'Calgary Tower, Canada',
-                            travelMode: google.maps.DirectionsTravelMode.TRANSIT,
+                            destination: '" + destination + @"',
+                            travelMode: google.maps.DirectionsTravelMode." + _travelMode[mode] + @",
                             unitSystem: google.maps.UnitSystem.METRIC,
                             optimizeWaypoints: true
                         };
@@ -58,74 +120,46 @@ namespace _481kiosk
                 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
             </body> 
             </html>";
+        }
 
-        private String _embeddedMap = @"
-            <!doctype html><html>
-                <head>
-                    <meta http-equiv='X - UA - Compatible' content='IE=edge'/>
-                </head>
-                <body>
-                    <div id = 'map' style = 'width: 520px; height: 360px;'/>
-                <script type = 'text/javascript'>
-                    function initMap() {
-                        var directionsService = new google.maps.DirectionsService();
-                        var directionsDisplay = new google.maps.DirectionsRenderer();
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 13,
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        });
-
-                        directionsDisplay.setMap(map);
-
-                        var request = {
-                            origin: 'Chinook Centre',
-                            destination: 'Calgary Tower, Canada',
-                            travelMode: google.maps.DirectionsTravelMode.TRANSIT,
-                            unitSystem: google.maps.UnitSystem.METRIC,
-                            optimizeWaypoints: true
-                        };
-
-                        directionsService.route(request, function(response, status)
-                        {
-                            if (status == google.maps.DirectionsStatus.OK)
-                            {
-                                directionsDisplay.setDirections(response);
-                            }
-                        });
-                    }
-                </script> 
-                <script type = 'text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY&signed_in=true&callback=initMap'></script>
-                <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-                </body>
-            </html>";
-
-        public UCMapScreen(MainWindow _window)
+        private void showContent(String _map, String _instructions)
         {
-            _main = _window;
-            InitializeComponent();
-            /* Embedded method of google-maps
-            < !doctype html >< html >
-                 < head >
-                 < meta http - equiv = 'X - UA - Compatible' content = 'IE=edge' />
-                            </ head >
-                      < body >
-                          < iframe class='youtube-player' type='text/html' width='510' height='360' frameborder='0' style='border: 0'
-                        src ='https://www.google.com/maps/embed/v1/directions?origin=Chinook Mall&destination=Calgary Tower&mode=transit&key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY'>
-                    </iframe>
-                </body>
-            </html>";
-            */
             try
             {
-                StringBuilder queryAddress = new StringBuilder();
-                queryAddress.Append("https://maps.google.com/maps?output=embed");
-                //queryAddress.Append("https://maps.googleapis.com/maps/api/staticmap?center=Calgary Tower Calgary AB&zoom=14&size=510x360&maptype=roadmap&key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY");
-                wbMap.NavigateToString(_embeddedMap);
-                wbInstructions.NavigateToString(_embeddedInstructions);
-            } catch (Exception e)
+                wbMap.NavigateToString(_map);
+                wbInstructions.NavigateToString(_instructions);
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message.ToString(), "Error");
             }
+        }
+
+        private void btnTransit_Click(object sender, RoutedEventArgs e)
+        {
+            String destination = _info.txtBlockTitle.Text + " Calgary Alberta";
+            String _embeddedMap, _embeddedInstructions;
+            setupContent(destination, 0, out _embeddedMap, out _embeddedInstructions);
+
+            showContent(_embeddedMap, _embeddedInstructions);
+        }
+
+        private void btnWalking_Click(object sender, RoutedEventArgs e)
+        {
+            String destination = _info.txtBlockTitle.Text + " Calgary Alberta";
+            String _embeddedMap, _embeddedInstructions;
+            setupContent(destination, 1, out _embeddedMap, out _embeddedInstructions);
+
+            showContent(_embeddedMap, _embeddedInstructions);
+        }
+
+        private void btnCar_Click(object sender, RoutedEventArgs e)
+        {
+            String destination = _info.txtBlockTitle.Text + " Calgary Alberta";
+            String _embeddedMap, _embeddedInstructions;
+            setupContent(destination, 2, out _embeddedMap, out _embeddedInstructions);
+
+            showContent(_embeddedMap, _embeddedInstructions);
         }
     }
 }
