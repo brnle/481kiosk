@@ -45,5 +45,19 @@ namespace _481kiosk
             _main.tabControl.Items.Add(_tabPage);
             _main.tabControl.SelectedItem = _tabPage;
         }
+
+        private void btnRestaurantsNearby_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCRestaurants _ucRestaurants = new UCRestaurants(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Restaurants";
+
+            _tabPage.Content = _ucRestaurants;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
     }
 }
