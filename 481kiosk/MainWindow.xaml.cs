@@ -24,17 +24,20 @@ namespace _481kiosk
         public MainWindow()
         {
             InitializeComponent();
-            tabLanguage.Width = tabControl.Width - 1;
+
+            //Set up function that will call resize tab function whenever the tab item collection has changed in tab control
             var view = CollectionViewSource.GetDefaultView(tabControl.Items);
             view.CollectionChanged += (o, e) => { resize(tabControl.Items); };
         }
 
+        //Function used to resize all the tab items
         private void resize(ItemCollection items)
         {
+            //Iterates through each tab item and changes the size according to the number of tab items available
             for (int index = 0; index < items.Count; index++)
             {
                 TabItem tab = (TabItem) items.GetItemAt(index);
-                tab.Width = (tabControl.ActualWidth / items.Count) - 2;
+                tab.Width = (tabControl.ActualWidth - 4) / items.Count;
             }
         }
 

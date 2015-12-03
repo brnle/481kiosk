@@ -14,7 +14,7 @@
                     <Setter Property="HorizontalAlignment" Value="Center" />
                 </Style>
             </TabControl.Resources>
-            <TabItem x:Name="tabLanguage" Header="Language" HorizontalAlignment="Left">
+            <TabItem x:Name="tabLanguage" Header="Language" HorizontalAlignment="Left" Width="880">
                 <Grid x:Name="backgroundForTab" Background="#FFE5E5E5">
                     <Label x:Name="labelSelectLanguage" Content="Welcome To" HorizontalAlignment="Left" Margin="196,64,0,0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="48"/>
                     <Label x:Name="labelCalgary" Content="Calgary" HorizontalAlignment="Left" Margin="370,108,0,0" VerticalAlignment="Top" FontFamily="Mistral" FontSize="106.667" Height="auto" Width="auto"/>

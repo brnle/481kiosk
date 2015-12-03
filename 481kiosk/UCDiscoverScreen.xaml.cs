@@ -183,5 +183,28 @@ namespace _481kiosk
             expAttractions.IsExpanded = false;
             expEvents.IsExpanded = false;
         }
+
+        private void rdoDistance_Checked(object sender, RoutedEventArgs e)
+        {
+            int x = 0;
+            int y = 0;
+            var elements = grdAttractions.Children.Cast<UIElement>().
+                Where(ele => Grid.GetColumn(ele) == x && Grid.GetRow(ele) == y);
+            var elements2 = grdAttractions.Children.Cast<UIElement>().
+                Where(ele => Grid.GetColumn(ele) == x+1 && Grid.GetRow(ele) == y+1);
+
+
+            //This grabs a cell from a grid, goes row by row, left to right, so this would be the top left cell
+            Grid _grd = (Grid)grdAttractions.Children[0];
+
+            //Children of grid is organized into another array, goes in order Button-Border-TextBlock-TextBlock
+            Button _btn = (Button) _grd.Children[0];
+            Border _brd = (Border)_grd.Children[1];
+            TextBlock _txtblDistance = (TextBlock)_grd.Children[2];
+            TextBlock _txtblPrice= (TextBlock)_grd.Children[3];
+
+            //Just a message to show which grid block you're looking at
+            MessageBox.Show(_txtblDistance.Text);
+        }
     }
 }
