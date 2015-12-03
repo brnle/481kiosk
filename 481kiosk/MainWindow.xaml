@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:_481kiosk"
         mc:Ignorable="d"
         Title="Calgary Information Kiosk" Height="696" Width="900" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="656" VerticalAlignment="Top" Width="882">
-            <TabItem x:Name="tabLanguage" Header="Language">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabPanel}">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                </Style>
+            </TabControl.Resources>
+            <TabItem x:Name="tabLanguage" Header="Language" HorizontalAlignment="Left">
                 <Grid x:Name="backgroundForTab" Background="#FFE5E5E5">
                     <Label x:Name="labelSelectLanguage" Content="Welcome To" HorizontalAlignment="Left" Margin="196,64,0,0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="48"/>
                     <Label x:Name="labelCalgary" Content="Calgary" HorizontalAlignment="Left" Margin="370,108,0,0" VerticalAlignment="Top" FontFamily="Mistral" FontSize="106.667" Height="auto" Width="auto"/>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace _481kiosk
         public MainWindow()
         {
             InitializeComponent();
+            tabLanguage.Width = tabControl.Width - 1;
+            var view = CollectionViewSource.GetDefaultView(tabControl.Items);
+            view.CollectionChanged += (o, e) => { resize(tabControl.Items); };
+        }
+
+        private void resize(ItemCollection items)
+        {
+            for (int index = 0; index < items.Count; index++)
+            {
+                TabItem tab = (TabItem) items.GetItemAt(index);
+                tab.Width = (tabControl.ActualWidth / items.Count) - 2;
+            }
         }
 
         private void btnEnglish_Click(object sender, RoutedEventArgs e)

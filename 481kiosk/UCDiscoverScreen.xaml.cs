@@ -171,5 +171,17 @@ namespace _481kiosk
             _main.tabControl.Items.Add(_tabPage);
             _main.tabControl.SelectedItem = _tabPage;
         }
+
+        private void expEvents_Expanded(object sender, RoutedEventArgs e)
+        {
+            expAttractions.IsExpanded = false;
+            expRestaurants.IsExpanded = false;
+        }
+
+        private void expRestaurants_Expanded(object sender, RoutedEventArgs e)
+        {
+            expAttractions.IsExpanded = false;
+            expEvents.IsExpanded = false;
+        }
     }
 }

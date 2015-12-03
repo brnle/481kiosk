@@ -19,7 +19,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Height="41" Width="152" FontSize="26.667"/>
-                <Expander Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800">
+                <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="True" Width="800">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="163*"/>
@@ -222,7 +222,7 @@
                         </GroupBox>
                     </Grid>
                 </Expander>
-                <Expander Grid.Row ="2" Header="Events" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800">
+                <Expander x:Name="expEvents" Grid.Row ="2" Header="Events" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800" Expanded="expEvents_Expanded">
                     <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0">
 
                         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="2,0,-2,0">
@@ -234,7 +234,7 @@
                         </ScrollViewer>
                     </GroupBox>
                 </Expander>
-                <Expander Grid.Row ="3" Header="Restaurants" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800">
+                <Expander x:Name="expRestaurants" Grid.Row ="3" Header="Restaurants" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800" Expanded="expRestaurants_Expanded">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
