@@ -146,11 +146,25 @@ namespace _481kiosk
             //Input all information regarding attraction
             _tabPage.Header = "Calgary Tower";
             _ucInfo.txtBlockTitle.Text = "Calgary Tower";
-            _ucInfo.txtBlockAddress.Text = "101 9 Ave SW\nCalgary, AB T2P 1J9";
+            _ucInfo.txtBlockAddress.Text = "101 9 Ave SW, Calgary, AB T2P 1J9";
             _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calgary-tower.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Start your Calgary adventure 525 feet in the air! Rising from the downtown core, the Calgary Tower is a must-see for any visitor. On the observation deck, experience a 360° panoramic view of the bustling city, the foothills and the majestic Rocky Mountains. Stand on the amazing glass floor for a birds-eye view of the streets below.
 
-            //Project user control onto the new tab's content, and set it as the new selected tab
-            _tabPage.Content = _ucInfo;
+Multimedia tours are provided to each guest who visits the Calgary Tower! This informative and inspiring tour is free with admission and is available in four languages: English, French, Mandarin, and German.
+
+This award-winning tour begins at the base of the Tower with an interesting perspective on the elevator ride to the top. Once at the Observation Deck, the guide provides you with a panoramic view of the city which matches the views from our windows. Certain landmarks are highlighted and by touching these buildings on your screen, you will be provided with information and interesting facts.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - 9:00am to 9:00pm
+Tues - 9:00am to 9:00pm
+Wed - 9:00am to 9:00pm
+Thurs - 9:00am to 9:00pm
+Fri - 9:00am to 9:00pm
+Sat - 9:00am to 9:00pm
+Sun - 9:00am to 9:00pm
+
+*Hours extend to 10:00 p.m. from July to August";
+              //Project user control onto the new tab's content, and set it as the new selected tab
+              _tabPage.Content = _ucInfo;
             _main.tabControl.Items.Add(_tabPage);
             _main.tabControl.SelectedItem = _tabPage;
         }
@@ -164,8 +178,24 @@ namespace _481kiosk
 
             _tabPage.Header = "Glenbow Museum";
             _ucInfo.txtBlockTitle.Text = "Glenbow Museum";
-            _ucInfo.txtBlockAddress.Text = "130 9 Ave SE\nCalgary, AB T2G 0P3";
+            _ucInfo.txtBlockAddress.Text = "130 9 Ave SE, Calgary, AB T2G 0P3";
             _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/glenbow-museum.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Glenbow's vision is for more people to experience art and culture more often. In February of 2014, Glenbow announced its new direction - to provide visitors with a new kind of art museum experience. Glenbow showcases world-renowned travelling and permanent exhibitions that are meaningful to many diverse groups in our community, boasts the largest art collection in Western Canada and provides access and care to our collections.
+
+Glenbow also tells the story of Southern Alberta and the West to thousands of visitors to our city each year through permanent exhibitions on our third floor.
+
+Last year, 120,000 guests passed through Glenbow's doors, including more than 63,000 school children who took part in our School Programs and Chevron Museum School. Glenbow's Library and Archives is Canada's largest non-governmental archival repository. It is a major research centre for historians, writers, students, genealogists, filmmakers and media.
+
+The Glenbow Shop offers visitors a unique retail experience while providing a viable revenue stream for the institution. Glenbow also serves as a rental facility for many corporate and private functions, offering a 210-seat theatre, meeting rooms and three gallery floors as event space.";
+
+
+            _ucInfo.txtBlockHours.Text = @"Mon - Closed
+Tues - 9:00am to 5:00pm
+Wed - 9:00am to 5:00pm
+Thurs - 9:00am to 5:00pm
+Fri - 9:00am to 5:00pm
+Sat - 9:00am to 5:00pm
+Sun - 12:00pm to 5:00pm";
 
             _tabPage.Content = _ucInfo;
             _main.tabControl.Items.Add(_tabPage);
@@ -205,6 +235,219 @@ namespace _481kiosk
 
             //Just a message to show which grid block you're looking at
             MessageBox.Show(_txtblDistance.Text);
+        }
+
+        private void btnCalgaryZoo_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Calgary Zoo";
+            _ucInfo.txtBlockTitle.Text = "Calgary Zoo";
+            _ucInfo.txtBlockAddress.Text = "1300 Zoo Rd NE, Calgary, AB T2E 7V6";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calgary-zoo.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Animatronic Dinosaurs are Back!
+
+Watch for triceratops grazing among the bushes, then look up to see fearsome T-Rex’s banana-sized teeth ready to tear into his next meal. Don’t run! You haven’t actually travelled back in time – it just feels like it.
+
+This March, The Calgary Zoo is bringing back Dinosaurs Alive, the animatronic dinosaur exhibit previously seen in 2010. Following the refurbishment of the Prehistoric Park, the zoo will introduce 17 dinosaur models into the park to add to the current collection.
+
+These realistic, fleshy models have special engineering to help them move in a true fashion. All of the creatures vocalize and some can even be controlled through the touch of a button by a curious visitor.
+
+Come and see for yourself what Alberta might have looked like when dinosaurs reigned supreme.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - 9:00am to 5:00pm
+Tues - 9:00am to 5:00pm
+Wed - 9:00am to 5:00pm
+Thurs - 9:00am to 5:00pm
+Fri - 9:00am to 5:00pm
+Sat - 9:00am to 5:00pm
+Sun - 9:00am to 5:00pm";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void btnTelusSpark_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Telus Spark";
+            _ucInfo.txtBlockTitle.Text = "Telus Spark";
+            _ucInfo.txtBlockAddress.Text = "220 St Georges Dr NE, Calgary, AB T2E 5T2";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/telus-spark.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"TELUS Spark is Canada's first new purpose-built Science Centre in over 25 years and a place for people of all ages and abilities to embrace the exploration and discovery of science, technology and art in new and amazing ways.
+
+Discover for yourself what makes the world around us so undeniably incredible by exploring over 150 exhibits, programs and demonstrations across Galleries, Calgary's only HD Digital Dome Theatre, travelling exhibitions, an Outdoor Park, and more.
+
+Ignite your curiosity in the thrilling overlap of science, art and technology.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - 10:00am to 4:00pm
+Tues - 10:00am to 4:00pm
+Wed - 10:00am to 4:00pm
+Thurs - 10:00am to 4:00pm
+Fri - 10:00am to 4:00pm
+Sat - 10:00am to 5:00pm
+Sun - 10:00am to 4:00pm
+
+*Adult Night every second Thursday of the month, 6:00pm to 10:00pm";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void btnCanadaSportsHOF_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Canada's Sports Hall of Fame";
+            _ucInfo.txtBlockTitle.Text = "Canada's Sports Hall of Fame";
+            _ucInfo.txtBlockAddress.Text = "169 Canada Olympic Road SW, Calgary, AB T3B 6B7";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/canada-sports-hof.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Canada’s Sports Hall of Fame is an international award-winning facility with over 40,000 square feet of inspiring experiences. Located at WinSport, Canada’s Sports Hall of Fame features 12 galleries, more than 52 hands-on interactive experiences and a collection of more than 95,000 artefacts. It is a place of honour for the 605 inducted sport legends and the 65 sports they represent. Our mission is to share the stories of the achievements of our inducted Honoured Members so that we can inspire all Canadians to be the best they can be in all aspects of life. Spanning nearly 150 years of Canadian sport history, there is something fun, educational and inspiring for people of all ages.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - 10:00am to 5:00pm
+Tues - 10:00am to 5:00pm
+Wed - 10:00am to 5:00pm
+Thurs - 10:00am to 5:00pm
+Fri - 10:00am to 5:00pm
+Sat - 10:00am to 5:00pm
+Sun - 10:00am to 5:00pm";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void btnAeroSpaceMuseum_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Aero Space Museum";
+            _ucInfo.txtBlockTitle.Text = "Aero Space Museum";
+            _ucInfo.txtBlockAddress.Text = "4629 McCall Way NE, Calgary, AB T2E 8A5";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/aero-space-museum.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Who doesn’t wish they could fly? Discover Canada’s aviation adventure and enjoy seeing aircraft up close while hearing the roar of a modern jet overhead. Everything from Canada’s first powered aircraft to the majestic “Queen of the Sky” Lancaster are on display in a historic Second World War drill hall and outdoor hangar.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - 9:00am to 4:00pm
+Tues - 10:00am to 4:00pm
+Wed - 10:00am to 4:00pm
+Thurs - 10:00am to 4:00pm
+Fri - 10:00am to 4:00pm
+Sat - 10:00am to 4:00pm
+Sun - 10:00am to 4:00pm";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void btnCanadaOlympicPark_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Canada Olympic Park";
+            _ucInfo.txtBlockTitle.Text = "Canada Olympic Park";
+            _ucInfo.txtBlockAddress.Text = "88 Canada Olympic Road SW, Calgary, AB T3B 5R5";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/c-o-p.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Come out and play at WinSport, Calgary’s year-round playground and site of the 1988 Winter Olympic Games. In summer, kids can explore the Activity Centre featuring a 30 foot climbing wall and EuroBungy. The whole gang can hit the greens of our 18-hole mini-golf course while the more adventurous might want to take on the Adrenaline Combo—a Canadian Signature Experience that combines North America’s fastest zipline and Summer Bobsleigh. Winter brings us back to our Olympic roots as we transform into ski and snowboard central with hill tickets starting at $10.";
+            _ucInfo.txtBlockHours.Text = @"Mon - 8:00am to 9:00pm
+Tues - 8:00am to 9:00pm
+Wed - 8:00am to 9:00pm
+Thurs - 8:00am to 9:00pm
+Fri - 8:00am to 9:00pm
+Sat - 8:00am to 9:00pm
+Sun - 8:00am to 9:00pm
+
+*Times vary per building";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void btnCalawayPark_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Calaway Park";
+            _ucInfo.txtBlockTitle.Text = "Calaway Park";
+            _ucInfo.txtBlockAddress.Text = "245033 Range Rd 33, Calgary, AB T3Z 2E9";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calaway-park.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"32 Family-friendly rides! High-energy entertainment! Tempting treats! Calaway Park has something for everyone!
+ 
+As Western Canada’s Largest Outdoor Family Amusement Park, Calaway Park has been offering affordable, family- friendly fun and entertainment for over three decades.
+ 
+Ever since our award-winning theme park first opened its doors in 1982, Calaway Park has built on our well-deserved reputation for excellence by offering the best attractions, no less than 32 rides designed for thrill-seekers of all ages and beautifully choreographed, high-energy entertainment.
+ 
+Factor in Calaway Park’s one-pay gate, which include unlimited rides, attractions, must-see Calaway Live shows and unparalleled street performers such as stilt walkers, jugglers and clowns, not to mention lots of free parking – and it’s easy to see why families of all sizes venture out to Calaway Park’s stunning location in the shadow of the Rocky Mountains to enjoy a day full of safe, family fun.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - Closed
+Tues - Closed
+Wed - Closed
+Thurs - Closed
+Fri - Closed
+Sat - 10:00am to 7:00pm
+Sun - 10:00am to 7:00pm
+
+*Closed Weekdays from May 21 to June 21
+**Open from May 2016 to October 2016";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void btnBowHabitat_Click(object sender, RoutedEventArgs e)
+        {
+            _main.resetTab(_main.tabControl.SelectedIndex);
+
+            UCInfoScreen _ucInfo = new UCInfoScreen(_main);
+            TabItem _tabPage = new TabItem();
+
+            _tabPage.Header = "Bow Habitat Station";
+            _ucInfo.txtBlockTitle.Text = "Bow Habitat Station";
+            _ucInfo.txtBlockAddress.Text = "1440 17a St SE, Calgary, AB T2G 4T9";
+            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/bow-habitat-station.jpg", UriKind.Relative));
+            _ucInfo.txtDescription.Text = @"Investigate, explore and discover Alberta’s fish, wildlife, water and aquatic ecosystems. Explore hands-on exhibits in our Discovery Centre, feed the fish on a tour of our Fish Hatchery, go fishing in our Trout Pond, and take a stroll along the trails in our Interpretive Wetland.
+
+There is fun for the whole family at Bow Habitat Station!
+
+Located minutes east of downtown in the vibrant community of Inglewood, Bow Habitat Station offers a unique learning experience that’s sure to be a splash. The facility is for all ages and is completely wheelchair accessible. Free parking is available.";
+
+            _ucInfo.txtBlockHours.Text = @"Mon - Closed
+Tues - Closed
+Wed - 10:00am to 4:00pm
+Thurs - 10:00am to 4:00pm
+Fri - 10:00am to 4:00pm
+Sat - 10:00am to 4:00pm
+Sun - 10:00am to 4:00pm
+
+*Interpretive Wetland open from 5:00am to 11:00pm
+**10:00am to 8:00pm on third Thursday every month";
+
+            _tabPage.Content = _ucInfo;
+            _main.tabControl.Items.Add(_tabPage);
+            _main.tabControl.SelectedItem = _tabPage;
         }
     }
 }

@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:_481kiosk"
         mc:Ignorable="d"
         Title="Calgary Information Kiosk" Height="696" Width="900" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
-
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="656" VerticalAlignment="Top" Width="882">
             <TabControl.Resources>
@@ -14,18 +13,18 @@
                     <Setter Property="HorizontalAlignment" Value="Center" />
                 </Style>
             </TabControl.Resources>
-            <TabItem x:Name="tabLanguage" Header="Language" HorizontalAlignment="Left" Width="880">
+            <TabItem x:Name="tabLanguage" Header="Language" HorizontalAlignment="Center" Width="880">
                 <Grid x:Name="backgroundForTab" Background="#FFE5E5E5">
                     <Label x:Name="labelSelectLanguage" Content="Welcome To" HorizontalAlignment="Left" Margin="196,64,0,0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="48"/>
                     <Label x:Name="labelCalgary" Content="Calgary" HorizontalAlignment="Left" Margin="370,108,0,0" VerticalAlignment="Top" FontFamily="Mistral" FontSize="106.667" Height="auto" Width="auto"/>
                     <Button x:Name="btnEnglish" Content="English" HorizontalAlignment="Left" Margin="72,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnEnglish_Click"/>
-                    <Button x:Name="btnFrench" Content="Français" HorizontalAlignment="Left" Margin="265,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnSpanish" Content="Español" HorizontalAlignment="Left" Margin="458,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnChinese" Content="中国" HorizontalAlignment="Left" Margin="651,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnHindi" Content="हिंदी" HorizontalAlignment="Left" Margin="72,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnArabic" Content="العربية" HorizontalAlignment="Left" Margin="265,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnRussian" Content="Русский" HorizontalAlignment="Left" Margin="458,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
-                    <Button x:Name="btnJapanese" Content="日本語" HorizontalAlignment="Left" Margin="651,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667"/>
+                    <Button x:Name="btnFrench" Content="Français" HorizontalAlignment="Left" Margin="265,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnFrench_Click"/>
+                    <Button x:Name="btnSpanish" Content="Español" HorizontalAlignment="Left" Margin="458,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnSpanish_Click"/>
+                    <Button x:Name="btnChinese" Content="中国" HorizontalAlignment="Left" Margin="651,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnChinese_Click"/>
+                    <Button x:Name="btnHindi" Content="हिंदी" HorizontalAlignment="Left" Margin="72,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnHindi_Click"/>
+                    <Button x:Name="btnArabic" Content="العربية" HorizontalAlignment="Left" Margin="265,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnArabic_Click"/>
+                    <Button x:Name="btnRussian" Content="Русский" HorizontalAlignment="Left" Margin="458,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnRussian_Click"/>
+                    <Button x:Name="btnJapanese" Content="日本語" HorizontalAlignment="Left" Margin="651,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="14.667" Click="btnJapanese_Click"/>
                 </Grid>
             </TabItem>
 

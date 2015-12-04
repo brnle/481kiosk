@@ -35,8 +35,14 @@ namespace _481kiosk
             }
 
             _main.resetTab(_main.tabControl.SelectedIndex);
+            TabItem _current = (TabItem) _main.tabControl.SelectedItem;
 
-            UCMapScreen _ucMap = new UCMapScreen(_main);
+            if (this.txtBlockTitle.Text.Equals("Calaway Park"))
+            {
+                MessageBox.Show("Calaway Park does not have a transit route available, please select one of the other two modes of transportation. Sorry for the inconvenience.");
+            }
+
+            UCMapScreen _ucMap = new UCMapScreen(_main, this.txtBlockAddress.Text.ToString().Replace("\n", " "));
             TabItem _tabPage = new TabItem();
 
             _tabPage.Header = "Navigation";

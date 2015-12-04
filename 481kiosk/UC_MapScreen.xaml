@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
     <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="36,23,0,0" TextWrapping="Wrap" Text="INSTRUCTIONS" VerticalAlignment="Top" FontSize="26.667" Width="184"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="36,23,0,0" VerticalAlignment="Top" FontSize="21.333"/>
         <Button x:Name="btnTransit" Content="Transit" HorizontalAlignment="Left" Margin="279,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnTransit_Click"/>
         <Button x:Name="btnWalking" Content="Walking" HorizontalAlignment="Left" Margin="487,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnWalking_Click"/>
         <Button x:Name="btnCar" Content="Driving" HorizontalAlignment="Left" Margin="693,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnCar_Click"/>

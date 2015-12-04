@@ -66,5 +66,40 @@ namespace _481kiosk
                 }
             }
         }
+
+        private void btnFrench_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in French");
+        }
+
+        private void btnSpanish_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in Spanish");
+        }
+
+        private void btnChinese_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in Chinese");
+        }
+
+        private void btnHindi_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in Hindi");
+        }
+
+        private void btnArabic_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in Arabic");
+        }
+
+        private void btnRussian_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in Russian");
+        }
+
+        private void btnJapanese_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This button will display the Kiosk content in Japanese");
+        }
     }
 }

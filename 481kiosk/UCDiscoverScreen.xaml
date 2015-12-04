@@ -66,7 +66,7 @@
                                     <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                                 </Grid>
                                 <Grid Grid.Row="0" Grid.Column="1">
-                                    <Button x:Name="btnCalgaryZoo" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnCalgaryZoo" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalgaryZoo_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/calgary-zoo.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>
@@ -86,7 +86,7 @@
                                     <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="0" Grid.Column="2">
-                                    <Button x:Name="btnTelusSpark" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnTelusSpark" Width="175" Height="175" Margin="42,5,42,13" Click="btnTelusSpark_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/telus-spark.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>
@@ -106,7 +106,7 @@
                                     <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="1" Grid.Column="0">
-                                    <Button x:Name="btnCanadaSportsHOF" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnCanadaSportsHOF" Width="175" Height="175" Margin="42,5,42,13" Click="btnCanadaSportsHOF_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/canada-sports-hof.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>
@@ -146,7 +146,7 @@
                                     <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="1" Grid.Column="2">
-                                    <Button x:Name="btnAeroSpaceMuseum" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnAeroSpaceMuseum" Width="175" Height="175" Margin="42,5,42,13" Click="btnAeroSpaceMuseum_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/aero-space-museum.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>
@@ -166,7 +166,7 @@
                                     <TextBlock Text="$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="0">
-                                    <Button x:Name="btnCanadaOlympicPark" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnCanadaOlympicPark" Width="175" Height="175" Margin="42,5,42,13" Click="btnCanadaOlympicPark_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/c-o-p.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>
@@ -186,7 +186,7 @@
                                     <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="1">
-                                    <Button x:Name="btnCalawayPark" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnCalawayPark" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalawayPark_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/calaway-park.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>
@@ -206,7 +206,7 @@
                                     <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="2">
-                                    <Button x:Name="btnBowHabitat" Width="175" Height="175" Margin="42,5,42,13">
+                                    <Button x:Name="btnBowHabitat" Width="175" Height="175" Margin="42,5,42,13" Click="btnBowHabitat_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="Images/bow-habitat-station.jpg" Stretch="UniformToFill">
                                                 <ImageBrush.RelativeTransform>

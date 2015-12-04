@@ -23,27 +23,25 @@ namespace _481kiosk
     {
         private MainWindow _main;
         private String[] _travelMode = new String[3] {"TRANSIT", "WALKING", "DRIVING"};
-        private UCInfoScreen _info;
+        private String destination;
 
-        public UCMapScreen(MainWindow _window)
+        public UCMapScreen(MainWindow _window, String location)
         {
             _main = _window;
             InitializeComponent();
-           
-            TabItem _prevTab = (TabItem)_main.tabControl.Items.GetItemAt(_main.tabControl.Items.Count - 1);
-            _info = (UCInfoScreen) _prevTab.Content;
-            String destination = _info.txtBlockTitle.Text + " Calgary Alberta" ;
+            this.textBlock.Text = "Transit Instructions";
+            destination = location;
             String _embeddedMap, _embeddedInstructions;
 
             //Call generic function to develop the appropriate API call strings
-            setupContent(destination, 0, out _embeddedMap, out _embeddedInstructions);
+            setupContent(0, out _embeddedMap, out _embeddedInstructions);
 
             //Call generic function to show the map and instructions
             showContent(_embeddedMap, _embeddedInstructions);
         }
 
         //Generic template for creating the appropriate values for each string used in API call
-        private void setupContent(String destination, int mode, out String _embeddedMap, out String _embeddedInstructions)
+        private void setupContent(int mode, out String _embeddedMap, out String _embeddedInstructions)
         {
             _embeddedMap = @"
             <!doctype html><html>
@@ -137,27 +135,27 @@ namespace _481kiosk
 
         private void btnTransit_Click(object sender, RoutedEventArgs e)
         {
-            String destination = _info.txtBlockTitle.Text + " Calgary Alberta";
+            this.textBlock.Text = "Transit Instructions";
             String _embeddedMap, _embeddedInstructions;
-            setupContent(destination, 0, out _embeddedMap, out _embeddedInstructions);
+            setupContent(0, out _embeddedMap, out _embeddedInstructions);
 
             showContent(_embeddedMap, _embeddedInstructions);
         }
 
         private void btnWalking_Click(object sender, RoutedEventArgs e)
         {
-            String destination = _info.txtBlockTitle.Text + " Calgary Alberta";
+            this.textBlock.Text = "Walking Instructions";
             String _embeddedMap, _embeddedInstructions;
-            setupContent(destination, 1, out _embeddedMap, out _embeddedInstructions);
+            setupContent(1, out _embeddedMap, out _embeddedInstructions);
 
             showContent(_embeddedMap, _embeddedInstructions);
         }
 
         private void btnCar_Click(object sender, RoutedEventArgs e)
         {
-            String destination = _info.txtBlockTitle.Text + " Calgary Alberta";
+            this.textBlock.Text = "Driving Instructions";
             String _embeddedMap, _embeddedInstructions;
-            setupContent(destination, 2, out _embeddedMap, out _embeddedInstructions);
+            setupContent(2, out _embeddedMap, out _embeddedInstructions);
 
             showContent(_embeddedMap, _embeddedInstructions);
         }
