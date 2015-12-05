@@ -78,7 +78,7 @@ namespace _481kiosk
                         });
                     }
                 </script> 
-                <script type = 'text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY&signed_in=true&callback=initMap'></script>
+                <script type = 'text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY&callback=initMap'></script>
                 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
                 </body>
             </html>";
@@ -114,7 +114,7 @@ namespace _481kiosk
                         });
                     }
                 </script> 
-                <script type = 'text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY&signed_in=true&callback=initMap'></script>
+                <script type = 'text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDXmn-af22SRskpan1hT4KljI1XuWKSwVY&callback=initMap'></script>
                 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
             </body> 
             </html>";

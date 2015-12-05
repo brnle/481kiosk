@@ -225,16 +225,21 @@ Sun - 12:00pm to 5:00pm";
             b.Height = 175;
             b.Click += btnCalgaryTower_Click;
 
-            TransformGroup transGroup = new TransformGroup();
-            transGroup.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup.Children.Add(new TranslateTransform());
-
-            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/calgary-tower.jpg", UriKind.Relative)));
-            image.RelativeTransform = transGroup;
-            image.Stretch = Stretch.UniformToFill;
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("Images/calgary-tower.jpg", UriKind.Relative)));
             b.Background = image;
+            image.Stretch = Stretch.UniformToFill;
+
+            TextBlock textName = new TextBlock();
+            textName.TextWrapping = TextWrapping.Wrap;
+            textName.HorizontalAlignment = HorizontalAlignment.Right;
+            textName.VerticalAlignment = VerticalAlignment.Bottom;
+            textName.FontFamily = new FontFamily("Stencil");
+            textName.FontSize = 13.333;
+            textName.Margin = new Thickness(0, 130, 50, 0);
+            textName.Foreground = Brushes.White;
+            textName.Text = "Calgary Tower";
+
+            b.Content = textName;
 
             Thickness margin = b.Margin;
             margin.Left = 42;
@@ -279,16 +284,22 @@ Sun - 12:00pm to 5:00pm";
             b2.Height = 175;
             b2.Click += btnGlenbowMuseum_Click;
 
-            TransformGroup transGroup2 = new TransformGroup();
-            transGroup2.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup2.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup2.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup2.Children.Add(new TranslateTransform());
-
-            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/glenbow-museum.jpg", UriKind.Relative)));
-            image2.RelativeTransform = transGroup2;
+            //GLENBOW MUSEUM BUTTON
+            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("Images/glenbow-museum.jpg", UriKind.Relative)));
             image2.Stretch = Stretch.UniformToFill;
             b2.Background = image2;
+
+            TextBlock textName2 = new TextBlock();
+            textName2.TextWrapping = TextWrapping.Wrap;
+            textName2.HorizontalAlignment = HorizontalAlignment.Right;
+            textName2.VerticalAlignment = VerticalAlignment.Bottom;
+            textName2.FontFamily = new FontFamily("Stencil");
+            textName2.FontSize = 13.333;
+            textName2.Margin = new Thickness(0, 130, 50, 0);
+            textName2.Foreground = Brushes.White;
+            textName2.Text = "Glenbow Museum";
+
+            b2.Content = textName2;
 
             Thickness margin2 = b.Margin;
             margin2.Left = 42;
@@ -333,12 +344,22 @@ Sun - 12:00pm to 5:00pm";
             b3.Height = 175;
             b3.Click += btnTelusSpark_Click;
 
-
-
-            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/telus-spark.jpg", UriKind.Relative)));
-            image3.RelativeTransform = transGroup;
+            //TELUS SPARK BUTTON
+            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("Images/telus-spark.jpg", UriKind.Relative)));
             image3.Stretch = Stretch.UniformToFill;
             b3.Background = image3;
+
+            TextBlock textName3 = new TextBlock();
+            textName3.TextWrapping = TextWrapping.Wrap;
+            textName3.HorizontalAlignment = HorizontalAlignment.Right;
+            textName3.VerticalAlignment = VerticalAlignment.Bottom;
+            textName3.FontFamily = new FontFamily("Stencil");
+            textName3.FontSize = 13.333;
+            textName3.Margin = new Thickness(0, 130, 50, 0);
+            textName3.Foreground = Brushes.White;
+            textName3.Text = "Telus Spark";
+
+            b3.Content = textName3;
 
             Thickness margin3 = b3.Margin;
             margin3.Left = 42;
@@ -383,10 +404,22 @@ Sun - 12:00pm to 5:00pm";
             b4.Height = 175;
             b4.Click += btnBowHabitat_Click;
 
-            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/bow-habitat-station.jpg", UriKind.Relative)));
-            image4.RelativeTransform = transGroup;
+            //BOW HABITAT STATION BUTTON
+            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("Images/bow-habitat-station.jpg", UriKind.Relative)));
             image4.Stretch = Stretch.UniformToFill;
             b4.Background = image4;
+
+            TextBlock textName4 = new TextBlock();
+            textName4.TextWrapping = TextWrapping.Wrap;
+            textName4.HorizontalAlignment = HorizontalAlignment.Right;
+            textName4.VerticalAlignment = VerticalAlignment.Bottom;
+            textName4.FontFamily = new FontFamily("Stencil");
+            textName4.FontSize = 13.333;
+            textName4.Margin = new Thickness(0, 130, 50, 0);
+            textName4.Foreground = Brushes.White;
+            textName4.Text = "Bow Habitat Station";
+
+            b4.Content = textName4;
 
             b4.Margin = new Thickness(42, 5, 42, 13);
 
@@ -421,10 +454,22 @@ Sun - 12:00pm to 5:00pm";
             b5.Height = 175;
             b5.Click += btnCalgaryZoo_Click;
 
-            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/calgary-zoo.jpg", UriKind.Relative)));
-            image5.RelativeTransform = transGroup;
+            //CALGARY ZOO BUTTON
+            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("Images/calgary-zoo.jpg", UriKind.Relative)));
             image5.Stretch = Stretch.UniformToFill;
             b5.Background = image5;
+
+            TextBlock textName5 = new TextBlock();
+            textName5.TextWrapping = TextWrapping.Wrap;
+            textName5.HorizontalAlignment = HorizontalAlignment.Right;
+            textName5.VerticalAlignment = VerticalAlignment.Bottom;
+            textName5.FontFamily = new FontFamily("Stencil");
+            textName5.FontSize = 13.333;
+            textName5.Margin = new Thickness(0, 130, 50, 0);
+            textName5.Foreground = Brushes.White;
+            textName5.Text = "Calgary Zoo";
+
+            b5.Content = textName5;
 
             b5.Margin = new Thickness(42, 5, 42, 13);
 
@@ -438,7 +483,7 @@ Sun - 12:00pm to 5:00pm";
             border5.Margin = new Thickness(38, 8, 0, 0);
 
             TextBlock text5 = new TextBlock();
-            text5.Text = "13.3              $$$";
+            text5.Text = "8.0KM              $$$";
             text5.Margin = new Thickness(80, 10, 74, 0);
             text5.HorizontalAlignment = HorizontalAlignment.Left;
             text5.VerticalAlignment = VerticalAlignment.Bottom;
@@ -453,10 +498,22 @@ Sun - 12:00pm to 5:00pm";
             b6.Height = 175;
             b6.Click += btnCanadaOlympicPark_Click;
 
-            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/c-o-p.jpg", UriKind.Relative)));
-            image6.RelativeTransform = transGroup;
+            //CANADA OLYMPIC PARK BUTTON
+            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("Images/c-o-p.jpg", UriKind.Relative)));
             image6.Stretch = Stretch.UniformToFill;
             b6.Background = image6;
+
+            TextBlock textName6 = new TextBlock();
+            textName6.TextWrapping = TextWrapping.Wrap;
+            textName6.HorizontalAlignment = HorizontalAlignment.Right;
+            textName6.VerticalAlignment = VerticalAlignment.Bottom;
+            textName6.FontFamily = new FontFamily("Stencil");
+            textName6.FontSize = 13.333;
+            textName6.Margin = new Thickness(0, 130, 50, 0);
+            textName6.Foreground = Brushes.White;
+            textName6.Text = "Canada Olympic Park";
+
+            b6.Content = textName6;
 
             b6.Margin = new Thickness(42, 5, 42, 13);
 
@@ -486,10 +543,22 @@ Sun - 12:00pm to 5:00pm";
             b7.Height = 175;
             b7.Click += btnCanadaSportsHOF_Click;
 
-            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/canada-sports-hof.jpg", UriKind.Relative)));
-            image7.RelativeTransform = transGroup;
+            //CANADA SPORTS HALL OF FAME BUTTON
+            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("Images/canada-sports-hof.jpg", UriKind.Relative)));
             image7.Stretch = Stretch.UniformToFill;
             b7.Background = image7;
+
+            TextBlock textName7 = new TextBlock();
+            textName7.TextWrapping = TextWrapping.Wrap;
+            textName7.HorizontalAlignment = HorizontalAlignment.Right;
+            textName7.VerticalAlignment = VerticalAlignment.Bottom;
+            textName7.FontFamily = new FontFamily("Stencil");
+            textName7.FontSize = 13.333;
+            textName7.Margin = new Thickness(0, 130, 50, 0);
+            textName7.Foreground = Brushes.White;
+            textName7.Text = "Canada's Sports Hall of Fame";
+
+            b7.Content = textName7;
 
             b7.Margin = new Thickness(42, 5, 42, 13);
 
@@ -519,10 +588,22 @@ Sun - 12:00pm to 5:00pm";
             b8.Height = 175;
             b8.Click += btnAeroSpaceMuseum_Click;
 
-            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/aero-space-museum.jpg", UriKind.Relative)));
-            image8.RelativeTransform = transGroup;
+            //AERO SPACE MUSEUM
+            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("Images/aero-space-museum.jpg", UriKind.Relative)));
             image8.Stretch = Stretch.UniformToFill;
             b8.Background = image8;
+
+            TextBlock textName8 = new TextBlock();
+            textName8.TextWrapping = TextWrapping.Wrap;
+            textName8.HorizontalAlignment = HorizontalAlignment.Right;
+            textName8.VerticalAlignment = VerticalAlignment.Bottom;
+            textName8.FontFamily = new FontFamily("Stencil");
+            textName8.FontSize = 13.333;
+            textName8.Margin = new Thickness(0, 130, 50, 0);
+            textName8.Foreground = Brushes.White;
+            textName8.Text = "Aero Space Museum";
+
+            b8.Content = textName8;
 
             b8.Margin = new Thickness(42, 5, 42, 13);
 
@@ -553,10 +634,22 @@ Sun - 12:00pm to 5:00pm";
             b9.Height = 175;
             b9.Click += btnCalawayPark_Click;
 
-            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/calaway-park.jpg", UriKind.Relative)));
-            image9.RelativeTransform = transGroup;
+            //CALAWAY PARK BUTTON
+            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("Images/calaway-park.jpg", UriKind.Relative)));
             image9.Stretch = Stretch.UniformToFill;
             b9.Background = image9;
+
+            TextBlock textName9 = new TextBlock();
+            textName9.TextWrapping = TextWrapping.Wrap;
+            textName9.HorizontalAlignment = HorizontalAlignment.Right;
+            textName9.VerticalAlignment = VerticalAlignment.Bottom;
+            textName9.FontFamily = new FontFamily("Stencil");
+            textName9.FontSize = 13.333;
+            textName9.Margin = new Thickness(0, 130, 50, 0);
+            textName9.Foreground = Brushes.White;
+            textName9.Text = "Calaway Park";
+
+            b9.Content = textName9;
 
             b9.Margin = new Thickness(42, 5, 42, 13);
 
@@ -583,12 +676,12 @@ Sun - 12:00pm to 5:00pm";
             Grid.SetColumn(grid, 0);
             Grid.SetRow(grid2, 0);
             Grid.SetColumn(grid2, 1);
-            Grid.SetRow(grid3, 0);
-            Grid.SetColumn(grid3, 2);
+            Grid.SetRow(grid5, 0);
+            Grid.SetColumn(grid5, 2);
+            Grid.SetRow(grid3, 1);
+            Grid.SetColumn(grid3, 0);
             Grid.SetRow(grid4, 1);
-            Grid.SetColumn(grid4, 0);
-            Grid.SetRow(grid5, 1);
-            Grid.SetColumn(grid5, 1);
+            Grid.SetColumn(grid4, 1);
             Grid.SetRow(grid6, 1);
             Grid.SetColumn(grid6, 2);
             Grid.SetRow(grid7, 2);
@@ -831,16 +924,22 @@ Sun - 10:00am to 4:00pm
             b.Width = 175;
             b.Height = 175;
 
-            TransformGroup transGroup = new TransformGroup();
-            transGroup.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup.Children.Add(new TranslateTransform());
-
-            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image.RelativeTransform = transGroup;
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image.Stretch = Stretch.UniformToFill;
             b.Background = image;
+
+            TextBlock textName = new TextBlock();
+            textName.TextWrapping = TextWrapping.Wrap;
+            textName.HorizontalAlignment = HorizontalAlignment.Right;
+            textName.VerticalAlignment = VerticalAlignment.Bottom;
+            textName.FontFamily = new FontFamily("Stencil");
+            textName.FontSize = 13.333;
+            textName.Margin = new Thickness(0, 130, 50, 0);
+            textName.Foreground = Brushes.White;
+            textName.Text = "Calgary Tower";
+
+            b.Content = textName;
+
 
             Thickness margin = b.Margin;
             margin.Left = 42;
@@ -884,16 +983,21 @@ Sun - 10:00am to 4:00pm
             b2.Width = 175;
             b2.Height = 175;
 
-            TransformGroup transGroup2 = new TransformGroup();
-            transGroup2.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup2.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup2.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup2.Children.Add(new TranslateTransform());
-
-            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image2.RelativeTransform = transGroup2;
+            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image2.Stretch = Stretch.UniformToFill;
             b2.Background = image2;
+
+            TextBlock textName2 = new TextBlock();
+            textName2.TextWrapping = TextWrapping.Wrap;
+            textName2.HorizontalAlignment = HorizontalAlignment.Right;
+            textName2.VerticalAlignment = VerticalAlignment.Bottom;
+            textName2.FontFamily = new FontFamily("Stencil");
+            textName2.FontSize = 13.333;
+            textName2.Margin = new Thickness(0, 130, 50, 0);
+            textName2.Foreground = Brushes.White;
+            textName2.Text = "Calgary Tower";
+
+            b2.Content = textName2;
 
             Thickness margin2 = b.Margin;
             margin2.Left = 42;
@@ -937,16 +1041,21 @@ Sun - 10:00am to 4:00pm
             b3.Width = 175;
             b3.Height = 175;
 
-            /*TransformGroup transGroup3 = new TransformGroup();
-            transGroup3.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup3.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup3.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup3.Children.Add(new TranslateTransform());*/
-
-            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image3.RelativeTransform = transGroup;
+            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image3.Stretch = Stretch.UniformToFill;
             b3.Background = image3;
+
+            TextBlock textName3 = new TextBlock();
+            textName3.TextWrapping = TextWrapping.Wrap;
+            textName3.HorizontalAlignment = HorizontalAlignment.Right;
+            textName3.VerticalAlignment = VerticalAlignment.Bottom;
+            textName3.FontFamily = new FontFamily("Stencil");
+            textName3.FontSize = 13.333;
+            textName3.Margin = new Thickness(0, 130, 50, 0);
+            textName3.Foreground = Brushes.White;
+            textName3.Text = "Calgary Tower";
+
+            b3.Content = textName3;
 
             Thickness margin3 = b3.Margin;
             margin3.Left = 42;
@@ -990,10 +1099,21 @@ Sun - 10:00am to 4:00pm
             b4.Width = 175;
             b4.Height = 175;
 
-            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image4.RelativeTransform = transGroup;
+            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image4.Stretch = Stretch.UniformToFill;
             b4.Background = image4;
+
+            TextBlock textName4 = new TextBlock();
+            textName4.TextWrapping = TextWrapping.Wrap;
+            textName4.HorizontalAlignment = HorizontalAlignment.Right;
+            textName4.VerticalAlignment = VerticalAlignment.Bottom;
+            textName4.FontFamily = new FontFamily("Stencil");
+            textName4.FontSize = 13.333;
+            textName4.Margin = new Thickness(0, 130, 50, 0);
+            textName4.Foreground = Brushes.White;
+            textName4.Text = "Calgary Tower";
+
+            b4.Content = textName4;
 
             b4.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1027,10 +1147,21 @@ Sun - 10:00am to 4:00pm
             b5.Width = 175;
             b5.Height = 175;
 
-            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image5.RelativeTransform = transGroup;
+            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image5.Stretch = Stretch.UniformToFill;
             b5.Background = image5;
+
+            TextBlock textName5 = new TextBlock();
+            textName5.TextWrapping = TextWrapping.Wrap;
+            textName5.HorizontalAlignment = HorizontalAlignment.Right;
+            textName5.VerticalAlignment = VerticalAlignment.Bottom;
+            textName5.FontFamily = new FontFamily("Stencil");
+            textName5.FontSize = 13.333;
+            textName5.Margin = new Thickness(0, 130, 50, 0);
+            textName5.Foreground = Brushes.White;
+            textName5.Text = "Calgary Tower";
+
+            b5.Content = textName5;
 
             b5.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1058,10 +1189,21 @@ Sun - 10:00am to 4:00pm
             b6.Width = 175;
             b6.Height = 175;
 
-            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image6.RelativeTransform = transGroup;
+            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image6.Stretch = Stretch.UniformToFill;
             b6.Background = image6;
+
+            TextBlock textName6 = new TextBlock();
+            textName6.TextWrapping = TextWrapping.Wrap;
+            textName6.HorizontalAlignment = HorizontalAlignment.Right;
+            textName6.VerticalAlignment = VerticalAlignment.Bottom;
+            textName6.FontFamily = new FontFamily("Stencil");
+            textName6.FontSize = 13.333;
+            textName6.Margin = new Thickness(0, 130, 50, 0);
+            textName6.Foreground = Brushes.White;
+            textName6.Text = "Calgary Tower";
+
+            b6.Content = textName6;
 
             b6.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1090,10 +1232,21 @@ Sun - 10:00am to 4:00pm
             b7.Width = 175;
             b7.Height = 175;
 
-            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image7.RelativeTransform = transGroup;
+            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image7.Stretch = Stretch.UniformToFill;
             b7.Background = image7;
+
+            TextBlock textName7 = new TextBlock();
+            textName7.TextWrapping = TextWrapping.Wrap;
+            textName7.HorizontalAlignment = HorizontalAlignment.Right;
+            textName7.VerticalAlignment = VerticalAlignment.Bottom;
+            textName7.FontFamily = new FontFamily("Stencil");
+            textName7.FontSize = 13.333;
+            textName7.Margin = new Thickness(0, 130, 50, 0);
+            textName7.Foreground = Brushes.White;
+            textName7.Text = "Calgary Tower";
+
+            b7.Content = textName7;
 
             b7.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1122,10 +1275,21 @@ Sun - 10:00am to 4:00pm
             b8.Width = 175;
             b8.Height = 175;
 
-            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image8.RelativeTransform = transGroup;
+            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image8.Stretch = Stretch.UniformToFill;
             b8.Background = image8;
+
+            TextBlock textName8 = new TextBlock();
+            textName8.TextWrapping = TextWrapping.Wrap;
+            textName8.HorizontalAlignment = HorizontalAlignment.Right;
+            textName8.VerticalAlignment = VerticalAlignment.Bottom;
+            textName8.FontFamily = new FontFamily("Stencil");
+            textName8.FontSize = 13.333;
+            textName8.Margin = new Thickness(0, 130, 50, 0);
+            textName8.Foreground = Brushes.White;
+            textName8.Text = "Calgary Tower";
+
+            b8.Content = textName8;
 
             b8.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1155,10 +1319,21 @@ Sun - 10:00am to 4:00pm
             b9.Width = 175;
             b9.Height = 175;
 
-            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image9.RelativeTransform = transGroup;
+            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image9.Stretch = Stretch.UniformToFill;
             b9.Background = image8;
+
+            TextBlock textName9 = new TextBlock();
+            textName9.TextWrapping = TextWrapping.Wrap;
+            textName9.HorizontalAlignment = HorizontalAlignment.Right;
+            textName9.VerticalAlignment = VerticalAlignment.Bottom;
+            textName9.FontFamily = new FontFamily("Stencil");
+            textName9.FontSize = 13.333;
+            textName9.Margin = new Thickness(0, 130, 50, 0);
+            textName9.Foreground = Brushes.White;
+            textName9.Text = "Calgary Tower";
+
+            b9.Content = textName9;
 
             b9.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1180,19 +1355,6 @@ Sun - 10:00am to 4:00pm
             grid9.Children.Add(b9);
             grid9.Children.Add(border9);
             grid9.Children.Add(text9);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             Grid.SetRow(grid, 0);
             Grid.SetColumn(grid, 0);
@@ -1232,16 +1394,21 @@ Sun - 10:00am to 4:00pm
             b.Width = 175;
             b.Height = 175;
 
-            TransformGroup transGroup = new TransformGroup();
-            transGroup.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup.Children.Add(new TranslateTransform());
-
-            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image.RelativeTransform = transGroup;
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image.Stretch = Stretch.UniformToFill;
             b.Background = image;
+
+            TextBlock textName = new TextBlock();
+            textName.TextWrapping = TextWrapping.Wrap;
+            textName.HorizontalAlignment = HorizontalAlignment.Right;
+            textName.VerticalAlignment = VerticalAlignment.Bottom;
+            textName.FontFamily = new FontFamily("Stencil");
+            textName.FontSize = 13.333;
+            textName.Margin = new Thickness(0, 130, 50, 0);
+            textName.Foreground = Brushes.White;
+            textName.Text = "Calgary Tower";
+
+            b.Content = textName;
 
             Thickness margin = b.Margin;
             margin.Left = 42;
@@ -1285,16 +1452,21 @@ Sun - 10:00am to 4:00pm
             b2.Width = 175;
             b2.Height = 175;
 
-            TransformGroup transGroup2 = new TransformGroup();
-            transGroup2.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup2.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup2.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup2.Children.Add(new TranslateTransform());
-
-            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image2.RelativeTransform = transGroup2;
+            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image2.Stretch = Stretch.UniformToFill;
             b2.Background = image2;
+
+            TextBlock textName2 = new TextBlock();
+            textName2.TextWrapping = TextWrapping.Wrap;
+            textName2.HorizontalAlignment = HorizontalAlignment.Right;
+            textName2.VerticalAlignment = VerticalAlignment.Bottom;
+            textName2.FontFamily = new FontFamily("Stencil");
+            textName2.FontSize = 13.333;
+            textName2.Margin = new Thickness(0, 130, 50, 0);
+            textName2.Foreground = Brushes.White;
+            textName2.Text = "Calgary Tower";
+
+            b2.Content = textName2;
 
             Thickness margin2 = b.Margin;
             margin2.Left = 42;
@@ -1338,16 +1510,21 @@ Sun - 10:00am to 4:00pm
             b3.Width = 175;
             b3.Height = 175;
 
-            /*TransformGroup transGroup3 = new TransformGroup();
-            transGroup3.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup3.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup3.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup3.Children.Add(new TranslateTransform());*/
-
-            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image3.RelativeTransform = transGroup;
+            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image3.Stretch = Stretch.UniformToFill;
             b3.Background = image3;
+
+            TextBlock textName3 = new TextBlock();
+            textName3.TextWrapping = TextWrapping.Wrap;
+            textName3.HorizontalAlignment = HorizontalAlignment.Right;
+            textName3.VerticalAlignment = VerticalAlignment.Bottom;
+            textName3.FontFamily = new FontFamily("Stencil");
+            textName3.FontSize = 13.333;
+            textName3.Margin = new Thickness(0, 130, 50, 0);
+            textName3.Foreground = Brushes.White;
+            textName3.Text = "Calgary Tower";
+
+            b3.Content = textName3;
 
             Thickness margin3 = b3.Margin;
             margin3.Left = 42;
@@ -1391,10 +1568,21 @@ Sun - 10:00am to 4:00pm
             b4.Width = 175;
             b4.Height = 175;
 
-            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image4.RelativeTransform = transGroup;
+            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image4.Stretch = Stretch.UniformToFill;
             b4.Background = image4;
+
+            TextBlock textName4 = new TextBlock();
+            textName4.TextWrapping = TextWrapping.Wrap;
+            textName4.HorizontalAlignment = HorizontalAlignment.Right;
+            textName4.VerticalAlignment = VerticalAlignment.Bottom;
+            textName4.FontFamily = new FontFamily("Stencil");
+            textName4.FontSize = 13.333;
+            textName4.Margin = new Thickness(0, 130, 50, 0);
+            textName4.Foreground = Brushes.White;
+            textName4.Text = "Calgary Tower";
+
+            b4.Content = textName4;
 
             b4.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1428,10 +1616,21 @@ Sun - 10:00am to 4:00pm
             b5.Width = 175;
             b5.Height = 175;
 
-            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image5.RelativeTransform = transGroup;
+            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image5.Stretch = Stretch.UniformToFill;
             b5.Background = image5;
+
+            TextBlock textName5 = new TextBlock();
+            textName5.TextWrapping = TextWrapping.Wrap;
+            textName5.HorizontalAlignment = HorizontalAlignment.Right;
+            textName5.VerticalAlignment = VerticalAlignment.Bottom;
+            textName5.FontFamily = new FontFamily("Stencil");
+            textName5.FontSize = 13.333;
+            textName5.Margin = new Thickness(0, 130, 50, 0);
+            textName5.Foreground = Brushes.White;
+            textName5.Text = "Calgary Tower";
+
+            b5.Content = textName5;
 
             b5.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1459,10 +1658,21 @@ Sun - 10:00am to 4:00pm
             b6.Width = 175;
             b6.Height = 175;
 
-            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image6.RelativeTransform = transGroup;
+            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image6.Stretch = Stretch.UniformToFill;
             b6.Background = image6;
+
+            TextBlock textName6 = new TextBlock();
+            textName6.TextWrapping = TextWrapping.Wrap;
+            textName6.HorizontalAlignment = HorizontalAlignment.Right;
+            textName6.VerticalAlignment = VerticalAlignment.Bottom;
+            textName6.FontFamily = new FontFamily("Stencil");
+            textName6.FontSize = 13.333;
+            textName6.Margin = new Thickness(0, 130, 50, 0);
+            textName6.Foreground = Brushes.White;
+            textName6.Text = "Calgary Tower";
+
+            b6.Content = textName6;
 
             b6.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1491,10 +1701,21 @@ Sun - 10:00am to 4:00pm
             b7.Width = 175;
             b7.Height = 175;
 
-            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image7.RelativeTransform = transGroup;
+            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image7.Stretch = Stretch.UniformToFill;
             b7.Background = image7;
+
+            TextBlock textName7 = new TextBlock();
+            textName7.TextWrapping = TextWrapping.Wrap;
+            textName7.HorizontalAlignment = HorizontalAlignment.Right;
+            textName7.VerticalAlignment = VerticalAlignment.Bottom;
+            textName7.FontFamily = new FontFamily("Stencil");
+            textName7.FontSize = 13.333;
+            textName7.Margin = new Thickness(0, 130, 50, 0);
+            textName7.Foreground = Brushes.White;
+            textName7.Text = "Calgary Tower";
+
+            b7.Content = textName7;
 
             b7.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1523,10 +1744,21 @@ Sun - 10:00am to 4:00pm
             b8.Width = 175;
             b8.Height = 175;
 
-            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image8.RelativeTransform = transGroup;
+            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image8.Stretch = Stretch.UniformToFill;
             b8.Background = image8;
+
+            TextBlock textName8 = new TextBlock();
+            textName8.TextWrapping = TextWrapping.Wrap;
+            textName8.HorizontalAlignment = HorizontalAlignment.Right;
+            textName8.VerticalAlignment = VerticalAlignment.Bottom;
+            textName8.FontFamily = new FontFamily("Stencil");
+            textName8.FontSize = 13.333;
+            textName8.Margin = new Thickness(0, 130, 50, 0);
+            textName8.Foreground = Brushes.White;
+            textName8.Text = "Calgary Tower";
+
+            b8.Content = textName8;
 
             b8.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1556,10 +1788,21 @@ Sun - 10:00am to 4:00pm
             b9.Width = 175;
             b9.Height = 175;
 
-            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
-            image9.RelativeTransform = transGroup;
+            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative)));
             image9.Stretch = Stretch.UniformToFill;
             b9.Background = image8;
+
+            TextBlock textName9 = new TextBlock();
+            textName9.TextWrapping = TextWrapping.Wrap;
+            textName9.HorizontalAlignment = HorizontalAlignment.Right;
+            textName9.VerticalAlignment = VerticalAlignment.Bottom;
+            textName9.FontFamily = new FontFamily("Stencil");
+            textName9.FontSize = 13.333;
+            textName9.Margin = new Thickness(0, 130, 50, 0);
+            textName9.Foreground = Brushes.White;
+            textName9.Text = "Calgary Tower";
+
+            b9.Content = textName9;
 
             b9.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1621,16 +1864,22 @@ Sun - 10:00am to 4:00pm
             b.Height = 175;
             b.Click += btnBowHabitat_Click;
 
-            TransformGroup transGroup = new TransformGroup();
-            transGroup.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup.Children.Add(new TranslateTransform());
-
-            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/bow-habitat-station.jpg", UriKind.Relative)));
-            image.RelativeTransform = transGroup;
+            //BOW HABITAT BUTTON
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("Images/bow-habitat-station.jpg", UriKind.Relative)));
             image.Stretch = Stretch.UniformToFill;
             b.Background = image;
+
+            TextBlock textName = new TextBlock();
+            textName.TextWrapping = TextWrapping.Wrap;
+            textName.HorizontalAlignment = HorizontalAlignment.Right;
+            textName.VerticalAlignment = VerticalAlignment.Bottom;
+            textName.FontFamily = new FontFamily("Stencil");
+            textName.FontSize = 13.333;
+            textName.Margin = new Thickness(0, 130, 50, 0);
+            textName.Foreground = Brushes.White;
+            textName.Text = "Bow Habitat";
+
+            b.Content = textName;
 
             Thickness margin = b.Margin;
             margin.Left = 42;
@@ -1675,16 +1924,22 @@ Sun - 10:00am to 4:00pm
             b2.Height = 175;
             b2.Click += btnAeroSpaceMuseum_Click;
 
-            TransformGroup transGroup2 = new TransformGroup();
-            transGroup2.Children.Add(new ScaleTransform(0.5, 0.5));
-            transGroup2.Children.Add(new SkewTransform(0.5, 0.5));
-            transGroup2.Children.Add(new RotateTransform(0, 0.5, 0.5));
-            transGroup2.Children.Add(new TranslateTransform());
-
-            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/aero-space-museum.jpg", UriKind.Relative)));
-            image2.RelativeTransform = transGroup2;
+            //AERO SPACE MUSEUM BUTTON
+            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("Images/aero-space-museum.jpg", UriKind.Relative)));
             image2.Stretch = Stretch.UniformToFill;
             b2.Background = image2;
+
+            TextBlock textName2 = new TextBlock();
+            textName2.TextWrapping = TextWrapping.Wrap;
+            textName2.HorizontalAlignment = HorizontalAlignment.Right;
+            textName2.VerticalAlignment = VerticalAlignment.Bottom;
+            textName2.FontFamily = new FontFamily("Stencil");
+            textName2.FontSize = 13.333;
+            textName2.Margin = new Thickness(0, 130, 50, 0);
+            textName2.Foreground = Brushes.White;
+            textName2.Text = "Aero Space Museum";
+
+            b2.Content = textName2;
 
             Thickness margin2 = b.Margin;
             margin2.Left = 42;
@@ -1729,12 +1984,22 @@ Sun - 10:00am to 4:00pm
             b3.Height = 175;
             b3.Click += btnCalgaryTower_Click;
 
-
-
-            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/calgary-tower.jpg", UriKind.Relative)));
-            image3.RelativeTransform = transGroup;
+            //CALGARY TOWER BUTTON
+            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("Images/calgary-tower.jpg", UriKind.Relative)));
             image3.Stretch = Stretch.UniformToFill;
             b3.Background = image3;
+
+            TextBlock textName3 = new TextBlock();
+            textName3.TextWrapping = TextWrapping.Wrap;
+            textName3.HorizontalAlignment = HorizontalAlignment.Right;
+            textName3.VerticalAlignment = VerticalAlignment.Bottom;
+            textName3.FontFamily = new FontFamily("Stencil");
+            textName3.FontSize = 13.333;
+            textName3.Margin = new Thickness(0, 130, 50, 0);
+            textName3.Foreground = Brushes.White;
+            textName3.Text = "Calgary Tower";
+
+            b3.Content = textName3;
 
             Thickness margin3 = b3.Margin;
             margin3.Left = 42;
@@ -1779,10 +2044,22 @@ Sun - 10:00am to 4:00pm
             b4.Height = 175;
             b4.Click += btnCanadaSportsHOF_Click;
 
-            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/canada-sports-hof.jpg", UriKind.Relative)));
-            image4.RelativeTransform = transGroup;
+            //CANADA SPORTS HALL OF FAME BUTTON
+            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("Images/canada-sports-hof.jpg", UriKind.Relative)));
             image4.Stretch = Stretch.UniformToFill;
             b4.Background = image4;
+
+            TextBlock textName4 = new TextBlock();
+            textName4.TextWrapping = TextWrapping.Wrap;
+            textName4.HorizontalAlignment = HorizontalAlignment.Right;
+            textName4.VerticalAlignment = VerticalAlignment.Bottom;
+            textName4.FontFamily = new FontFamily("Stencil");
+            textName4.FontSize = 13.333;
+            textName4.Margin = new Thickness(0, 130, 50, 0);
+            textName4.Foreground = Brushes.White;
+            textName4.Text = "Canada's Sports Hall of Fame";
+
+            b4.Content = textName4;
 
             b4.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1817,10 +2094,22 @@ Sun - 10:00am to 4:00pm
             b5.Height = 175;
             b5.Click += btnTelusSpark_Click;
 
-            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/telus-spark.jpg", UriKind.Relative)));
-            image5.RelativeTransform = transGroup;
+            //TELUS SPARK BUTTON
+            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("Images/telus-spark.jpg", UriKind.Relative)));
             image5.Stretch = Stretch.UniformToFill;
             b5.Background = image5;
+
+            TextBlock textName5 = new TextBlock();
+            textName5.TextWrapping = TextWrapping.Wrap;
+            textName5.HorizontalAlignment = HorizontalAlignment.Right;
+            textName5.VerticalAlignment = VerticalAlignment.Bottom;
+            textName5.FontFamily = new FontFamily("Stencil");
+            textName5.FontSize = 13.333;
+            textName5.Margin = new Thickness(0, 130, 50, 0);
+            textName5.Foreground = Brushes.White;
+            textName5.Text = "Telus Spark";
+
+            b5.Content = textName5;
 
             b5.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1849,10 +2138,21 @@ Sun - 10:00am to 4:00pm
             b6.Height = 175;
             b6.Click += btnGlenbowMuseum_Click;
 
-            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/glenbow-museum.jpg", UriKind.Relative)));
-            image6.RelativeTransform = transGroup;
+            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("Images/glenbow-museum.jpg", UriKind.Relative)));
             image6.Stretch = Stretch.UniformToFill;
             b6.Background = image6;
+
+            TextBlock textName6 = new TextBlock();
+            textName6.TextWrapping = TextWrapping.Wrap;
+            textName6.HorizontalAlignment = HorizontalAlignment.Right;
+            textName6.VerticalAlignment = VerticalAlignment.Bottom;
+            textName6.FontFamily = new FontFamily("Stencil");
+            textName6.FontSize = 13.333;
+            textName6.Margin = new Thickness(0, 130, 50, 0);
+            textName6.Foreground = Brushes.White;
+            textName6.Text = "Glenbow Museum";
+
+            b6.Content = textName6;
 
             b6.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1882,10 +2182,22 @@ Sun - 10:00am to 4:00pm
             b7.Height = 175;
             b7.Click += btnCalgaryZoo_Click;
 
-            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/calgary-zoo.jpg", UriKind.Relative)));
-            image7.RelativeTransform = transGroup;
+            //CALGARY ZOO BUTTON
+            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("Images/calgary-zoo.jpg", UriKind.Relative)));
             image7.Stretch = Stretch.UniformToFill;
             b7.Background = image7;
+
+            TextBlock textName7 = new TextBlock();
+            textName7.TextWrapping = TextWrapping.Wrap;
+            textName7.HorizontalAlignment = HorizontalAlignment.Right;
+            textName7.VerticalAlignment = VerticalAlignment.Bottom;
+            textName7.FontFamily = new FontFamily("Stencil");
+            textName7.FontSize = 13.333;
+            textName7.Margin = new Thickness(0, 130, 50, 0);
+            textName7.Foreground = Brushes.White;
+            textName7.Text = "Calgary Zoo";
+
+            b7.Content = textName7;
 
             b7.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1915,10 +2227,22 @@ Sun - 10:00am to 4:00pm
             b8.Height = 175;
             b8.Click += btnCanadaOlympicPark_Click;
 
-            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/c-o-p.jpg", UriKind.Relative)));
-            image8.RelativeTransform = transGroup;
+            //CANADIAN OLYMPIC PARK
+            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("Images/c-o-p.jpg", UriKind.Relative)));
             image8.Stretch = Stretch.UniformToFill;
             b8.Background = image8;
+
+            TextBlock textName8 = new TextBlock();
+            textName8.TextWrapping = TextWrapping.Wrap;
+            textName8.HorizontalAlignment = HorizontalAlignment.Right;
+            textName8.VerticalAlignment = VerticalAlignment.Bottom;
+            textName8.FontFamily = new FontFamily("Stencil");
+            textName8.FontSize = 13.333;
+            textName8.Margin = new Thickness(0, 130, 50, 0);
+            textName8.Foreground = Brushes.White;
+            textName8.Text = "Canada Olympic Park";
+
+            b8.Content = textName8;
 
             b8.Margin = new Thickness(42, 5, 42, 13);
 
@@ -1949,10 +2273,22 @@ Sun - 10:00am to 4:00pm
             b9.Height = 175;
             b9.Click += btnCalawayPark_Click;
 
-            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/calaway-park.jpg", UriKind.Relative)));
-            image9.RelativeTransform = transGroup;
+            //CALAWAY PARK
+            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("Images/calaway-park.jpg", UriKind.Relative)));
             image9.Stretch = Stretch.UniformToFill;
             b9.Background = image9;
+
+            TextBlock textName9 = new TextBlock();
+            textName9.TextWrapping = TextWrapping.Wrap;
+            textName9.HorizontalAlignment = HorizontalAlignment.Right;
+            textName9.VerticalAlignment = VerticalAlignment.Bottom;
+            textName9.FontFamily = new FontFamily("Stencil");
+            textName9.FontSize = 13.333;
+            textName9.Margin = new Thickness(0, 130, 50, 0);
+            textName9.Foreground = Brushes.White;
+            textName9.Text = "Calaway Park";
+
+            b9.Content = textName9;
 
             b9.Margin = new Thickness(42, 5, 42, 13);
 

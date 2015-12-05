@@ -83,7 +83,7 @@
                                         <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Calgary Zoo" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="13.3KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="6.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="0" Grid.Column="2">
@@ -180,11 +180,11 @@
                                                 </ImageBrush.RelativeTransform>
                                             </ImageBrush>
                                         </Button.Background>
-                                        <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Text="Canadian Olympic Park" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                                        <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Text="Canada Olympic Park" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
                                     <TextBlock Text="18.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="1">
                                     <Button x:Name="btnCalawayPark" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalawayPark_Click">
