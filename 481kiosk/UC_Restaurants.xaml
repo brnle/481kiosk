@@ -12,11 +12,11 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="56,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="15" Width="78" Foreground="Black"/>
-        <RadioButton Margin="119,6,-119,24" Content="Distance" Grid.Row="0"/>
-        <RadioButton Margin="199,6,-227,24" Content="Price" Grid.Row="0"/>
+        <RadioButton x:Name="restDistanceChecked" Margin="119,6,-119,24" Content="Distance" Grid.Row="0"/>
+        <RadioButton Margin="199,6,-227,24" Content="Price" Grid.Row="0" />
         <GroupBox Height="575" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="2">
             <ScrollViewer Height="560" Margin="0,6,0,-6">
-                <Grid>
+                <Grid x:Name="gridRestaurant">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="200"/>
                         <RowDefinition Height="200" />

@@ -24,15 +24,14 @@ namespace _481kiosk
         public DiscoverWindow()
         {
             List<Events> novEvents = new List<Events>();
-            novEvents.Add(new Events("Calgary Flames", "Calgary flames face off against the league leading team Chicago Blackhawks", "Calgary-Flames.jpg", "555 Saddledome Rise SE\n T2G 2W1",""));
-            novEvents.Add(new Events("Illuminasia", "Exotic lantern festival from different parts of asia", "illuminasia.jpg", "asd",""));
-            novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "stampede_logo.png", "asd",""));
+            novEvents.Add(new Events("Calgary Flames", "Calgary flames face off against the league leading team Chicago Blackhawks", "Calgary-Flames.jpg", "555 Saddledome Rise SE\n T2G 2W1", ""));
+            novEvents.Add(new Events("Illuminasia", "Exotic lantern festival from different parts of asia", "illuminasia.jpg", "asd", ""));
+            novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "stampede_logo.png", "asd", ""));
             InitializeComponent();
             eventListing = new Dictionary<string, List<Events>>();
             eventListing.Add("11/25/2015", novEvents);
 
         }
-
         private void Selection_Change(object sender, SelectionChangedEventArgs e)
         {
 

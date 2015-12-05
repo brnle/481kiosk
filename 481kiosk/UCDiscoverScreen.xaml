@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="_481kiosk.UCDiscoverScreen"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:_481kiosk"
+             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="_481kiosk.UCDiscoverScreen"
              mc:Ignorable="d" 
              d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
     <Grid>
@@ -237,7 +238,8 @@
 
                         <StackPanel x:Name="buttonStackpanel">
                             <Calendar Height="170" HorizontalAlignment="Left" Margin="304,0,-482,0"   
-                                        x:Name="calendar1" VerticalAlignment="Top" Width="180" SelectedDatesChanged="Selection_Change"/>
+								x:Name="calendar1" VerticalAlignment="Top" Width="180" SelectedDatesChanged="Selection_Change" ForceCursor="True"/>
+                            <Calendar/>
                         </StackPanel>
                     </ScrollViewer>
                 </GroupBox>
@@ -249,11 +251,11 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <TextBlock HorizontalAlignment="Left" Margin="56,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="15" Width="78" Foreground="Black"/>
-                    <RadioButton Margin="119,6,-119,24" Content="Distance" Grid.Row="0"/>
-                    <RadioButton Margin="199,6,-227,24" Content="Price" Grid.Row="0"/>
+                    <RadioButton Margin="119,6,-119,24" Content="Distance" Grid.Row="0" Checked="restDistanceChecked"/>
+                    <RadioButton Margin="199,6,-227,24" Content="Price" Grid.Row="0" Checked="restPriceChecked"/>
                     <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="2">
                         <ScrollViewer Margin="0,6,0,-6">
-                            <Grid>
+                            <Grid  x:Name="gridRestaurant">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"/>
                                     <RowDefinition Height="200" />

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace _481kiosk
 {
     /// <summary>
@@ -43,6 +44,7 @@ namespace _481kiosk
             novEvents.Add(new Events("Illuminasia", "Exotic lantern festival from different parts of asia", "Images/illuminasia.jpg", "1300 Zoo Rd NE\nT2E 7V6", "All week 7 pm"));
             novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "Images/stampede_logo.png", "1410 Olympic Way SE\nT2G 2W1", "7 a.m. to 12 p.m"));
             eventListing.Add("11/25/2015", novEvents);
+
         }
 
         private void Selection_Change(object sender, SelectionChangedEventArgs e)
@@ -448,6 +450,795 @@ Sun - 10:00am to 4:00pm
             _tabPage.Content = _ucInfo;
             _main.tabControl.Items.Add(_tabPage);
             _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void restDistanceChecked(object sender, RoutedEventArgs e)
+        {
+            gridRestaurant.Children.RemoveRange(0, gridRestaurant.Children.Count);
+            Grid grid = new Grid();
+            Button b = new Button();
+            b.Width = 175;
+            b.Height = 175;
+
+            TransformGroup transGroup = new TransformGroup();
+            transGroup.Children.Add(new ScaleTransform(0.5, 0.5));
+            transGroup.Children.Add(new SkewTransform(0.5, 0.5));
+            transGroup.Children.Add(new RotateTransform(0, 0.5, 0.5));
+            transGroup.Children.Add(new TranslateTransform());
+
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image.RelativeTransform = transGroup;
+            image.Stretch = Stretch.UniformToFill;
+            b.Background = image;
+
+            Thickness margin = b.Margin;
+            margin.Left = 42;
+            margin.Top = 5;
+            margin.Right = 42;
+            margin.Bottom = 13;
+            b.Margin = margin;
+
+            Border border = new Border();
+            border.BorderBrush = Brushes.Black;
+            border.BorderThickness = new Thickness(1);
+            border.Height = 192;
+            border.Width = 184;
+            border.HorizontalAlignment = HorizontalAlignment.Left;
+
+            Thickness marginBorder = border.Margin;
+            marginBorder.Left = 38;
+            marginBorder.Top = 8;
+            marginBorder.Right = 0;
+            marginBorder.Bottom = 0;
+            border.Margin = marginBorder;
+
+            TextBlock text1 = new TextBlock();
+            text1.Text = "7.4KM              $$$$";
+            Thickness text1Margin = text1.Margin;
+            text1Margin.Left = 80;
+            text1Margin.Top = 10;
+            text1Margin.Right = 74;
+            text1Margin.Bottom = 0;
+            text1.Margin = text1Margin;
+            text1.HorizontalAlignment = HorizontalAlignment.Left;
+            text1.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid.Children.Add(b);
+            grid.Children.Add(border);
+            grid.Children.Add(text1);
+
+             
+            Grid grid2 = new Grid();
+            Button b2 = new Button();
+            b2.Width = 175;
+            b2.Height = 175;
+
+            TransformGroup transGroup2 = new TransformGroup();
+            transGroup2.Children.Add(new ScaleTransform(0.5, 0.5));
+            transGroup2.Children.Add(new SkewTransform(0.5, 0.5));
+            transGroup2.Children.Add(new RotateTransform(0, 0.5, 0.5));
+            transGroup2.Children.Add(new TranslateTransform());
+
+            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image2.RelativeTransform = transGroup2;
+            image2.Stretch = Stretch.UniformToFill;
+            b2.Background = image2;
+
+            Thickness margin2 = b.Margin;
+            margin2.Left = 42;
+            margin2.Top = 5;
+            margin2.Right = 42;
+            margin2.Bottom = 13;
+            b2.Margin = margin2;
+
+            Border border2 = new Border();
+            border2.BorderBrush = Brushes.Black;
+            border2.BorderThickness = new Thickness(1);
+            border2.Height = 192;
+            border2.Width = 184;
+            border2.HorizontalAlignment = HorizontalAlignment.Left;
+        
+            Thickness marginBorder2 = border.Margin;
+            marginBorder2.Left = 38;
+            marginBorder2.Top = 8;
+            marginBorder2.Right = 0;
+            marginBorder2.Bottom = 0;
+            border2.Margin = marginBorder2;
+
+            TextBlock text2 = new TextBlock();
+            text2.Text = "13.2KM              $$$$";
+            Thickness text2Margin = text2.Margin;
+            text2Margin.Left = 80;
+            text2Margin.Top = 10;
+            text2Margin.Right = 74;
+            text2Margin.Bottom = 0;
+            text2.Margin = text1Margin;
+            text2.HorizontalAlignment = HorizontalAlignment.Left;
+            text2.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid2.Children.Add(b2);
+            grid2.Children.Add(border2);
+            grid2.Children.Add(text2);
+
+
+            Grid grid3 = new Grid();
+            Button b3 = new Button();
+            b3.Width = 175;
+            b3.Height = 175;
+
+            /*TransformGroup transGroup3 = new TransformGroup();
+            transGroup3.Children.Add(new ScaleTransform(0.5, 0.5));
+            transGroup3.Children.Add(new SkewTransform(0.5, 0.5));
+            transGroup3.Children.Add(new RotateTransform(0, 0.5, 0.5));
+            transGroup3.Children.Add(new TranslateTransform());*/
+
+            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image3.RelativeTransform = transGroup;
+            image3.Stretch = Stretch.UniformToFill;
+            b3.Background = image3;
+
+            Thickness margin3 = b3.Margin;
+            margin3.Left = 42;
+            margin3.Top = 5;
+            margin3.Right = 42;
+            margin3.Bottom = 13;
+            b3.Margin = margin3;
+
+            Border border3 = new Border();
+            border3.BorderBrush = Brushes.Black;
+            border3.BorderThickness = new Thickness(1);
+            border3.Height = 192;
+            border3.Width = 184;
+            border3.HorizontalAlignment = HorizontalAlignment.Left;
+
+            Thickness marginBorder3 = border3.Margin;
+            marginBorder3.Left = 38;
+            marginBorder3.Top = 8;
+            marginBorder3.Right = 0;
+            marginBorder3.Bottom = 0;
+            border3.Margin = marginBorder3;
+
+            TextBlock text3 = new TextBlock();
+            text3.Text = "14.1KM              $$$";
+            Thickness text3Margin = text3.Margin;
+            text3Margin.Left = 80;
+            text3Margin.Top = 10;
+            text3Margin.Right = 74;
+            text3Margin.Bottom = 0;
+            text3.Margin = text3Margin;
+            text3.HorizontalAlignment = HorizontalAlignment.Left;
+            text3.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid3.Children.Add(b3);
+            grid3.Children.Add(border3);
+            grid3.Children.Add(text3);
+
+
+            Grid grid4 = new Grid();
+            Button b4 = new Button();
+            b4.Width = 175;
+            b4.Height = 175;
+
+            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image4.RelativeTransform = transGroup;
+            image4.Stretch = Stretch.UniformToFill;
+            b4.Background = image4;
+
+            b4.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border4 = new Border();
+            border4.BorderBrush = Brushes.Black;
+            border4.BorderThickness = new Thickness(1);
+            border4.Height = 192;
+            border4.Width = 184;
+            border4.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border4.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text4 = new TextBlock();
+            text4.Text = "14.5KM              $$$";
+            Thickness text4Margin = text4.Margin;
+            text4Margin.Left = 80;
+            text4Margin.Top = 10;
+            text4Margin.Right = 74;
+            text4Margin.Bottom = 0;
+            text4.Margin = text3Margin;
+            text4.HorizontalAlignment = HorizontalAlignment.Left;
+            text4.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid4.Children.Add(b4);
+            grid4.Children.Add(border4);
+            grid4.Children.Add(text4);
+
+
+            Grid grid5 = new Grid();
+            Button b5 = new Button();
+            b5.Width = 175;
+            b5.Height = 175;
+
+            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image5.RelativeTransform = transGroup;
+            image5.Stretch = Stretch.UniformToFill;
+            b5.Background = image5;
+
+            b5.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border5 = new Border();
+            border5.BorderBrush = Brushes.Black;
+            border5.BorderThickness = new Thickness(1);
+            border5.Height = 192;
+            border5.Width = 184;
+            border5.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border5.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text5 = new TextBlock();
+            text5.Text = "16KM              $";
+            text5.Margin = new Thickness(80, 10, 74, 0);
+            text5.HorizontalAlignment = HorizontalAlignment.Left;
+            text5.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid5.Children.Add(b5);
+            grid5.Children.Add(border5);
+            grid5.Children.Add(text5);
+
+            Grid grid6= new Grid();
+            Button b6= new Button();
+            b6.Width = 175;
+            b6.Height = 175;
+
+            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image6.RelativeTransform = transGroup;
+            image6.Stretch = Stretch.UniformToFill;
+            b6.Background = image6;
+
+            b6.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border6 = new Border();
+            border6.BorderBrush = Brushes.Black;
+            border6.BorderThickness = new Thickness(1);
+            border6.Height = 192;
+            border6.Width = 184;
+            border6.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border6.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text6 = new TextBlock();
+            text6.Text = "17.2KM              $";
+            text6.Margin = new Thickness(80, 10, 74, 0);
+            text6.HorizontalAlignment = HorizontalAlignment.Left;
+            text6.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid6.Children.Add(b6);
+            grid6.Children.Add(border6);
+            grid6.Children.Add(text6);
+
+
+            Grid grid7 = new Grid();
+            Button b7 = new Button();
+            b7.Width = 175;
+            b7.Height = 175;
+
+            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image7.RelativeTransform = transGroup;
+            image7.Stretch = Stretch.UniformToFill;
+            b7.Background = image7;
+
+            b7.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border7 = new Border();
+            border7.BorderBrush = Brushes.Black;
+            border7.BorderThickness = new Thickness(1);
+            border7.Height = 192;
+            border7.Width = 184;
+            border7.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border7.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text7 = new TextBlock();
+            text7.Text = "17.9KM              $";
+            text7.Margin = new Thickness(80, 10, 74, 0);
+            text7.HorizontalAlignment = HorizontalAlignment.Left;
+            text7.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid7.Children.Add(b7);
+            grid7.Children.Add(border7);
+            grid7.Children.Add(text7);
+
+
+            Grid grid8 = new Grid();
+            Button b8 = new Button();
+            b8.Width = 175;
+            b8.Height = 175;
+
+            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image8.RelativeTransform = transGroup;
+            image8.Stretch = Stretch.UniformToFill;
+            b8.Background = image8;
+
+            b8.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border8 = new Border();
+            border8.BorderBrush = Brushes.Black;
+            border8.BorderThickness = new Thickness(1);
+            border8.Height = 192;
+            border8.Width = 184;
+            border8.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border8.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text8 = new TextBlock();
+            text8.Text = "19.5KM              $$$$";
+            text8.Margin = new Thickness(80, 10, 74, 0);
+            text8.HorizontalAlignment = HorizontalAlignment.Left;
+            text8.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid8.Children.Add(b8);
+            grid8.Children.Add(border8);
+            grid8.Children.Add(text8);
+
+
+
+            Grid grid9 = new Grid();
+            Button b9 = new Button();
+            b9.Width = 175;
+            b9.Height = 175;
+
+            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image9.RelativeTransform = transGroup;
+            image9.Stretch = Stretch.UniformToFill;
+            b9.Background = image8;
+
+            b9.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border9 = new Border();
+            border9.BorderBrush = Brushes.Black;
+            border9.BorderThickness = new Thickness(1);
+            border9.Height = 192;
+            border9.Width = 184;
+            border9.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border9.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text9 = new TextBlock();
+            text9.Text = "22.2KM              $$";
+            text9.Margin = new Thickness(80, 10, 74, 0);
+            text9.HorizontalAlignment = HorizontalAlignment.Left;
+            text9.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid9.Children.Add(b9);
+            grid9.Children.Add(border9);
+            grid9.Children.Add(text9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Grid.SetRow(grid, 0);
+            Grid.SetColumn(grid, 0);
+            Grid.SetRow(grid2, 0);
+            Grid.SetColumn(grid2, 1);
+            Grid.SetRow(grid3, 0);
+            Grid.SetColumn(grid3, 2);
+            Grid.SetRow(grid4, 1);
+            Grid.SetColumn(grid4, 0);
+            Grid.SetRow(grid5, 1);
+            Grid.SetColumn(grid5, 1);
+            Grid.SetRow(grid6, 1);
+            Grid.SetColumn(grid6, 2);
+            Grid.SetRow(grid7, 2);
+            Grid.SetColumn(grid7, 0);
+            Grid.SetRow(grid8, 2);
+            Grid.SetColumn(grid8, 1);
+            Grid.SetRow(grid9, 2);
+            Grid.SetColumn(grid9, 2);
+
+            gridRestaurant.Children.Add(grid);
+            gridRestaurant.Children.Add(grid2);
+            gridRestaurant.Children.Add(grid3);
+            gridRestaurant.Children.Add(grid4);
+            gridRestaurant.Children.Add(grid5);
+            gridRestaurant.Children.Add(grid6);
+            gridRestaurant.Children.Add(grid7);
+            gridRestaurant.Children.Add(grid8);
+            gridRestaurant.Children.Add(grid9);
+        }
+
+        private void restPriceChecked(object sender, RoutedEventArgs e)
+        {
+            gridRestaurant.Children.RemoveRange(0, gridRestaurant.Children.Count);
+            Grid grid = new Grid();
+            Button b = new Button();
+            b.Width = 175;
+            b.Height = 175;
+
+            TransformGroup transGroup = new TransformGroup();
+            transGroup.Children.Add(new ScaleTransform(0.5, 0.5));
+            transGroup.Children.Add(new SkewTransform(0.5, 0.5));
+            transGroup.Children.Add(new RotateTransform(0, 0.5, 0.5));
+            transGroup.Children.Add(new TranslateTransform());
+
+            ImageBrush image = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image.RelativeTransform = transGroup;
+            image.Stretch = Stretch.UniformToFill;
+            b.Background = image;
+
+            Thickness margin = b.Margin;
+            margin.Left = 42;
+            margin.Top = 5;
+            margin.Right = 42;
+            margin.Bottom = 13;
+            b.Margin = margin;
+
+            Border border = new Border();
+            border.BorderBrush = Brushes.Black;
+            border.BorderThickness = new Thickness(1);
+            border.Height = 192;
+            border.Width = 184;
+            border.HorizontalAlignment = HorizontalAlignment.Left;
+
+            Thickness marginBorder = border.Margin;
+            marginBorder.Left = 38;
+            marginBorder.Top = 8;
+            marginBorder.Right = 0;
+            marginBorder.Bottom = 0;
+            border.Margin = marginBorder;
+
+            TextBlock text1 = new TextBlock();
+            text1.Text = "7.4KM              $";
+            Thickness text1Margin = text1.Margin;
+            text1Margin.Left = 80;
+            text1Margin.Top = 10;
+            text1Margin.Right = 74;
+            text1Margin.Bottom = 0;
+            text1.Margin = text1Margin;
+            text1.HorizontalAlignment = HorizontalAlignment.Left;
+            text1.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid.Children.Add(b);
+            grid.Children.Add(border);
+            grid.Children.Add(text1);
+
+
+            Grid grid2 = new Grid();
+            Button b2 = new Button();
+            b2.Width = 175;
+            b2.Height = 175;
+
+            TransformGroup transGroup2 = new TransformGroup();
+            transGroup2.Children.Add(new ScaleTransform(0.5, 0.5));
+            transGroup2.Children.Add(new SkewTransform(0.5, 0.5));
+            transGroup2.Children.Add(new RotateTransform(0, 0.5, 0.5));
+            transGroup2.Children.Add(new TranslateTransform());
+
+            ImageBrush image2 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image2.RelativeTransform = transGroup2;
+            image2.Stretch = Stretch.UniformToFill;
+            b2.Background = image2;
+
+            Thickness margin2 = b.Margin;
+            margin2.Left = 42;
+            margin2.Top = 5;
+            margin2.Right = 42;
+            margin2.Bottom = 13;
+            b2.Margin = margin2;
+
+            Border border2 = new Border();
+            border2.BorderBrush = Brushes.Black;
+            border2.BorderThickness = new Thickness(1);
+            border2.Height = 192;
+            border2.Width = 184;
+            border2.HorizontalAlignment = HorizontalAlignment.Left;
+
+            Thickness marginBorder2 = border.Margin;
+            marginBorder2.Left = 38;
+            marginBorder2.Top = 8;
+            marginBorder2.Right = 0;
+            marginBorder2.Bottom = 0;
+            border2.Margin = marginBorder2;
+
+            TextBlock text2 = new TextBlock();
+            text2.Text = "6.2KM              $";
+            Thickness text2Margin = text2.Margin;
+            text2Margin.Left = 80;
+            text2Margin.Top = 10;
+            text2Margin.Right = 74;
+            text2Margin.Bottom = 0;
+            text2.Margin = text1Margin;
+            text2.HorizontalAlignment = HorizontalAlignment.Left;
+            text2.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid2.Children.Add(b2);
+            grid2.Children.Add(border2);
+            grid2.Children.Add(text2);
+
+
+            Grid grid3 = new Grid();
+            Button b3 = new Button();
+            b3.Width = 175;
+            b3.Height = 175;
+
+            /*TransformGroup transGroup3 = new TransformGroup();
+            transGroup3.Children.Add(new ScaleTransform(0.5, 0.5));
+            transGroup3.Children.Add(new SkewTransform(0.5, 0.5));
+            transGroup3.Children.Add(new RotateTransform(0, 0.5, 0.5));
+            transGroup3.Children.Add(new TranslateTransform());*/
+
+            ImageBrush image3 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image3.RelativeTransform = transGroup;
+            image3.Stretch = Stretch.UniformToFill;
+            b3.Background = image3;
+
+            Thickness margin3 = b3.Margin;
+            margin3.Left = 42;
+            margin3.Top = 5;
+            margin3.Right = 42;
+            margin3.Bottom = 13;
+            b3.Margin = margin3;
+
+            Border border3 = new Border();
+            border3.BorderBrush = Brushes.Black;
+            border3.BorderThickness = new Thickness(1);
+            border3.Height = 192;
+            border3.Width = 184;
+            border3.HorizontalAlignment = HorizontalAlignment.Left;
+
+            Thickness marginBorder3 = border3.Margin;
+            marginBorder3.Left = 38;
+            marginBorder3.Top = 8;
+            marginBorder3.Right = 0;
+            marginBorder3.Bottom = 0;
+            border3.Margin = marginBorder3;
+
+            TextBlock text3 = new TextBlock();
+            text3.Text = "1.2KM              $$";
+            Thickness text3Margin = text3.Margin;
+            text3Margin.Left = 80;
+            text3Margin.Top = 10;
+            text3Margin.Right = 74;
+            text3Margin.Bottom = 0;
+            text3.Margin = text3Margin;
+            text3.HorizontalAlignment = HorizontalAlignment.Left;
+            text3.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid3.Children.Add(b3);
+            grid3.Children.Add(border3);
+            grid3.Children.Add(text3);
+
+
+            Grid grid4 = new Grid();
+            Button b4 = new Button();
+            b4.Width = 175;
+            b4.Height = 175;
+
+            ImageBrush image4 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image4.RelativeTransform = transGroup;
+            image4.Stretch = Stretch.UniformToFill;
+            b4.Background = image4;
+
+            b4.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border4 = new Border();
+            border4.BorderBrush = Brushes.Black;
+            border4.BorderThickness = new Thickness(1);
+            border4.Height = 192;
+            border4.Width = 184;
+            border4.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border4.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text4 = new TextBlock();
+            text4.Text = "3.2KM              $$";
+            Thickness text4Margin = text4.Margin;
+            text4Margin.Left = 80;
+            text4Margin.Top = 10;
+            text4Margin.Right = 74;
+            text4Margin.Bottom = 0;
+            text4.Margin = text3Margin;
+            text4.HorizontalAlignment = HorizontalAlignment.Left;
+            text4.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid4.Children.Add(b4);
+            grid4.Children.Add(border4);
+            grid4.Children.Add(text4);
+
+
+            Grid grid5 = new Grid();
+            Button b5 = new Button();
+            b5.Width = 175;
+            b5.Height = 175;
+
+            ImageBrush image5 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image5.RelativeTransform = transGroup;
+            image5.Stretch = Stretch.UniformToFill;
+            b5.Background = image5;
+
+            b5.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border5 = new Border();
+            border5.BorderBrush = Brushes.Black;
+            border5.BorderThickness = new Thickness(1);
+            border5.Height = 192;
+            border5.Width = 184;
+            border5.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border5.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text5 = new TextBlock();
+            text5.Text = "14.2KM              $$$";
+            text5.Margin = new Thickness(80, 10, 74, 0);
+            text5.HorizontalAlignment = HorizontalAlignment.Left;
+            text5.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid5.Children.Add(b5);
+            grid5.Children.Add(border5);
+            grid5.Children.Add(text5);
+
+            Grid grid6 = new Grid();
+            Button b6 = new Button();
+            b6.Width = 175;
+            b6.Height = 175;
+
+            ImageBrush image6 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image6.RelativeTransform = transGroup;
+            image6.Stretch = Stretch.UniformToFill;
+            b6.Background = image6;
+
+            b6.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border6 = new Border();
+            border6.BorderBrush = Brushes.Black;
+            border6.BorderThickness = new Thickness(1);
+            border6.Height = 192;
+            border6.Width = 184;
+            border6.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border6.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text6 = new TextBlock();
+            text6.Text = "5.5KM              $$$";
+            text6.Margin = new Thickness(80, 10, 74, 0);
+            text6.HorizontalAlignment = HorizontalAlignment.Left;
+            text6.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid6.Children.Add(b6);
+            grid6.Children.Add(border6);
+            grid6.Children.Add(text6);
+
+
+            Grid grid7 = new Grid();
+            Button b7 = new Button();
+            b7.Width = 175;
+            b7.Height = 175;
+
+            ImageBrush image7 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image7.RelativeTransform = transGroup;
+            image7.Stretch = Stretch.UniformToFill;
+            b7.Background = image7;
+
+            b7.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border7 = new Border();
+            border7.BorderBrush = Brushes.Black;
+            border7.BorderThickness = new Thickness(1);
+            border7.Height = 192;
+            border7.Width = 184;
+            border7.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border7.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text7 = new TextBlock();
+            text7.Text = "17.9KM              $$$$";
+            text7.Margin = new Thickness(80, 10, 74, 0);
+            text7.HorizontalAlignment = HorizontalAlignment.Left;
+            text7.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid7.Children.Add(b7);
+            grid7.Children.Add(border7);
+            grid7.Children.Add(text7);
+
+
+            Grid grid8 = new Grid();
+            Button b8 = new Button();
+            b8.Width = 175;
+            b8.Height = 175;
+
+            ImageBrush image8 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image8.RelativeTransform = transGroup;
+            image8.Stretch = Stretch.UniformToFill;
+            b8.Background = image8;
+
+            b8.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border8 = new Border();
+            border8.BorderBrush = Brushes.Black;
+            border8.BorderThickness = new Thickness(1);
+            border8.Height = 192;
+            border8.Width = 184;
+            border8.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border8.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text8 = new TextBlock();
+            text8.Text = "2.5KM              $$$$";
+            text8.Margin = new Thickness(80, 10, 74, 0);
+            text8.HorizontalAlignment = HorizontalAlignment.Left;
+            text8.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid8.Children.Add(b8);
+            grid8.Children.Add(border8);
+            grid8.Children.Add(text8);
+
+
+
+            Grid grid9 = new Grid();
+            Button b9 = new Button();
+            b9.Width = 175;
+            b9.Height = 175;
+
+            ImageBrush image9 = new ImageBrush(new BitmapImage(new Uri("C:/Users/tanquach/Documents/GitHub/481kiosk/481kiosk/Images/picRaw.jpg", UriKind.Relative)));
+            image9.RelativeTransform = transGroup;
+            image9.Stretch = Stretch.UniformToFill;
+            b9.Background = image8;
+
+            b9.Margin = new Thickness(42, 5, 42, 13);
+
+            Border border9 = new Border();
+            border9.BorderBrush = Brushes.Black;
+            border9.BorderThickness = new Thickness(1);
+            border9.Height = 192;
+            border9.Width = 184;
+            border9.HorizontalAlignment = HorizontalAlignment.Left;
+
+            border9.Margin = new Thickness(38, 8, 0, 0);
+
+            TextBlock text9 = new TextBlock();
+            text9.Text = "15.2KM              $$$$";
+            text9.Margin = new Thickness(80, 10, 74, 0);
+            text9.HorizontalAlignment = HorizontalAlignment.Left;
+            text9.VerticalAlignment = VerticalAlignment.Bottom;
+
+            grid9.Children.Add(b9);
+            grid9.Children.Add(border9);
+            grid9.Children.Add(text9);
+
+            Grid.SetRow(grid, 0);
+            Grid.SetColumn(grid, 0);
+            Grid.SetRow(grid2, 0);
+            Grid.SetColumn(grid2, 1);
+            Grid.SetRow(grid3, 0);
+            Grid.SetColumn(grid3, 2);
+            Grid.SetRow(grid4, 1);
+            Grid.SetColumn(grid4, 0);
+            Grid.SetRow(grid5, 1);
+            Grid.SetColumn(grid5, 1);
+            Grid.SetRow(grid6, 1);
+            Grid.SetColumn(grid6, 2);
+            Grid.SetRow(grid7, 2);
+            Grid.SetColumn(grid7, 0);
+            Grid.SetRow(grid8, 2);
+            Grid.SetColumn(grid8, 1);
+            Grid.SetRow(grid9, 2);
+            Grid.SetColumn(grid9, 2);
+
+            gridRestaurant.Children.Add(grid);
+            gridRestaurant.Children.Add(grid2);
+            gridRestaurant.Children.Add(grid3);
+            gridRestaurant.Children.Add(grid4);
+            gridRestaurant.Children.Add(grid5);
+            gridRestaurant.Children.Add(grid6);
+            gridRestaurant.Children.Add(grid7);
+            gridRestaurant.Children.Add(grid8);
+            gridRestaurant.Children.Add(grid9);
         }
     }
 }
