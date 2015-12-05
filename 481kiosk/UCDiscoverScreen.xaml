@@ -32,7 +32,7 @@
                     </Grid.RowDefinitions>
                     <TextBlock HorizontalAlignment="Left" Margin="56,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="15" Width="78" Foreground="Black"/>
                     <RadioButton x:Name="rdoDistance" Margin="149,5,-149,10" Content="Distance" Grid.Row="0" Grid.ColumnSpan="2" Checked="rdoDistance_Checked"/>
-                    <RadioButton Margin="76,5,-239,10" Content="Price" Grid.Row="0" Grid.Column="1"/>
+                    <RadioButton Margin="76,5,-239,10" Content="Price" Grid.Row="0" Grid.Column="1" Checked="rdoPrice_Checked"/>
                     <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="2">
                         <ScrollViewer Margin="0,6,0,-6">
                             <Grid x:Name="grdAttractions">
