@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,16 +25,21 @@ namespace _481kiosk
     {
         private Dictionary<string, List<Events>> eventListing;
         private MainWindow _main;
+        public int month;
         public UCDiscoverScreen(MainWindow _source)
         {
             _main = _source;
             InitializeComponent();
+
+            CultureInfo originalCulture = Thread.CurrentThread.CurrentCulture;
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
             List<Events> decEvents1 = new List<Events>();
             decEvents1.Add(new Events("Inside", "Inside is a play about modern life. Daniel MacIvor adapted the play with University of Calgary students", "Images/inside.jpg", "210 University Ct. N.W\nReeve Theatre",
                 "Tuesday 7:30 p.m\nWednesday 7:30 p.m\nThursday 7:30 p.m\nFriday 7:30 p.m\nSaturday 7:30 p.m\nSunday 2 p.m"));
-            decEvents1.Add(new Events("Jewish Book Festival", "Browse hundreds of books at the annual Jewish Book Festival", "Images/jewish_book_event.jpg", "1607 90 Ave. S.W\nJewish Centre Calgary",
+            decEvents1.Add(new Events("Jewish Book Festival", "Browse hundreds of books at the annual Jewish Book Festival", "Images/jewish_book_event.jpeg", "1607 90 Ave. S.W\nJewish Centre Calgary",
                 "Sunday 10 a.m. to 8:30 p.m\nMonday 10 a.m.to 8:30 p.m\nTuesday 10 a.m.to 8:30 p.m\nWednesday 10 a.m.to 8:30 p.m\nThursday 10 a.m.to 8:30 p.m\nFriday 10 a.m.to 4 p.m\nSaturday 6 p.m.to 8:30 p.m."));
-            eventListing = new Dictionary<string, List<Events>>();
+            eventListing = new Dictionary<String, List<Events>>();
             eventListing.Add("12/1/2015", decEvents1);
             eventListing.Add("12/2/2015", decEvents1);
             eventListing.Add("12/3/2015", decEvents1);
@@ -45,71 +52,67 @@ namespace _481kiosk
             novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "Images/stampede_logo.png", "1410 Olympic Way SE\nT2G 2W1", "7 a.m. to 12 p.m"));
             eventListing.Add("11/25/2015", novEvents);
 
+            setupCalendar();
         }
 
         private void Selection_Change(object sender, SelectionChangedEventArgs e)
         {
-
             // Iterate through the SelectedDates collection and display the
             // dates selected in the Calendar control.
-            foreach (DateTime day in calendar1.SelectedDates)
+
+
+            setupCalendar();
+            DateTime day = calendar1.SelectedDate.Value;
+
+            if (eventListing.ContainsKey(day.Date.ToShortDateString()))
             {
-                if (eventListing.ContainsKey(day.Date.ToShortDateString()))
+                buttonStackpanel.Children.Clear();
+                List<Events> tempEventListing = eventListing[day.Date.ToShortDateString()];
+                int count = tempEventListing.Count();
+                //For loop to create a list of buttons depending on how many events there are
+                for (int i = 0; i < count; i++)
                 {
-                    buttonStackpanel.Children.RemoveRange(1, buttonStackpanel.Children.Count - 1);
-                    List<Events> tempEventListing = eventListing[day.Date.ToShortDateString()];
-                    int count = tempEventListing.Count();
-                    //For loop to create a list of buttons depending on how many events there are
-                    List<Button> buttons = new List<Button>();
-                    for (int i = 0; i < count; i++)
-                    {
 
-                        Grid grid = new Grid();
-                        StackPanel stackpanel = new StackPanel();
+                    DockPanel grid = new DockPanel();
+                    Button b = new Button();
+                    b.Tag = tempEventListing[i];
+                    b.Click += event_Click;
+                    b.Content = grid;
+                    StackPanel stackpanel = new StackPanel();
+                    b.HorizontalContentAlignment = HorizontalAlignment.Left;
+                    grid.LastChildFill = true;
 
-                        Image eventImage = new Image();
-                        BitmapImage bitmap = new BitmapImage();
-                        eventImage.Source = new BitmapImage(new Uri(tempEventListing[i].getImg(), UriKind.Relative));
-                        eventImage.HorizontalAlignment = HorizontalAlignment.Left;
-                        eventImage.Width = 150;
-                        eventImage.Height = 100;
-                        Thickness margin = eventImage.Margin;
-                        margin.Left = -160;
-                        margin.Top = 0;
-                        margin.Right = 0;
-                        margin.Bottom = -9;
-                        eventImage.Margin = margin;
+                    Image eventImage = new Image();
+                    BitmapImage bitmap = new BitmapImage();
+                    eventImage.Source = new BitmapImage(new Uri(tempEventListing[i].getImg(), UriKind.Relative));
+                    eventImage.Width = 150;
+                    eventImage.Height = 100;
+                    eventImage.Stretch = Stretch.Fill;
+                    eventImage.StretchDirection = StretchDirection.Both;
+                    stackpanel.Margin = new Thickness(10, 0, 0, 0);
 
-                        TextBlock eventName = new TextBlock();
-                        eventName.FontWeight = FontWeights.Bold;
-                        eventName.Text = tempEventListing[i].getName();
 
-                        TextBlock eventDesc = new TextBlock();
-                        eventDesc.Text = day.Date.ToShortDateString() + "\n" + tempEventListing[i].getDescription();
-                        eventDesc.TextWrapping = TextWrapping.Wrap;
+                    TextBlock eventName = new TextBlock();
+                    eventName.FontWeight = FontWeights.Bold;
+                    eventName.FontSize = 16;
+                    eventName.FontStyle = FontStyles.Italic;
+                    eventName.Text = tempEventListing[i].getName();
 
-                        stackpanel.Children.Add(eventName);
-                        stackpanel.Children.Add(eventDesc);
-                        grid.Children.Add(eventImage);
-                        Grid.SetColumn(eventImage, 0);
-                        grid.Children.Add(stackpanel);
-                        Grid.SetColumn(stackpanel, 1);
+                    TextBlock eventDesc = new TextBlock();
+                    eventDesc.Text = day.Date.ToShortDateString() + "\n" + tempEventListing[i].getDescription();
+                    eventDesc.TextWrapping = TextWrapping.Wrap;
 
-                        Button b = new Button();
-                        b.Tag = tempEventListing[i];
-                        b.Click += event_Click;
-                        //b.Name = tempEventListing[i].getName();
-                        b.Content = grid;
-                        buttonStackpanel.Children.Add(b);
-                    }
+                    stackpanel.Children.Add(eventName);
+                    stackpanel.Children.Add(eventDesc);
+                    grid.Children.Add(eventImage);
+                    grid.Children.Add(stackpanel);
+
+                    buttonStackpanel.Children.Add(b);
                 }
-                else
-                {
-                    buttonStackpanel.Children.RemoveRange(1, buttonStackpanel.Children.Count - 1);
-                }
-
-
-
+            }
+            else
+            {
+                buttonStackpanel.Children.Clear();
             }
         }
 
@@ -2340,6 +2343,36 @@ Sun - 10:00am to 4:00pm
             grdAttractions.Children.Add(grid7);
             grdAttractions.Children.Add(grid8);
             grdAttractions.Children.Add(grid9);
+        }
+
+        private void setupCalendar()
+        {
+            calendar1.SelectionMode = CalendarSelectionMode.MultipleRange;
+
+            month = calendar1.DisplayDate.Month;
+            int year = calendar1.DisplayDate.Year;
+
+            int startDay = 1;
+            int endDay = DateTime.DaysInMonth(year, month);
+            DateTime endOfMonth = new DateTime(year, month, endDay);
+            DateTime startOfMonth = new DateTime(year, month, startDay);
+
+            for (DateTime d = startOfMonth; d <= endOfMonth; d = d.AddDays(1))
+            {
+                if (eventListing.ContainsKey(d.Date.ToShortDateString()))
+                {
+                    calendar1.SelectedDates.Add(d);
+                }
+            }
+        }
+
+        private void calendar1_DisplayDateChanged(object sender, CalendarDateChangedEventArgs e)
+        {
+            setupCalendar();
+            if (month != calendar1.DisplayDate.Month)
+            {
+                buttonStackpanel.Children.Clear();
+            }
         }
     }
 }

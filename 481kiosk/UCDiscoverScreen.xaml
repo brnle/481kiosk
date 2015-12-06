@@ -236,11 +236,22 @@
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="2,0,-2,0">
 
-                        <StackPanel x:Name="buttonStackpanel">
-                            <Calendar Height="170" HorizontalAlignment="Left" Margin="304,0,-482,0"   
-								x:Name="calendar1" VerticalAlignment="Top" Width="180" SelectedDatesChanged="Selection_Change" ForceCursor="True"/>
-                            <Calendar/>
-                        </StackPanel>
+                        <DockPanel x:Name="dockPanel">
+                            <Calendar Height="auto"
+								x:Name="calendar1" VerticalAlignment="Stretch" Width="auto" SelectedDatesChanged="Selection_Change" ForceCursor="True" DisplayDateChanged="calendar1_DisplayDateChanged" SelectionMode="MultipleRange">
+                                <Calendar.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFE4EAF0" Offset="0"/>
+                                        <GradientStop Color="#FFECF0F4" Offset="0.16"/>
+                                        <GradientStop Color="#FFFCFCFD" Offset="0.16"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Calendar.Background>
+                            </Calendar>
+                            <StackPanel x:Name="buttonStackpanel">
+
+                            </StackPanel>
+                        </DockPanel>
                     </ScrollViewer>
                 </GroupBox>
             </Expander>
