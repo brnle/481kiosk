@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
     <Grid>
-        <Grid x:Name="backgroundForTab" Margin="0,-2,-2,4">
+        <Grid x:Name="backgroundForTab" Margin="-3,-4.5,-5,-3.333">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="Auto" />
@@ -19,22 +19,26 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Height="41" Width="152" FontSize="26.667"/>
-            <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="True" Width="800">
+            <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Height="41" Width="152" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" Grid.RowSpan="2"/>
+            <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="True" Width="800" FontSize="16">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="163*"/>
-                        <ColumnDefinition Width="635*"/>
+                        <ColumnDefinition Width="55*"/>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="737*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <TextBlock HorizontalAlignment="Left" Margin="56,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="15" Width="78" Foreground="Black"/>
-                    <RadioButton x:Name="rdoDistance" Margin="149,5,-149,10" Content="Distance" Grid.Row="0" Grid.ColumnSpan="2" Checked="rdoDistance_Checked"/>
-                    <RadioButton Margin="76,5,-239,10" Content="Price" Grid.Row="0" Grid.Column="1" Checked="rdoPrice_Checked"/>
-                    <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <TextBlock HorizontalAlignment="Left" Margin="44,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="20" Width="78" Foreground="Black" Grid.Column="0" Grid.ColumnSpan="3"/>
+                    <RadioButton x:Name="rdoDistance" Margin="131,5,564,8" Content="Distance" Grid.Row="0" Grid.Column="2" Checked="rdoDistance_Checked"/>
+                    <RadioButton Margin="70,5,-239,10" Content="Price" Grid.Row="0" Grid.Column="2" Checked="rdoPrice_Checked"/>
+                    <GroupBox Height="410" Foreground="Black" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="{x:Null}">
                         <ScrollViewer Margin="0,6,0,-6">
+                            <ScrollViewer.Foreground>
+                                <ImageBrush/>
+                            </ScrollViewer.Foreground>
                             <Grid x:Name="grdAttractions">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="200"/>
@@ -62,9 +66,9 @@
                                         </Button.Background>
                                         <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Calgary Tower" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
-                                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="38,8,0,0" Width="184"/>
-                                    <TextBlock Text="5.9KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
+                                    <TextBlock Text="5.9KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="0" Grid.Column="1">
                                     <Button x:Name="btnCalgaryZoo" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalgaryZoo_Click">
@@ -83,8 +87,8 @@
                                         <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="Calgary Zoo" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="6.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="6.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="0" Grid.Column="2">
                                     <Button x:Name="btnTelusSpark" Width="175" Height="175" Margin="42,5,42,13" Click="btnTelusSpark_Click">
@@ -103,8 +107,8 @@
                                         <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="Telus Spark" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="9.2KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="9.2KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black" />
+                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="1" Grid.Column="0">
                                     <Button x:Name="btnCanadaSportsHOF" Width="175" Height="175" Margin="42,5,42,13" Click="btnCanadaSportsHOF_Click">
@@ -123,8 +127,8 @@
                                         <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="Canada's Sports Hall of Fame" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="18.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="18.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="1" Grid.Column="1">
                                     <Button x:Name="btnGlenbowMuseum" Width="175" Height="175" Margin="42,5,42,13" Click="btnGlenbowMuseum_Click">
@@ -143,8 +147,8 @@
                                         <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Glenbow Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="6.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="6.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="1" Grid.Column="2">
                                     <Button x:Name="btnAeroSpaceMuseum" Width="175" Height="175" Margin="42,5,42,13" Click="btnAeroSpaceMuseum_Click">
@@ -163,8 +167,8 @@
                                         <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="Aero Space Museum" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="19.1KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="19.1KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="0">
                                     <Button x:Name="btnCanadaOlympicPark" Width="175" Height="175" Margin="42,5,42,13" Click="btnCanadaOlympicPark_Click">
@@ -183,8 +187,8 @@
                                         <TextBlock x:Name="textBlock7" TextWrapping="Wrap" Text="Canada Olympic Park" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="18.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="18.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="1">
                                     <Button x:Name="btnCalawayPark" Width="175" Height="175" Margin="42,5,42,13" Click="btnCalawayPark_Click">
@@ -203,8 +207,8 @@
                                         <TextBlock x:Name="textBlock8" TextWrapping="Wrap" Text="Calaway Park" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="28.5KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="28.5KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                                 <Grid Grid.Row="2" Grid.Column="2">
                                     <Button x:Name="btnBowHabitat" Width="175" Height="175" Margin="42,5,42,13" Click="btnBowHabitat_Click">
@@ -223,8 +227,8 @@
                                         <TextBlock x:Name="textBlock9" TextWrapping="Wrap" Text="Bow Habitat Station" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                                     </Button>
                                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                                    <TextBlock Text="11.5KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                                    <TextBlock Text="$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                                    <TextBlock Text="11.5KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Black"/>
+                                    <TextBlock Text="$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black"/>
                                 </Grid>
                             </Grid>
                         </ScrollViewer>

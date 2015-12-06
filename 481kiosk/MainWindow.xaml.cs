@@ -48,6 +48,10 @@ namespace _481kiosk
 
             UCDiscoverScreen _ucDiscover = new UCDiscoverScreen(this);
             TabItem _tabDiscover = new TabItem();
+
+            screenColor(Brushes.OrangeRed, _tabDiscover);
+            _tabDiscover.MouseLeftButtonUp += delegate { screenColor(Brushes.OrangeRed, _tabDiscover); };
+
             _tabDiscover.Header = "Discover";
             _tabDiscover.Content = _ucDiscover;
 
@@ -65,6 +69,18 @@ namespace _481kiosk
                     tabControl.Items.RemoveAt(index);
                 }
             }
+        }
+
+        public void screenColor(Brush brush, TabItem tab)
+        {
+            MainGrid.Background = brush;
+            tabControl.Background = brush;
+            tab.Background = brush;
+        }
+        private void langTab_Click(object sender, RoutedEventArgs e)
+        {
+            var converter = new System.Windows.Media.BrushConverter();
+            screenColor((Brush)converter.ConvertFromString("#FF00CFCF"), (TabItem)sender);
         }
 
         private void btnFrench_Click(object sender, RoutedEventArgs e)

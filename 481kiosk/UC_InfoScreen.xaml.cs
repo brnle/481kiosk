@@ -45,6 +45,10 @@ namespace _481kiosk
             UCMapScreen _ucMap = new UCMapScreen(_main, this.txtBlockAddress.Text.ToString().Replace("\n", " "));
             TabItem _tabPage = new TabItem();
 
+            //Code for color
+            _main.screenColor(Brushes.Gold, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Gold, _tabPage); };
+
             _tabPage.Header = "Navigation";
 
             _tabPage.Content = _ucMap;
@@ -58,6 +62,11 @@ namespace _481kiosk
 
             UCRestaurants _ucRestaurants = new UCRestaurants(_main);
             TabItem _tabPage = new TabItem();
+
+
+            //Code for color
+            _main.screenColor(Brushes.Lavender, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Lavender, _tabPage); };
 
             _tabPage.Header = "Restaurants";
 

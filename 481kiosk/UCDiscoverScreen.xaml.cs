@@ -147,6 +147,9 @@ namespace _481kiosk
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
 
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
 
             //Input all information regarding attraction
             _tabPage.Header = "Calgary Tower";
@@ -180,6 +183,10 @@ Sun - 9:00am to 9:00pm
 
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
+
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
 
             _tabPage.Header = "Glenbow Museum";
             _ucInfo.txtBlockTitle.Text = "Glenbow Museum";
@@ -713,6 +720,10 @@ Sun - 12:00pm to 5:00pm";
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
 
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+
             _tabPage.Header = "Calgary Zoo";
             _ucInfo.txtBlockTitle.Text = "Calgary Zoo";
             _ucInfo.txtBlockAddress.Text = "1300 Zoo Rd NE, Calgary, AB T2E 7V6";
@@ -747,6 +758,10 @@ Sun - 9:00am to 5:00pm";
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
 
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+
             _tabPage.Header = "Telus Spark";
             _ucInfo.txtBlockTitle.Text = "Telus Spark";
             _ucInfo.txtBlockAddress.Text = "220 St Georges Dr NE, Calgary, AB T2E 5T2";
@@ -779,6 +794,10 @@ Sun - 10:00am to 4:00pm
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
 
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+
             _tabPage.Header = "Canada's Sports Hall of Fame";
             _ucInfo.txtBlockTitle.Text = "Canada's Sports Hall of Fame";
             _ucInfo.txtBlockAddress.Text = "169 Canada Olympic Road SW, Calgary, AB T3B 6B7";
@@ -804,6 +823,10 @@ Sun - 10:00am to 5:00pm";
 
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
+
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
 
             _tabPage.Header = "Aero Space Museum";
             _ucInfo.txtBlockTitle.Text = "Aero Space Museum";
@@ -831,6 +854,10 @@ Sun - 10:00am to 4:00pm";
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
 
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+
             _tabPage.Header = "Canada Olympic Park";
             _ucInfo.txtBlockTitle.Text = "Canada Olympic Park";
             _ucInfo.txtBlockAddress.Text = "88 Canada Olympic Road SW, Calgary, AB T3B 5R5";
@@ -857,6 +884,10 @@ Sun - 8:00am to 9:00pm
 
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
+
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
 
             _tabPage.Header = "Calaway Park";
             _ucInfo.txtBlockTitle.Text = "Calaway Park";
@@ -892,6 +923,10 @@ Sun - 10:00am to 7:00pm
 
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
+
+            //Code for color
+            _main.screenColor(Brushes.Green, _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
 
             _tabPage.Header = "Bow Habitat Station";
             _ucInfo.txtBlockTitle.Text = "Bow Habitat Station";
