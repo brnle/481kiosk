@@ -37,7 +37,7 @@ namespace _481kiosk
             for (int index = 0; index < items.Count; index++)
             {
                 TabItem tab = (TabItem) items.GetItemAt(index);
-                tab.Width = (tabControl.ActualWidth - 4) / items.Count;
+                tab.Width = (tabControl.ActualWidth - 6) / items.Count;
             }
         }
 
@@ -51,7 +51,7 @@ namespace _481kiosk
 
             screenColor(Brushes.OrangeRed, _tabDiscover);
             _tabDiscover.MouseLeftButtonUp += delegate { screenColor(Brushes.OrangeRed, _tabDiscover); };
-
+            
             _tabDiscover.Header = "Discover";
             _tabDiscover.Content = _ucDiscover;
 
@@ -76,6 +76,7 @@ namespace _481kiosk
             MainGrid.Background = brush;
             tabControl.Background = brush;
             tab.Background = brush;
+
         }
         private void langTab_Click(object sender, RoutedEventArgs e)
         {

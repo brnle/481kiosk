@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_481kiosk"
         mc:Ignorable="d"
-        Title="Calgary Information Kiosk" Height="696" Width="900" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+        Title="Calgary Information Kiosk" Height="696" Width="900" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Background="{x:Null}">
     <Window.Resources>
         <SolidColorBrush x:Key="TabItem.Selected.Background" Color="#FFFFFF"/>
         <SolidColorBrush x:Key="TabItem.Selected.Border" Color="#ACACAC"/>
@@ -130,8 +130,8 @@
     </Window.Resources>
     
     <Grid x:Name="MainGrid" Background="#FF00CFCF">
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="667" VerticalAlignment="Top" Width="900" FontFamily="Segoe UI Emoji" BorderBrush="{x:Null}" Style="{DynamicResource TabControlStyle1}" Background="#FF00CFCF" Margin="0,0,-6,0">
-            <TabItem x:Name="tabLanguage" Header="Language" MouseLeftButtonUp="langTab_Click"  Style="{DynamicResource TabStyle}" Height="35" Width="896" BorderBrush="#FFACACAC" HorizontalAlignment="Left" Margin="0,-0.5,0,0.5">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="667" VerticalAlignment="Top" Width="878" FontFamily="Segoe UI Emoji" BorderBrush="{x:Null}" Style="{DynamicResource TabControlStyle1}" Background="#FF151515" Margin="0,0,-6,0">
+            <TabItem x:Name="tabLanguage" Header="Language" MouseLeftButtonUp="langTab_Click"  Style="{DynamicResource TabStyle}" Height="35" Width="874" BorderBrush="#FFACACAC" HorizontalAlignment="Left" Margin="0,-0.5,0,0.5">
                 <TabItem.Resources>
                     <Style x:Key="FocusVisual">
                         <Setter Property="Control.Template">

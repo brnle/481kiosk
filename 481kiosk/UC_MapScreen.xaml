@@ -16,7 +16,8 @@
         <Label x:Name="lblTransit" Content="24 Minutes" HorizontalAlignment="Left" Margin="314,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="71"/>
         <Button x:Name="btnPrint" Content="PRINT INSTRUCTIONS" HorizontalAlignment="Left" Margin="36,535,0,0" VerticalAlignment="Top" Width="797" Height="70" FontSize="26.667"/>
         <WebBrowser x:Name="wbMap" Height="406" Margin="279,110,39,108" Width="554"/>
-        <WebBrowser x:Name="wbInstructions" Height="453" Margin="37,63,652,108" Width="183"/>
+        <WebBrowser x:Name="wbInstructions" Margin="37,110,652,108" Width="183"/>
+        <Button x:Name="btnReverse" Content="Reverse Trip" HorizontalAlignment="Left" Margin="58,73,0,0" VerticalAlignment="Top" Width="136" Height="32" FontSize="14.667" Click="btnReverse_Click"/>
 
     </Grid>
 </UserControl>

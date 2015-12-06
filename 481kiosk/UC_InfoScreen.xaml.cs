@@ -21,9 +21,17 @@ namespace _481kiosk
     public partial class UCInfoScreen : UserControl
     {
         private MainWindow _main;
+        String originChange = "new";
         public UCInfoScreen(MainWindow _window)
         {
             _main = _window;
+            InitializeComponent();
+        }
+
+        public UCInfoScreen(MainWindow _window, String origin)
+        {
+            _main = _window;
+            originChange = origin;
             InitializeComponent();
         }
 
@@ -42,7 +50,18 @@ namespace _481kiosk
                 MessageBox.Show("Calaway Park does not have a transit route available, please select one of the other two modes of transportation. Sorry for the inconvenience.");
             }
 
-            UCMapScreen _ucMap = new UCMapScreen(_main, this.txtBlockAddress.Text.ToString().Replace("\n", " "));
+            UCMapScreen _ucMap;
+
+            if (!originChange.Equals("new"))
+            {
+                Console.WriteLine("NOT NULL");
+                _ucMap = new UCMapScreen(_main, this.txtBlockAddress.Text.ToString().Replace("\n", " "), originChange);
+            } else
+            {
+                _ucMap = new UCMapScreen(_main, this.txtBlockAddress.Text.ToString().Replace("\n", " "));
+                
+            }
+            
             TabItem _tabPage = new TabItem();
 
             //Code for color
@@ -60,7 +79,9 @@ namespace _481kiosk
         {
             _main.resetTab(_main.tabControl.SelectedIndex);
 
-            UCRestaurants _ucRestaurants = new UCRestaurants(_main);
+            String newOrigin = this.txtBlockAddress.Text.ToString().Replace("\n", " ");
+
+            UCRestaurants _ucRestaurants = new UCRestaurants(_main, newOrigin);
             TabItem _tabPage = new TabItem();
 
 

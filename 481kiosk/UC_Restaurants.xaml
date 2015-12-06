@@ -12,11 +12,11 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="56,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="15" Width="78" Foreground="Black"/>
-        <RadioButton x:Name="restDistanceChecked" Margin="119,6,-119,24" Content="Distance" Grid.Row="0"/>
-        <RadioButton Margin="199,6,-227,24" Content="Price" Grid.Row="0" />
+        <RadioButton x:Name="restDistanceChecked" Margin="119,6,-119,24" Content="Distance" Grid.Row="0" Checked="distanceChecked"/>
+        <RadioButton x:Name="restPriceChecked" Margin="199,6,-227,24" Content="Price" Grid.Row="0" Checked="restPriceChecked_Checked" />
         <GroupBox Height="575" Foreground="#FF4A4A5D" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="2">
             <ScrollViewer Height="560" Margin="0,6,0,-6">
-                <Grid x:Name="gridRestaurant">
+                <Grid  x:Name="gridRestaurant">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="200"/>
                         <RowDefinition Height="200" />
@@ -28,7 +28,7 @@
                         <ColumnDefinition Width="260" />
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Row="0" Grid.Column="0">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnRiverCafe" Width="175" Height="175" Margin="42,5,42,13" Click="btnRiverCafe_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="Images/hardy4.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
@@ -48,7 +48,7 @@
                         <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="0" Grid.Column="1">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnNotable" Width="175" Height="175" Margin="42,5,42,13" Click="btnNotable_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="Images/picNotable.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
@@ -68,7 +68,7 @@
                         <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="0" Grid.Column="2">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnRawBar" Width="175" Height="175" Margin="42,5,42,13" Click="btnRawBar_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="Images/picRaw.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
@@ -88,9 +88,9 @@
                         <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1" Grid.Column="0">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnHolySmokeBBQ" Width="175" Height="175" Margin="42,5,42,13" Click="btnHolySmokeBBQ_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="Images/hardy4.jpg" Stretch="UniformToFill">
+                                <ImageBrush ImageSource="Images/holy-smoke-bbq.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
                                         <TransformGroup>
                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -101,16 +101,16 @@
                                     </ImageBrush.RelativeTransform>
                                 </ImageBrush>
                             </Button.Background>
-                            <TextBlock TextWrapping="Wrap" Text="River Cafe" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                            <TextBlock TextWrapping="Wrap" Text="Holy Smoke BBQ" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                         </Button>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                        <TextBlock Text="7.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                        <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        <TextBlock Text="3.7KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                        <TextBlock Text="$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1" Grid.Column="1">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnCanadianBrewhouse" Width="175" Height="175" Margin="42,5,42,13" Click="btnCanadianBrewhouse_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="Images/picNotable.jpg" Stretch="UniformToFill">
+                                <ImageBrush ImageSource="Images/canadian-brewhouse.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
                                         <TransformGroup>
                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -121,16 +121,16 @@
                                     </ImageBrush.RelativeTransform>
                                 </ImageBrush>
                             </Button.Background>
-                            <TextBlock TextWrapping="Wrap" Text="Notable" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                            <TextBlock TextWrapping="Wrap" Text="Canadian Brewhouse" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                         </Button>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                        <TextBlock Text="13.2KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                        <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        <TextBlock Text="21.3KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                        <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1" Grid.Column="2">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnHimalayan" Width="175" Height="175" Margin="42,5,42,13" Click="btnHimalayan_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="Images/picRaw.jpg" Stretch="UniformToFill">
+                                <ImageBrush ImageSource="Images/himalayan.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
                                         <TransformGroup>
                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -141,16 +141,16 @@
                                     </ImageBrush.RelativeTransform>
                                 </ImageBrush>
                             </Button.Background>
-                            <TextBlock TextWrapping="Wrap" Text="Raw Bar" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                            <TextBlock TextWrapping="Wrap" Text="The Himalayan" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                         </Button>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                        <TextBlock Text="5.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                        <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        <TextBlock Text="9.5KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                        <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="2" Grid.Column="0">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnSaltlik" Width="175" Height="175" Margin="42,5,42,13" Click="btnSaltlik_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="Images/hardy4.jpg" Stretch="UniformToFill">
+                                <ImageBrush ImageSource="Images/saltlik.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
                                         <TransformGroup>
                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -161,16 +161,16 @@
                                     </ImageBrush.RelativeTransform>
                                 </ImageBrush>
                             </Button.Background>
-                            <TextBlock TextWrapping="Wrap" Text="River Cafe" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                            <TextBlock TextWrapping="Wrap" Text="Saltlik Steakhouse" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                         </Button>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                        <TextBlock Text="7.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                        <TextBlock Text="6.4KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                         <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="2" Grid.Column="1">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
+                        <Button x:Name="btnNaina" Width="175" Height="175" Margin="42,5,42,13" Click="btnNaina_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="Images/picNotable.jpg" Stretch="UniformToFill">
+                                <ImageBrush ImageSource="Images/naina-kitchen.jpg" Stretch="UniformToFill">
                                     <ImageBrush.RelativeTransform>
                                         <TransformGroup>
                                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -181,33 +181,12 @@
                                     </ImageBrush.RelativeTransform>
                                 </ImageBrush>
                             </Button.Background>
-                            <TextBlock TextWrapping="Wrap" Text="Notable" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
+                            <TextBlock TextWrapping="Wrap" Text="Naina's Kitchen" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
                         </Button>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                        <TextBlock Text="13.2KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                        <TextBlock Text="$$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        <TextBlock Text="5.6KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                        <TextBlock Text="$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     </Grid>
-                    <Grid Grid.Row="2" Grid.Column="2">
-                        <Button Width="175" Height="175" Margin="42,5,42,13">
-                            <Button.Background>
-                                <ImageBrush ImageSource="Images/picRaw.jpg" Stretch="UniformToFill">
-                                    <ImageBrush.RelativeTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                                            <TranslateTransform/>
-                                        </TransformGroup>
-                                    </ImageBrush.RelativeTransform>
-                                </ImageBrush>
-                            </Button.Background>
-                            <TextBlock TextWrapping="Wrap" Text="Raw Bar" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Stencil" FontSize="13.333" Margin="0,130,50,0" Foreground="#FFF9F8F8"/>
-                        </Button>
-                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="192" Margin="38,8,0,0" VerticalAlignment="Top" Width="184"/>
-                        <TextBlock Text="5.8KM" Margin="80,10,74,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-                        <TextBlock Text="$$$" Margin="80,10,74,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
-                    </Grid>
-
                 </Grid>
             </ScrollViewer>
         </GroupBox>

@@ -27,7 +27,7 @@
             </ScrollViewer>
         </GroupBox>
         <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold" Click="btnDirections_Click"/>
-        <Button x:Name="btnRestaurantsNearby" Content="Restaurants Nearby This Location" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold" Click="btnRestaurantsNearby_Click"/>
+        <Button x:Name="btnRestaurantsNearby" Content="Restaurants FROM THIS LOCATION" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold" Click="btnRestaurantsNearby_Click"/>
 
     </Grid>
 </UserControl>

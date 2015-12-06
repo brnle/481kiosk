@@ -24,6 +24,7 @@ namespace _481kiosk
         private MainWindow _main;
         private String[] _travelMode = new String[3] {"TRANSIT", "WALKING", "DRIVING"};
         private String destination;
+        private String origin = "Chinook Centre";
 
         public UCMapScreen(MainWindow _window, String location)
         {
@@ -31,6 +32,24 @@ namespace _481kiosk
             InitializeComponent();
             this.textBlock.Text = "Transit Instructions";
             destination = location;
+            String _embeddedMap, _embeddedInstructions;
+
+            //Call generic function to develop the appropriate API call strings
+            setupContent(0, out _embeddedMap, out _embeddedInstructions);
+
+            //Call generic function to show the map and instructions
+            showContent(_embeddedMap, _embeddedInstructions);
+        }
+
+        public UCMapScreen(MainWindow _window, String location, String newOrigin)
+        {
+            _main = _window;
+            origin = newOrigin;
+            InitializeComponent();
+            this.textBlock.Text = "Transit Instructions";
+            destination = location;
+            Console.WriteLine(destination);
+            Console.WriteLine(origin);
             String _embeddedMap, _embeddedInstructions;
 
             //Call generic function to develop the appropriate API call strings
@@ -62,7 +81,7 @@ namespace _481kiosk
                         directionsDisplay.setMap(map);
 
                         var request = {
-                            origin: 'Chinook Centre',
+                            origin: '"+ origin + @"',
                             destination: '" + destination + @"',
                             travelMode: google.maps.DirectionsTravelMode." + _travelMode[mode] + @",
                             unitSystem: google.maps.UnitSystem.METRIC,
@@ -98,7 +117,7 @@ namespace _481kiosk
                         directionsDisplay.setPanel(document.getElementById('panel'));
 
                         var request = {
-                            origin: 'Chinook Centre',
+                            origin: '" + origin + @"',
                             destination: '" + destination + @"',
                             travelMode: google.maps.DirectionsTravelMode." + _travelMode[mode] + @",
                             unitSystem: google.maps.UnitSystem.METRIC,
@@ -157,6 +176,22 @@ namespace _481kiosk
             String _embeddedMap, _embeddedInstructions;
             setupContent(2, out _embeddedMap, out _embeddedInstructions);
 
+            showContent(_embeddedMap, _embeddedInstructions);
+        }
+
+        private void btnReverse_Click(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+            this.textBlock.Text = "Transit Instructions";
+            String temp = destination;
+            destination = origin;
+            origin = temp;
+            String _embeddedMap, _embeddedInstructions;
+
+            //Call generic function to develop the appropriate API call strings
+            setupContent(0, out _embeddedMap, out _embeddedInstructions);
+
+            //Call generic function to show the map and instructions
             showContent(_embeddedMap, _embeddedInstructions);
         }
     }
