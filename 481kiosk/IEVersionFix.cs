@@ -19,7 +19,7 @@ namespace _481kiosk
     
     class IEVersionFix
     {
-        private const string InternetExplorerRootKey = @"Software\Microsoft\Internet Explorer";
+        private const string InternetExplorerRootKey = @"Software\Wow6432Node\Microsoft\Internet Explorer";
         private const string BrowserEmulationKey = InternetExplorerRootKey + @"\Main\FeatureControl\FEATURE_BROWSER_EMULATION";
 
         public enum BrowserEmulationVersion
@@ -187,8 +187,11 @@ namespace _481kiosk
                 case 8:
                     emulationCode = BrowserEmulationVersion.Version8;
                     break;
-                default:
+                case 7:
                     emulationCode = BrowserEmulationVersion.Version7;
+                    break;
+                default:
+                    emulationCode = BrowserEmulationVersion.Version11Edge;
                     break;
                 }
             }
