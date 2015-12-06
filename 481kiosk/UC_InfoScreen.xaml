@@ -11,7 +11,7 @@
             <Image x:Name="imgPicture" Height="267" Width="229" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="233"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Height="80" Margin="32,28,33,0" VerticalAlignment="Top">
-            <TextBlock x:Name="txtBlockTitle" TextAlignment="Center" FontSize="40" FontFamily="Rockwell Extra Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Height="69" FontStyle="Italic" TextOptions.TextFormattingMode="Display" Width="807" TextWrapping="Wrap"/>
+            <TextBlock x:Name="txtBlockTitle" TextAlignment="Center" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Height="80" FontStyle="Italic" TextOptions.TextFormattingMode="Display" Width="807" TextWrapping="Wrap"/>
         </Viewbox>
         <GroupBox x:Name="grpBoxAddress" Header="Address" HorizontalAlignment="Left" Margin="304,113,0,0" VerticalAlignment="Top" BorderBrush="Black" Height="95" Width="253" FontSize="16" FontWeight="Bold">
             <TextBlock x:Name="txtBlockAddress" Margin="10,10,0,0" TextWrapping="Wrap" Width="221"/>
@@ -26,8 +26,8 @@
                 <TextBlock x:Name="txtDescription" TextWrapping="Wrap" VerticalAlignment="Top" Height="auto" Width="742" FontSize="13.333" FontWeight="Normal" HorizontalAlignment="Center"/>
             </ScrollViewer>
         </GroupBox>
-        <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold" Click="btnDirections_Click"/>
-        <Button x:Name="btnRestaurantsNearby" Content="Restaurants FROM THIS LOCATION" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold" Click="btnRestaurantsNearby_Click"/>
+        <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold" Click="btnDirections_Click" Background="White"/>
+        <Button x:Name="btnRestaurantsNearby" Content="Restaurants FROM THIS LOCATION" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold" Click="btnRestaurantsNearby_Click" Background="White"/>
 
     </Grid>
 </UserControl>

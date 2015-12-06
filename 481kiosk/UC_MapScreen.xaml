@@ -7,17 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
     <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="36,23,0,0" VerticalAlignment="Top" FontSize="21.333"/>
-        <Button x:Name="btnTransit" Content="Transit" HorizontalAlignment="Left" Margin="279,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnTransit_Click"/>
-        <Button x:Name="btnWalking" Content="Walking" HorizontalAlignment="Left" Margin="487,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnWalking_Click"/>
-        <Button x:Name="btnCar" Content="Driving" HorizontalAlignment="Left" Margin="693,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnCar_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="36,23,0,0" VerticalAlignment="Top" FontSize="32" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold"/>
+        <Button x:Name="btnTransit" Content="Transit" HorizontalAlignment="Left" Margin="279,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnTransit_Click" Background="White"/>
+        <Button x:Name="btnWalking" Content="Walking" HorizontalAlignment="Left" Margin="487,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnWalking_Click" Background="White"/>
+        <Button x:Name="btnCar" Content="Driving" HorizontalAlignment="Left" Margin="693,42,0,0" VerticalAlignment="Top" Width="140" Height="32" FontSize="14.667" Click="btnCar_Click" Background="White"/>
         <Label x:Name="lblDriving" Content="11 Minutes" HorizontalAlignment="Left" Margin="728,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="71"/>
         <Label x:Name="lblWalking" Content="1 hour 11 minutes" HorizontalAlignment="Left" Margin="503,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="110"/>
         <Label x:Name="lblTransit" Content="24 Minutes" HorizontalAlignment="Left" Margin="314,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.072,0.385" Width="71"/>
-        <Button x:Name="btnPrint" Content="PRINT INSTRUCTIONS" HorizontalAlignment="Left" Margin="36,535,0,0" VerticalAlignment="Top" Width="797" Height="70" FontSize="26.667"/>
+        <Button x:Name="btnPrint" Content="PRINT INSTRUCTIONS" HorizontalAlignment="Left" Margin="36,535,0,0" VerticalAlignment="Top" Width="797" Height="70" FontSize="26.667" Background="White"/>
         <WebBrowser x:Name="wbMap" Height="406" Margin="279,110,39,108" Width="554"/>
         <WebBrowser x:Name="wbInstructions" Margin="37,110,652,108" Width="183"/>
-        <Button x:Name="btnReverse" Content="Reverse Trip" HorizontalAlignment="Left" Margin="58,73,0,0" VerticalAlignment="Top" Width="136" Height="32" FontSize="14.667" Click="btnReverse_Click"/>
+        <Button x:Name="btnReverse" Content="Reverse Trip" HorizontalAlignment="Left" Margin="58,73,0,0" VerticalAlignment="Top" Width="136" Height="32" FontSize="14.667" Click="btnReverse_Click" Background="White"/>
 
     </Grid>
 </UserControl>

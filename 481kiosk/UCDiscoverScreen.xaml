@@ -19,22 +19,23 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Height="41" Width="152" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" Grid.RowSpan="2"/>
-            <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Blue" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="True" Width="800" FontSize="16">
+            <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="362,7,0,0" VerticalAlignment="Top" Height="72" Width="168" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" Grid.RowSpan="2"/>
+            <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Black" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="True" Width="800" FontSize="16" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Regular">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="55*"/>
                         <ColumnDefinition Width="6*"/>
-                        <ColumnDefinition Width="737*"/>
+                        <ColumnDefinition Width="102*"/>
+                        <ColumnDefinition Width="635*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <TextBlock HorizontalAlignment="Left" Margin="44,5,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Height="20" Width="78" Foreground="Black" Grid.Column="0" Grid.ColumnSpan="3"/>
-                    <RadioButton x:Name="rdoDistance" Margin="131,5,515,8" Content="Distance" Grid.Row="0" Grid.Column="2" Checked="rdoDistance_Checked"/>
-                    <RadioButton Margin="70,5,611,10" Content="Price" Grid.Row="0" Grid.Column="2" Checked="rdoPrice_Checked" Width="auto"/>
-                    <GroupBox Height="410" Foreground="Black" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="{x:Null}">
+                    <RadioButton x:Name="rdoDistance" Margin="29,5,515,8" Content="Distance" Grid.Row="0" Grid.Column="3" Checked="rdoDistance_Checked"/>
+                    <RadioButton Margin="70,5,611,10" Content="Price" Grid.Row="0" Grid.Column="2" Checked="rdoPrice_Checked" Width="auto" Grid.ColumnSpan="2"/>
+                    <GroupBox Height="410" Foreground="Black" Margin="0,0,-2,0" Grid.Row="1" Grid.ColumnSpan="4" BorderBrush="{x:Null}">
                         <ScrollViewer Margin="0,6,0,-6">
                             <ScrollViewer.Foreground>
                                 <ImageBrush/>
@@ -235,7 +236,7 @@
                     </GroupBox>
                 </Grid>
             </Expander>
-            <Expander x:Name="expEvents" Grid.Row ="2" Header="Events" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800" Expanded="expEvents_Expanded">
+            <Expander x:Name="expEvents" Grid.Row ="2" Header="Events" Foreground="Black" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="False" Width="800" Expanded="expEvents_Expanded" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Regular" FontSize="16">
                 <GroupBox Height="410" Foreground="#FF4A4A5D" Margin="0,0,-2,0">
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="2,0,-2,0">
@@ -259,7 +260,7 @@
                     </ScrollViewer>
                 </GroupBox>
             </Expander>
-            <Expander x:Name="expRestaurants" Grid.Row ="3" Header="Restaurants" Foreground="Blue" Margin="38,10" Background="{x:Null}" Grid.RowSpan="1" IsExpanded="False" Width="800" Expanded="expRestaurants_Expanded">
+            <Expander x:Name="expRestaurants" Grid.Row ="3" Header="Restaurants" Foreground="Black" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="False" Width="800" Expanded="expRestaurants_Expanded" FontSize="16" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Regular">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />

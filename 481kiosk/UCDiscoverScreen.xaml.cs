@@ -125,6 +125,9 @@ namespace _481kiosk
             UCInfoScreen _ucInfo = new UCInfoScreen(_main);
             TabItem _tabPage = new TabItem();
 
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99e699")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99e699")), _tabPage); };
+
             Events temp = (Events)button.Tag;
             //Input all information regarding attraction
             _tabPage.Header = temp.getName();
@@ -148,8 +151,8 @@ namespace _481kiosk
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             //Input all information regarding attraction
             _tabPage.Header = "Calgary Tower";
@@ -185,8 +188,8 @@ Sun - 9:00am to 9:00pm
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Glenbow Museum";
             _ucInfo.txtBlockTitle.Text = "Glenbow Museum";
@@ -721,8 +724,8 @@ Sun - 12:00pm to 5:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Calgary Zoo";
             _ucInfo.txtBlockTitle.Text = "Calgary Zoo";
@@ -759,8 +762,8 @@ Sun - 9:00am to 5:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Telus Spark";
             _ucInfo.txtBlockTitle.Text = "Telus Spark";
@@ -795,8 +798,8 @@ Sun - 10:00am to 4:00pm
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Canada's Sports Hall of Fame";
             _ucInfo.txtBlockTitle.Text = "Canada's Sports Hall of Fame";
@@ -825,8 +828,8 @@ Sun - 10:00am to 5:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Aero Space Museum";
             _ucInfo.txtBlockTitle.Text = "Aero Space Museum";
@@ -855,8 +858,8 @@ Sun - 10:00am to 4:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Canada Olympic Park";
             _ucInfo.txtBlockTitle.Text = "Canada Olympic Park";
@@ -886,8 +889,8 @@ Sun - 8:00am to 9:00pm
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Calaway Park";
             _ucInfo.txtBlockTitle.Text = "Calaway Park";
@@ -925,8 +928,8 @@ Sun - 10:00am to 7:00pm
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _tabPage.Header = "Bow Habitat Station";
             _ucInfo.txtBlockTitle.Text = "Bow Habitat Station";
@@ -2341,8 +2344,8 @@ Sun - 10:00am to 4:00pm
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "River Cafe";
@@ -2374,8 +2377,8 @@ Sun - 10:00am to 10:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "NOTaBLE";
@@ -2407,8 +2410,8 @@ Sun - 11:00am to 9:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "Raw Bar";
@@ -2438,8 +2441,8 @@ Sun - Closed";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "Holy Smoke BBQ";
@@ -2469,8 +2472,8 @@ Sun - Closed";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "Canadian Brewhouse";
@@ -2514,8 +2517,8 @@ Sun - 11:00am to 2:00am";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "Himalayan";
@@ -2545,8 +2548,8 @@ Sun - 5:00pm to 9:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "Saltlik";
@@ -2578,8 +2581,8 @@ Sun - 5:00pm to 10:00pm";
             TabItem _tabPage = new TabItem();
 
             //Code for color
-            _main.screenColor(Brushes.Green, _tabPage);
-            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor(Brushes.Green, _tabPage); };
+            _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage);
+            _tabPage.MouseLeftButtonUp += delegate { _main.screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#99ccff")), _tabPage); };
 
             _ucInfo.btnRestaurantsNearby.Visibility = Visibility.Hidden;
             _tabPage.Header = "Naina's Kitchen";

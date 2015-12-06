@@ -49,8 +49,8 @@ namespace _481kiosk
             UCDiscoverScreen _ucDiscover = new UCDiscoverScreen(this);
             TabItem _tabDiscover = new TabItem();
 
-            screenColor(Brushes.OrangeRed, _tabDiscover);
-            _tabDiscover.MouseLeftButtonUp += delegate { screenColor(Brushes.OrangeRed, _tabDiscover); };
+            screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#ffa366")), _tabDiscover);
+            _tabDiscover.MouseLeftButtonUp += delegate { screenColor((SolidColorBrush)(new BrushConverter().ConvertFrom("#ffa366")), _tabDiscover); };
             
             _tabDiscover.Header = "Discover";
             _tabDiscover.Content = _ucDiscover;

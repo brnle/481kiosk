@@ -156,6 +156,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\BebasNeue Bold.ttf" />
+    <Resource Include="Fonts\BebasNeue Book.ttf" />
+    <Resource Include="Fonts\BebasNeue Light.ttf" />
+    <Resource Include="Fonts\BebasNeue Regular.ttf" />
+    <Resource Include="Fonts\BebasNeue Thin.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,6 +171,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Canada_Maple_Leaf_svg.png" />
     <Content Include="Images\canadian-brewhouse.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -194,6 +200,7 @@
     <Content Include="Images\naina-kitchen.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Picture-152.png" />
     <Content Include="Images\saltlik.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

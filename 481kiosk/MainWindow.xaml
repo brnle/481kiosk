@@ -128,7 +128,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    
+
     <Grid x:Name="MainGrid" Background="#FF00CFCF">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="667" VerticalAlignment="Top" Width="878" FontFamily="Segoe UI Emoji" BorderBrush="{x:Null}" Style="{DynamicResource TabControlStyle1}" Background="#FF151515" Margin="0,0,-6,0">
             <TabItem x:Name="tabLanguage" Header="Language" MouseLeftButtonUp="langTab_Click"  Style="{DynamicResource TabStyle}" Height="35" Width="874" BorderBrush="#FFACACAC" HorizontalAlignment="Left" Margin="0,-0.5,0,0.5">
@@ -343,17 +343,19 @@
                     </Style>
                 </TabItem.Resources>
                 <Grid x:Name="backgroundForTab" Margin="-3,-4.5,-5,-3.333" Background="#FF00CFCF">
-                    <Label x:Name="labelSelectLanguage" Content="Welcome To" HorizontalAlignment="Left" Margin="73,55,0,0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Regular"/>
-                    <Label x:Name="labelCalgary" Content="Calgary Kiosk" HorizontalAlignment="Left" Margin="210,96.68,0,0" VerticalAlignment="Top" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" FontSize="106.667" Height="143.04" Width="522"/>
-                    <Label x:Name="labelCityGuide" Content="Please Select a language" HorizontalAlignment="Left" Margin="68,272.72,0,0" FontFamily="Segoe UI" FontSize="18.667" Width="300" Height="43.28" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+
+                    <Label x:Name="labelSelectLanguage" Content="Welcome To" HorizontalAlignment="Left" Margin="137,55,0,0" VerticalAlignment="Top" Height="auto" Width="auto" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Book"/>
+                    <Label x:Name="labelCalgary" Content="Calgary Kiosk" HorizontalAlignment="Left" Margin="218,97,0,0" VerticalAlignment="Top" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" FontSize="106.667" Height="143" Width="522"/>
+                    <Label x:Name="labelCityGuide" Content="Please Select a language" HorizontalAlignment="Left" Margin="68,272.72,0,0" FontFamily="Segoe UI" FontSize="21.333" Width="300" Height="43.28" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" FontWeight="Bold"/>
                     <Button x:Name="btnEnglish" Content="English" HorizontalAlignment="Left" Margin="72,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Click="btnEnglish_Click" Style="{DynamicResource ButtonStyle1}"/>
-                    <Button x:Name="btnFrench" Content="Français" HorizontalAlignment="Left" Margin="265,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
-                    <Button x:Name="btnSpanish" Content="Español" HorizontalAlignment="Left" Margin="458,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
-                    <Button x:Name="btnChinese" Content="中国" HorizontalAlignment="Left" Margin="651,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
+                    <Button x:Name="btnFrench" Content="Français" HorizontalAlignment="Left" Margin="265,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}" Click="btnFrench_Click"/>
+                    <Button x:Name="btnSpanish" Content="Español" HorizontalAlignment="Left" Margin="458,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}" Click="btnSpanish_Click"/>
+                    <Button x:Name="btnChinese" Content="中国" HorizontalAlignment="Left" Margin="651,316,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}" Click="btnChinese_Click"/>
                     <Button x:Name="btnHindi" Content="हिंदी" HorizontalAlignment="Left" Margin="72,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
                     <Button x:Name="btnArabic" Content="العربية" HorizontalAlignment="Left" Margin="265,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
                     <Button x:Name="btnRussian" Content="Русский" HorizontalAlignment="Left" Margin="458,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
                     <Button x:Name="btnJapanese" Content="日本語" HorizontalAlignment="Left" Margin="651,458,0,0" VerticalAlignment="Top" Width="157" Height="96" FontSize="24" Style="{DynamicResource ButtonStyle1}"/>
+                    <Image x:Name="image" HorizontalAlignment="Left" Height="154" Margin="35,70,0,0" VerticalAlignment="Top" Width="178" Source="Images/Canada_Maple_Leaf_svg.png"/>
                 </Grid>
             </TabItem>
         </TabControl>
