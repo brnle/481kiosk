@@ -95,5 +95,15 @@ namespace _481kiosk
             _main.tabControl.Items.Add(_tabPage);
             _main.tabControl.SelectedItem = _tabPage;
         }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listBox.SelectedItem != null)
+            {
+                Image newImage = (Image)listBox.SelectedItem;
+                imgPicture.Source = newImage.Source;
+            }
+            
+        }
     }
 }

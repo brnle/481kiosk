@@ -76,12 +76,11 @@ namespace _481kiosk
             MainGrid.Background = brush;
             tabControl.Background = brush;
             tab.Background = brush;
-
         }
         private void langTab_Click(object sender, RoutedEventArgs e)
         {
-            var converter = new System.Windows.Media.BrushConverter();
-            screenColor((Brush)converter.ConvertFromString("#FF00CFCF"), (TabItem)sender);
+            //var converter = new System.Windows.Media.BrushConverter();
+            //screenColor((Brush)converter.ConvertFromString("#FF00CFCF"), (TabItem)sender);
         }
 
         private void btnFrench_Click(object sender, RoutedEventArgs e)
@@ -119,4 +118,6 @@ namespace _481kiosk
             MessageBox.Show("This button will display the Kiosk content in Japanese");
         }
     }
+
+
 }

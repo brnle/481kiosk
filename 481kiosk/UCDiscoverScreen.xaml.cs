@@ -52,6 +52,7 @@ namespace _481kiosk
             novEvents.Add(new Events("Calgary Stampede", "Famous cowboy festival for all ages", "Images/stampede_logo.png", "1410 Olympic Way SE\nT2G 2W1", "7 a.m. to 12 p.m"));
             eventListing.Add("11/25/2015", novEvents);
 
+            expAttractions.IsExpanded = true;
             setupCalendar();
         }
 
@@ -134,6 +135,7 @@ namespace _481kiosk
             _ucInfo.txtBlockTitle.Text = temp.getName();
             _ucInfo.txtBlockAddress.Text = temp.getAddress();
             _ucInfo.imgPicture.Source = new BitmapImage(new Uri(temp.getImg(), UriKind.Relative));
+            _ucInfo.txtDescription.Text = temp.getDescription();
 
             //Project user control onto the new tab's content, and set it as the new selected tab
             _tabPage.Content = _ucInfo;
@@ -158,7 +160,25 @@ namespace _481kiosk
             _tabPage.Header = "Calgary Tower";
             _ucInfo.txtBlockTitle.Text = "Calgary Tower";
             _ucInfo.txtBlockAddress.Text = "101 9 Ave SW, Calgary, AB T2P 1J9";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calgary-tower.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/calgary-tower.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            Image newImage = new Image();
+            Image newImage2 = new Image();
+            Image newImage3 = new Image();
+
+
+            newImage.Source = new BitmapImage(new Uri("Images/calgary-tower2.jpg", UriKind.Relative));
+            newImage2.Source = new BitmapImage(new Uri("Images/calgary-tower-restaurant.jpg", UriKind.Relative));
+            newImage3.Source = new BitmapImage(new Uri("Images/calgary-tower-glass-floor.jpg", UriKind.Relative));
+
+            _ucInfo.listBox.Items.Add(original);
+            _ucInfo.listBox.Items.Add(newImage);
+            _ucInfo.listBox.Items.Add(newImage2);
+            _ucInfo.listBox.Items.Add(newImage3);
+
+
             _ucInfo.txtDescription.Text = @"Start your Calgary adventure 525 feet in the air! Rising from the downtown core, the Calgary Tower is a must-see for any visitor. On the observation deck, experience a 360° panoramic view of the bustling city, the foothills and the majestic Rocky Mountains. Stand on the amazing glass floor for a birds-eye view of the streets below.
 
 Multimedia tours are provided to each guest who visits the Calgary Tower! This informative and inspiring tour is free with admission and is available in four languages: English, French, Mandarin, and German.
@@ -194,7 +214,26 @@ Sun - 9:00am to 9:00pm
             _tabPage.Header = "Glenbow Museum";
             _ucInfo.txtBlockTitle.Text = "Glenbow Museum";
             _ucInfo.txtBlockAddress.Text = "130 9 Ave SE, Calgary, AB T2G 0P3";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/glenbow-museum.jpg", UriKind.Relative));
+
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/glenbow-museum.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            Image newImage = new Image();
+            Image newImage2 = new Image();
+            Image newImage3 = new Image();
+
+
+            newImage.Source = new BitmapImage(new Uri("Images/glenbow-museum-staircase.jpg", UriKind.Relative));
+            newImage2.Source = new BitmapImage(new Uri("Images/glenbow-museum-interior.jpg", UriKind.Relative));
+            newImage3.Source = new BitmapImage(new Uri("Images/glenbow-museum-art.jpg", UriKind.Relative));
+
+            _ucInfo.listBox.Items.Add(original);
+            _ucInfo.listBox.Items.Add(newImage);
+            _ucInfo.listBox.Items.Add(newImage2);
+            _ucInfo.listBox.Items.Add(newImage3);
+
+
             _ucInfo.txtDescription.Text = @"Glenbow's vision is for more people to experience art and culture more often. In February of 2014, Glenbow announced its new direction - to provide visitors with a new kind of art museum experience. Glenbow showcases world-renowned travelling and permanent exhibitions that are meaningful to many diverse groups in our community, boasts the largest art collection in Western Canada and provides access and care to our collections.
 
 Glenbow also tells the story of Southern Alberta and the West to thousands of visitors to our city each year through permanent exhibitions on our third floor.
@@ -283,6 +322,7 @@ Sun - 12:00pm to 5:00pm";
             text1Margin.Right = 74;
             text1Margin.Bottom = 0;
             text1.Margin = text1Margin;
+            text1.Foreground = Brushes.Black;
             text1.HorizontalAlignment = HorizontalAlignment.Left;
             text1.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -343,6 +383,7 @@ Sun - 12:00pm to 5:00pm";
             text2Margin.Right = 74;
             text2Margin.Bottom = 0;
             text2.Margin = text1Margin;
+            text2.Foreground = Brushes.Black;
             text2.HorizontalAlignment = HorizontalAlignment.Left;
             text2.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -403,6 +444,7 @@ Sun - 12:00pm to 5:00pm";
             text3Margin.Right = 74;
             text3Margin.Bottom = 0;
             text3.Margin = text3Margin;
+            text3.Foreground = Brushes.Black;
             text3.HorizontalAlignment = HorizontalAlignment.Left;
             text3.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -453,6 +495,7 @@ Sun - 12:00pm to 5:00pm";
             text4Margin.Right = 74;
             text4Margin.Bottom = 0;
             text4.Margin = text3Margin;
+            text4.Foreground = Brushes.Black;
             text4.HorizontalAlignment = HorizontalAlignment.Left;
             text4.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -498,6 +541,7 @@ Sun - 12:00pm to 5:00pm";
             TextBlock text5 = new TextBlock();
             text5.Text = "8.0KM              $$$";
             text5.Margin = new Thickness(80, 10, 74, 0);
+            text5.Foreground = Brushes.Black;
             text5.HorizontalAlignment = HorizontalAlignment.Left;
             text5.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -542,6 +586,7 @@ Sun - 12:00pm to 5:00pm";
             TextBlock text6 = new TextBlock();
             text6.Text = "18.4KM              $$$";
             text6.Margin = new Thickness(80, 10, 74, 0);
+            text6.Foreground = Brushes.Black;
             text6.HorizontalAlignment = HorizontalAlignment.Left;
             text6.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -587,6 +632,7 @@ Sun - 12:00pm to 5:00pm";
             TextBlock text7 = new TextBlock();
             text7.Text = "18.8KM              $$";
             text7.Margin = new Thickness(80, 10, 74, 0);
+            text7.Foreground = Brushes.Black;
             text7.HorizontalAlignment = HorizontalAlignment.Left;
             text7.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -632,6 +678,7 @@ Sun - 12:00pm to 5:00pm";
             TextBlock text8 = new TextBlock();
             text8.Text = "19.1KM              $";
             text8.Margin = new Thickness(80, 10, 74, 0);
+            text8.Foreground = Brushes.Black;
             text8.HorizontalAlignment = HorizontalAlignment.Left;
             text8.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -678,6 +725,7 @@ Sun - 12:00pm to 5:00pm";
             TextBlock text9 = new TextBlock();
             text9.Text = "28.5KM              $$$$";
             text9.Margin = new Thickness(80, 10, 74, 0);
+            text9.Foreground = Brushes.Black;
             text9.HorizontalAlignment = HorizontalAlignment.Left;
             text9.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -730,7 +778,23 @@ Sun - 12:00pm to 5:00pm";
             _tabPage.Header = "Calgary Zoo";
             _ucInfo.txtBlockTitle.Text = "Calgary Zoo";
             _ucInfo.txtBlockAddress.Text = "1300 Zoo Rd NE, Calgary, AB T2E 7V6";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calgary-zoo.jpg", UriKind.Relative));
+
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/calgary-zoo.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            Image newImage = new Image();
+            Image newImage2 = new Image();
+
+
+            newImage.Source = new BitmapImage(new Uri("Images/calgary-zoo-water.jpg", UriKind.Relative));
+            newImage2.Source = new BitmapImage(new Uri("Images/calgary-zoo-penguins.jpg", UriKind.Relative));
+
+            _ucInfo.listBox.Items.Add(original);
+            _ucInfo.listBox.Items.Add(newImage);
+            _ucInfo.listBox.Items.Add(newImage2);
+
+
             _ucInfo.txtDescription.Text = @"Animatronic Dinosaurs are Back!
 
 Watch for triceratops grazing among the bushes, then look up to see fearsome T-Rex’s banana-sized teeth ready to tear into his next meal. Don’t run! You haven’t actually travelled back in time – it just feels like it.
@@ -768,7 +832,21 @@ Sun - 9:00am to 5:00pm";
             _tabPage.Header = "Telus Spark";
             _ucInfo.txtBlockTitle.Text = "Telus Spark";
             _ucInfo.txtBlockAddress.Text = "220 St Georges Dr NE, Calgary, AB T2E 5T2";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/telus-spark.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/telus-spark.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            Image newImage = new Image();
+            Image newImage2 = new Image();
+
+
+            newImage.Source = new BitmapImage(new Uri("Images/telus-spark-exterior.png", UriKind.Relative));
+            newImage2.Source = new BitmapImage(new Uri("Images/telus-spark-event.jpg", UriKind.Relative));
+
+            _ucInfo.listBox.Items.Add(original);
+            _ucInfo.listBox.Items.Add(newImage);
+            _ucInfo.listBox.Items.Add(newImage2);
+
             _ucInfo.txtDescription.Text = @"TELUS Spark is Canada's first new purpose-built Science Centre in over 25 years and a place for people of all ages and abilities to embrace the exploration and discovery of science, technology and art in new and amazing ways.
 
 Discover for yourself what makes the world around us so undeniably incredible by exploring over 150 exhibits, programs and demonstrations across Galleries, Calgary's only HD Digital Dome Theatre, travelling exhibitions, an Outdoor Park, and more.
@@ -804,7 +882,25 @@ Sun - 10:00am to 4:00pm
             _tabPage.Header = "Canada's Sports Hall of Fame";
             _ucInfo.txtBlockTitle.Text = "Canada's Sports Hall of Fame";
             _ucInfo.txtBlockAddress.Text = "169 Canada Olympic Road SW, Calgary, AB T3B 6B7";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/canada-sports-hof.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/canada-sports-hof.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            Image newImage = new Image();
+            Image newImage2 = new Image();
+            Image newImage3 = new Image();
+
+
+            newImage.Source = new BitmapImage(new Uri("Images/canada-sports-hof-gallery.jpg", UriKind.Relative));
+            newImage2.Source = new BitmapImage(new Uri("Images/canada-sports-hof-event.jpg", UriKind.Relative));
+            newImage3.Source = new BitmapImage(new Uri("Images/canada-sports-hof-sports-hall.jpg", UriKind.Relative));
+
+            _ucInfo.listBox.Items.Add(original);
+            _ucInfo.listBox.Items.Add(newImage);
+            _ucInfo.listBox.Items.Add(newImage2);
+            _ucInfo.listBox.Items.Add(newImage3);
+
+
             _ucInfo.txtDescription.Text = @"Canada’s Sports Hall of Fame is an international award-winning facility with over 40,000 square feet of inspiring experiences. Located at WinSport, Canada’s Sports Hall of Fame features 12 galleries, more than 52 hands-on interactive experiences and a collection of more than 95,000 artefacts. It is a place of honour for the 605 inducted sport legends and the 65 sports they represent. Our mission is to share the stories of the achievements of our inducted Honoured Members so that we can inspire all Canadians to be the best they can be in all aspects of life. Spanning nearly 150 years of Canadian sport history, there is something fun, educational and inspiring for people of all ages.";
 
             _ucInfo.txtBlockHours.Text = @"Mon - 10:00am to 5:00pm
@@ -834,7 +930,12 @@ Sun - 10:00am to 5:00pm";
             _tabPage.Header = "Aero Space Museum";
             _ucInfo.txtBlockTitle.Text = "Aero Space Museum";
             _ucInfo.txtBlockAddress.Text = "4629 McCall Way NE, Calgary, AB T2E 8A5";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/aero-space-museum.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/aero-space-museum.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Who doesn’t wish they could fly? Discover Canada’s aviation adventure and enjoy seeing aircraft up close while hearing the roar of a modern jet overhead. Everything from Canada’s first powered aircraft to the majestic “Queen of the Sky” Lancaster are on display in a historic Second World War drill hall and outdoor hangar.";
 
             _ucInfo.txtBlockHours.Text = @"Mon - 9:00am to 4:00pm
@@ -864,7 +965,12 @@ Sun - 10:00am to 4:00pm";
             _tabPage.Header = "Canada Olympic Park";
             _ucInfo.txtBlockTitle.Text = "Canada Olympic Park";
             _ucInfo.txtBlockAddress.Text = "88 Canada Olympic Road SW, Calgary, AB T3B 5R5";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/c-o-p.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/c-o-p.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Come out and play at WinSport, Calgary’s year-round playground and site of the 1988 Winter Olympic Games. In summer, kids can explore the Activity Centre featuring a 30 foot climbing wall and EuroBungy. The whole gang can hit the greens of our 18-hole mini-golf course while the more adventurous might want to take on the Adrenaline Combo—a Canadian Signature Experience that combines North America’s fastest zipline and Summer Bobsleigh. Winter brings us back to our Olympic roots as we transform into ski and snowboard central with hill tickets starting at $10.";
             _ucInfo.txtBlockHours.Text = @"Mon - 8:00am to 9:00pm
 Tues - 8:00am to 9:00pm
@@ -895,7 +1001,12 @@ Sun - 8:00am to 9:00pm
             _tabPage.Header = "Calaway Park";
             _ucInfo.txtBlockTitle.Text = "Calaway Park";
             _ucInfo.txtBlockAddress.Text = "245033 Range Rd 33, Calgary, AB T3Z 2E9";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/calaway-park.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/calaway-park.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"32 Family-friendly rides! High-energy entertainment! Tempting treats! Calaway Park has something for everyone!
  
 As Western Canada’s Largest Outdoor Family Amusement Park, Calaway Park has been offering affordable, family- friendly fun and entertainment for over three decades.
@@ -934,7 +1045,12 @@ Sun - 10:00am to 7:00pm
             _tabPage.Header = "Bow Habitat Station";
             _ucInfo.txtBlockTitle.Text = "Bow Habitat Station";
             _ucInfo.txtBlockAddress.Text = "1440 17a St SE, Calgary, AB T2G 4T9";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/bow-habitat-station.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/bow-habitat-station.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Investigate, explore and discover Alberta’s fish, wildlife, water and aquatic ecosystems. Explore hands-on exhibits in our Discovery Centre, feed the fish on a tour of our Fish Hatchery, go fishing in our Trout Pond, and take a stroll along the trails in our Interpretive Wetland.
 
 There is fun for the whole family at Bow Habitat Station!
@@ -1874,6 +1990,7 @@ Sun - 10:00am to 4:00pm
             text1Margin.Right = 74;
             text1Margin.Bottom = 0;
             text1.Margin = text1Margin;
+            text1.Foreground = Brushes.Black;
             text1.HorizontalAlignment = HorizontalAlignment.Left;
             text1.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -1934,6 +2051,7 @@ Sun - 10:00am to 4:00pm
             text2Margin.Right = 74;
             text2Margin.Bottom = 0;
             text2.Margin = text1Margin;
+            text2.Foreground = Brushes.Black;
             text2.HorizontalAlignment = HorizontalAlignment.Left;
             text2.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -1994,6 +2112,7 @@ Sun - 10:00am to 4:00pm
             text3Margin.Right = 74;
             text3Margin.Bottom = 0;
             text3.Margin = text3Margin;
+            text3.Foreground = Brushes.Black;
             text3.HorizontalAlignment = HorizontalAlignment.Left;
             text3.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2044,6 +2163,7 @@ Sun - 10:00am to 4:00pm
             text4Margin.Right = 74;
             text4Margin.Bottom = 0;
             text4.Margin = text3Margin;
+            text4.Foreground = Brushes.Black;
             text4.HorizontalAlignment = HorizontalAlignment.Left;
             text4.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2089,6 +2209,7 @@ Sun - 10:00am to 4:00pm
             TextBlock text5 = new TextBlock();
             text5.Text = "9.2              $$";
             text5.Margin = new Thickness(80, 10, 74, 0);
+            text5.Foreground = Brushes.Black;
             text5.HorizontalAlignment = HorizontalAlignment.Left;
             text5.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2132,6 +2253,7 @@ Sun - 10:00am to 4:00pm
             TextBlock text6 = new TextBlock();
             text6.Text = "6.4KM              $$$";
             text6.Margin = new Thickness(80, 10, 74, 0);
+            text6.Foreground = Brushes.Black;
             text6.HorizontalAlignment = HorizontalAlignment.Left;
             text6.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2177,6 +2299,7 @@ Sun - 10:00am to 4:00pm
             TextBlock text7 = new TextBlock();
             text7.Text = "13.3KM              $$$";
             text7.Margin = new Thickness(80, 10, 74, 0);
+            text7.Foreground = Brushes.Black;
             text7.HorizontalAlignment = HorizontalAlignment.Left;
             text7.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2222,6 +2345,7 @@ Sun - 10:00am to 4:00pm
             TextBlock text8 = new TextBlock();
             text8.Text = "18.4KM              $$$";
             text8.Margin = new Thickness(80, 10, 74, 0);
+            text8.Foreground = Brushes.Black;
             text8.HorizontalAlignment = HorizontalAlignment.Left;
             text8.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2268,6 +2392,7 @@ Sun - 10:00am to 4:00pm
             TextBlock text9 = new TextBlock();
             text9.Text = "28.5KM              $$$$";
             text9.Margin = new Thickness(80, 10, 74, 0);
+            text9.Foreground = Brushes.Black;
             text9.HorizontalAlignment = HorizontalAlignment.Left;
             text9.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -2351,7 +2476,12 @@ Sun - 10:00am to 4:00pm
             _tabPage.Header = "River Cafe";
             _ucInfo.txtBlockTitle.Text = "River Cafe";
             _ucInfo.txtBlockAddress.Text = "25 Princes Island Park SW, Calgary, AB T2P 0R1";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/hardy4.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/hardy4.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"The River Cafe is a world class restaurant on Prince's Island Park, Calgary, Alberta, Canada. 
 
 An extraordinary dining experience is to embark on a journey. We have created a beautiful place in an extraordinary setting and have tended to the details that make you feel at home: staff who care, chefs who are passionate about quality and the regional seasonal ingredients that bring to your palate a taste of place.";
@@ -2384,7 +2514,12 @@ Sun - 10:00am to 10:00pm";
             _tabPage.Header = "NOTaBLE";
             _ucInfo.txtBlockTitle.Text = "NOTaBLE";
             _ucInfo.txtBlockAddress.Text = "4611 Bowness Rd NW, Calgary, AB T3B0S4";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/picNotable.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/picNotable.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"A new chapter in Calgary dining has begun. Slow down and savor the experience with us.
 
 Cozy. Charming. Gourmet Casual. A comfortable “home” to foster a genuine love of great food with a family of passionate culinarians, passionate producers and exceptional service staff. The open kitchen invites you in. The rotisserie turns. Juices drip and sizzle. Sauce on the saucier station bubbles. The menu reflects our passion. A new burger on the menu every month. A selection of wines chosen with care. The Stilton cheesecake, a signature recipe you won’t find anywhere else, completes the experience. Come, relax and enjoy a fresh dining experience at NOtaBLE. We look forward to serving you. As the chef says, “Don’t think fine dining, think great food.”";
@@ -2417,7 +2552,12 @@ Sun - 11:00am to 9:00pm";
             _tabPage.Header = "Raw Bar";
             _ucInfo.txtBlockTitle.Text = "Raw Bar";
             _ucInfo.txtBlockAddress.Text = "119 12 Avenue Southwest, Calgary, AB T2R 0G8";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/picRaw.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"​Hotel Arts’ award-winning restaurant, Raw Bar recently received an extensive renovation and reopened with a Vietmodern theme and fresh new look. Raw Bar showcases a menu that celebrates Vietnamese heritage with some contemporary influences which we call Vietmodern. Order our well-liked Short Rib Steamed Buns and enjoy our chef-attended action station where a selection of fresh oysters are prepared. Vietmodern dishes are made to pair perfectly with our innovative cocktails. Save room for dessert prepared by our talented pastry team.";
 
             _ucInfo.txtBlockHours.Text = @"Mon - 4:00pm to 11:00pm
@@ -2448,7 +2588,12 @@ Sun - Closed";
             _tabPage.Header = "Holy Smoke BBQ";
             _ucInfo.txtBlockTitle.Text = "Holy Smoke BBQ";
             _ucInfo.txtBlockAddress.Text = "4640 Manhattan Rd SE, Calgary, AB T2G 4B5";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/holy-smoke-bbq.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/holy-smoke-bbq.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Brisket, ribs, pulled pork, smoked chicken, homemade sides and sauces. Come on in and feed your soul...";
 
             _ucInfo.txtBlockHours.Text = @"Mon - 10:00am to 8:00pm
@@ -2479,7 +2624,13 @@ Sun - Closed";
             _tabPage.Header = "Canadian Brewhouse";
             _ucInfo.txtBlockTitle.Text = "Canadian Brewhouse";
             _ucInfo.txtBlockAddress.Text = "9650 Harvest Hills Boulevard North, Calgary, AB T3K 0B3";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/canadian-brewhouse.jpg", UriKind.Relative));
+
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/canadian-brewhouse.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Welcome to The Canadian Brewhouse!
 
 Let us introduce ourselves and get to know each other!
@@ -2524,7 +2675,12 @@ Sun - 11:00am to 2:00am";
             _tabPage.Header = "Himalayan";
             _ucInfo.txtBlockTitle.Text = "Himalayan";
             _ucInfo.txtBlockAddress.Text = "3218 17th Ave SW, Calgary, AB T3E0B3";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/himalayan.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/himalayan.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"A popular indian cuisine restaurant located on 17 avenue, with some of the most culturally diverse restaurants in Calgary.";
 
             _ucInfo.txtBlockHours.Text = @"Mon - 5:00pm to 9:00pm
@@ -2555,7 +2711,12 @@ Sun - 5:00pm to 9:00pm";
             _tabPage.Header = "Saltlik";
             _ucInfo.txtBlockTitle.Text = "Saltlik";
             _ucInfo.txtBlockAddress.Text = "101 8 Ave SW, Calgary, AB T2G5J2";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/saltlik.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/saltlik.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Welcome to Saltlik, the quintessential modern steakhouse.
 Our menu of comfortable luxury will please not only the true steak lover, but has enough variety to satisfy any appetite. The quality ingredients we use shine through in every dish.
 Where will you be joining us?";
@@ -2588,7 +2749,12 @@ Sun - 5:00pm to 10:00pm";
             _tabPage.Header = "Naina's Kitchen";
             _ucInfo.txtBlockTitle.Text = "Naina's Kitchen";
             _ucInfo.txtBlockAddress.Text = "8, 2808 Ogden Road Southeast, Calgary, AB T2G 4R7";
-            _ucInfo.imgPicture.Source = new BitmapImage(new Uri("Images/naina-kitchen.jpg", UriKind.Relative));
+
+            Image original = new Image();
+            original.Source = new BitmapImage(new Uri("Images/naina-kitchen.jpg", UriKind.Relative));
+            _ucInfo.imgPicture.Source = original.Source;
+            _ucInfo.listBox.Items.Add(original);
+
             _ucInfo.txtDescription.Text = @"Welcome to Naina's Kitchen
 
 Think back to the times you visited Grandma's, remember the wonderful aromas that hit you as you came in the door. Your mouth would start to water and you couldn't wait to see what was coming. Comfort was the word.
@@ -2610,6 +2776,14 @@ Sun - Closed";
             _tabPage.Content = _ucInfo;
             _main.tabControl.Items.Add(_tabPage);
             _main.tabControl.SelectedItem = _tabPage;
+        }
+
+        private void expAttractions_Expanded(object sender, RoutedEventArgs e)
+        {
+
+            expEvents.IsExpanded = false;
+            expRestaurants.IsExpanded = false;
+
         }
     }
 }

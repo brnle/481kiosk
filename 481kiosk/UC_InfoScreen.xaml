@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="624" d:DesignWidth="872" Width="Auto" Height="Auto" VerticalAlignment="Top">
     <Grid>
-        <Viewbox Margin="32,108,608,251" Stretch="UniformToFill">
-            <Image x:Name="imgPicture" Height="267" Width="229" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="233"/>
+        <Viewbox Margin="32,108,608,334" Stretch="UniformToFill">
+            <Image x:Name="imgPicture" Height="180" Width="229" MaxWidth="233"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Height="80" Margin="32,28,33,0" VerticalAlignment="Top">
             <TextBlock x:Name="txtBlockTitle" TextAlignment="Center" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" VerticalAlignment="Top" HorizontalAlignment="Center" Height="80" FontStyle="Italic" TextOptions.TextFormattingMode="Display" Width="807" TextWrapping="Wrap"/>
@@ -28,6 +28,12 @@
         </GroupBox>
         <Button x:Name="btnDirections" Content="Directions" HorizontalAlignment="Left" Margin="304,222,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="21.333" FontWeight="Bold" Click="btnDirections_Click" Background="White"/>
         <Button x:Name="btnRestaurantsNearby" Content="Restaurants FROM THIS LOCATION" HorizontalAlignment="Left" Margin="304,310,0,0" VerticalAlignment="Top" Width="253" Height="68" FontSize="13.333" FontWeight="Bold" Click="btnRestaurantsNearby_Click" Background="White"/>
-
+        <ListBox x:Name="listBox" Height="68" Margin="32,310,608,246" VerticalAlignment="Center" Width="232" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{x:Null}" SelectionChanged="listBox_SelectionChanged">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="1" Columns="4"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
     </Grid>
 </UserControl>

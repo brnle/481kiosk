@@ -20,7 +20,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Label x:Name="label" Content="Discover" HorizontalAlignment="Left" Margin="362,7,0,0" VerticalAlignment="Top" Height="72" Width="168" FontSize="48" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Bold" Grid.RowSpan="2"/>
-            <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Black" Margin="38,10" Background="White" Grid.RowSpan="1" IsExpanded="True" Width="800" FontSize="16" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Regular">
+            <Expander x:Name="expAttractions" Grid.Row ="1" Header="Main Attractions" Foreground="Black" Margin="38,10" Background="White" Grid.RowSpan="1" Width="800" FontSize="16" FontFamily="/481kiosk;component/Fonts/#Bebas Neue Regular" Expanded="expAttractions_Expanded">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="55*"/>

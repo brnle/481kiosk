@@ -194,5 +194,10 @@ namespace _481kiosk
             //Call generic function to show the map and instructions
             showContent(_embeddedMap, _embeddedInstructions);
         }
+
+        private void btnPrint_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("The instructions have been printed on a receipt and has been dispensed.");
+        }
     }
 }

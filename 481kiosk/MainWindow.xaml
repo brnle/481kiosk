@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Calgary Information Kiosk" Height="696" Width="900" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Background="{x:Null}">
     <Window.Resources>
-        <SolidColorBrush x:Key="TabItem.Selected.Background" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="TabItem.IsSelected.Background" Color="{Binding Background, ElementName=tabControl}"/>
         <SolidColorBrush x:Key="TabItem.Selected.Border" Color="#ACACAC"/>
         <Style x:Key="TabControlStyle1" TargetType="{x:Type TabControl}">
             <Setter Property="Padding" Value="2"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Background" Value="{StaticResource TabItem.Selected.Background}"/>
+            <Setter Property="Background" Value="{StaticResource TabItem.IsSelected.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource TabItem.Selected.Border}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -131,6 +131,31 @@
 
     <Grid x:Name="MainGrid" Background="#FF00CFCF">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="667" VerticalAlignment="Top" Width="878" FontFamily="Segoe UI Emoji" BorderBrush="{x:Null}" Style="{DynamicResource TabControlStyle1}" Background="#FF151515" Margin="0,0,-6,0">
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TabItem}">
+                                <Grid>
+                                    <Border 
+                                    Margin="0,0,-4,0" 
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="#ACACAC"
+                                    BorderThickness="1,1,1,0" 
+                                    CornerRadius="2,12,0,0" >
+                                        <ContentPresenter x:Name="ContentSite"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"
+                                      ContentSource="Header"
+                                      Margin="12,2,12,2"
+                                      RecognizesAccessKey="True"/>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.ItemContainerStyle>
             <TabItem x:Name="tabLanguage" Header="Language" MouseLeftButtonUp="langTab_Click"  Style="{DynamicResource TabStyle}" Height="35" Width="874" BorderBrush="#FFACACAC" HorizontalAlignment="Left" Margin="0,-0.5,0,0.5">
                 <TabItem.Resources>
                     <Style x:Key="FocusVisual">
